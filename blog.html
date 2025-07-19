@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Software Development</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #4ecdc4;
+        }
+
+        .nav-links a.active {
+            color: #4ecdc4;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-icon {
+            width: 20px;
+            height: 20px;
+            background-color: #333;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-icon:hover {
+            background-color: #555;
+        }
+
+        /* Main Content */
+        main {
+            padding: 80px 0;
+        }
+
+        .hero {
+            margin-bottom: 80px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #cccccc;
+            margin-bottom: 20px;
+        }
+
+        .rss-link {
+            color: #ff6b6b;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .rss-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Blog Posts */
+        .blog-posts {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .blog-post {
+            border-left: 3px solid #333;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .post-date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .post-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .post-excerpt {
+            color: #cccccc;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .read-more {
+            color: #4ecdc4;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        .read-more::after {
+            content: '→';
+        }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 80px;
+            padding: 20px 0;
+            border-top: 1px solid #333;
+        }
+
+        .pagination-info {
+            color: #cccccc;
+        }
+
+        .pagination-nav {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .pagination-nav:hover {
+            background-color: #2a2a2a;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid #333;
+            padding: 40px 0;
+            margin-top: 80px;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .footer-nav a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-nav a:hover {
+            color: #4ecdc4;
+        }
+
+        .copyright {
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .blog-post {
+                padding-left: 20px;
+            }
+
+            .post-title {
+                font-size: 1.5rem;
+            }
+
+            .pagination {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .footer-nav {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .blog-post {
+                padding-left: 15px;
+            }
+
+            .post-title {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">C</div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#" class="active">Blog</a></li>
+                    <li><a href="#newsletter">Newsletter</a></li>
+                    <li><a href="speaking.html">Speaking</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#uses">Uses</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <div class="nav-icon"></div>
+                    <div class="nav-icon"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="hero">
+                <h1>Writing on software development and anything else I find interesting.</h1>
+                <p>All of my long-form thoughts on programming, content creation, and more, collected in chronological order.</p>
+                <a href="#" class="rss-link">RSS Feed</a>
+            </section>
+
+            <section class="blog-posts">
+                <article class="blog-post">
+                    <div class="post-date">April 11, 2023</div>
+                    <h2 class="post-title">JDK 21's Major Improvement: Virtual Threads Without Pinning</h2>
+                    <p class="post-excerpt">Learn how JDK 21's enhancement to virtual threads that eliminates pinning with synchronized blocks can dramatically improve performance of your Spring Boot applications.</p>
+                    <a href="#" class="read-more">Read article</a>
+                </article>
+
+                <article class="blog-post">
+                    <div class="post-date">April 7, 2023</div>
+                    <h2 class="post-title">Running AI Models Locally with Docker and Spring AI</h2>
+                    <p class="post-excerpt">Learn how to use Docker to host AI models instead of hitting on-web locally with your Spring Boot application, with some pitfalls along the way to avoid hitting into, and costs coming too.</p>
+                    <a href="#" class="read-more">Read article</a>
+                </article>
+
+                <article class="blog-post">
+                    <div class="post-date">March 28, 2023</div>
+                    <h2 class="post-title">Creating Your First Model Content Protocol (MCP) Server in Java</h2>
+                    <p class="post-excerpt">Learn how to build and develop a basic MCP server that runs in server AI assistants with your own data and services.</p>
+                    <a href="#" class="read-more">Read article</a>
+                </article>
+
+                <article class="blog-post">
+                    <div class="post-date">March 21, 2023</div>
+                    <h2 class="post-title">Stream Gathered to JDK 24: Building Custom Intermediate Operations for the Stream API</h2>
+                    <p class="post-excerpt">Discover how the new Stream gathered feature in JDK 24 provides a more elegant solution for building common composed and fundamental stream operations.</p>
+                    <a href="#" class="read-more">Read article</a>
+                </article>
+
+                <article class="blog-post">
+                    <div class="post-date">March 17, 2023</div>
+                    <h2 class="post-title">Supercharge Your LLM Applications with Model Context Protocol (MCP)</h2>
+                    <p class="post-excerpt">Learn how Model Context Protocol (MCP) enables LLMs to access external data sources and tools, with step-by-step implementation guides for Spring Boot today.</p>
+                    <a href="#" class="read-more">Read article</a>
+                </article>
+            </section>
+
+            <div class="pagination">
+                <span class="pagination-info">Showing 1 to 5 of 231 results</span>
+                <button class="pagination-nav">Next</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <nav class="footer-nav">
+                <a href="#about">About</a>
+                <a href="#">Blog</a>
+                <a href="#newsletter">Newsletter</a>
+                <a href="speaking.html">Speaking</a>
+                <a href="#courses">Courses</a>
+                <a href="#uses">Uses</a>
+            </nav>
+            <p class="copyright">© 2024 Claire Singh. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
