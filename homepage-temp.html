@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dan - Java Champion & Spring Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #4ecdc4;
+        }
+
+        .nav-links a.active {
+            color: #4ecdc4;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-icon {
+            width: 20px;
+            height: 20px;
+            background-color: #333;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-icon:hover {
+            background-color: #555;
+        }
+
+        /* Main Content */
+        main {
+            padding: 80px 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero-content .greeting {
+            color: #4ecdc4;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero-content .name {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: #cccccc;
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+
+        .hero-image {
+            text-align: center;
+        }
+
+        .profile-image {
+            width: 280px;
+            height: 280px;
+            border-radius: 15px;
+            background: linear-gradient(45deg, #333, #555);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #4ecdc4;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background-color: #4ecdc4;
+            transform: translateY(-3px);
+        }
+
+        /* About Section */
+        .section {
+            margin-bottom: 100px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+
+        .badges {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: #000;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            color: #cccccc;
+            line-height: 1.8;
+        }
+
+        /* Journey Section */
+        .journey-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .journey-content h3 {
+            font-size: 1.8rem;
+            color: #4ecdc4;
+            margin-bottom: 20px;
+        }
+
+        .journey-content p {
+            color: #cccccc;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        /* Tech Stack Section */
+        .tech-stack {
+            background-color: #111111;
+            border: 1px solid #333;
+            border-radius: 15px;
+            padding: 60px 40px;
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-description {
+            font-size: 1.2rem;
+            color: #888;
+            text-align: center;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .tech-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 20px;
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .tech-item:hover {
+            transform: translateY(-5px);
+            background-color: #222;
+        }
+
+        .tech-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .tech-name {
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        /* Blog Section */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .blog-card {
+            background: linear-gradient(135deg, #111111, #1a1a1a);
+            border: 1px solid #333;
+            border-radius: 15px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            border-color: #4ecdc4;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .blog-date {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .blog-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .blog-excerpt {
+            color: #cccccc;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .read-more {
+            color: #4ecdc4;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: #ff6b6b;
+        }
+
+        /* Follow Section */
+        .follow-section {
+            background-color: #111111;
+            border: 1px solid #333;
+            border-radius: 15px;
+            padding: 60px;
+            text-align: center;
+        }
+
+        .follow-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .follow-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .follow-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .follow-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .follow-handle {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Newsletter Section */
+        .newsletter-section {
+            background: linear-gradient(135deg, #1a1a1a, #222);
+            border: 1px solid #4ecdc4;
+            border-radius: 15px;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 15px;
+            max-width: 400px;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 15px;
+            border: 1px solid #333;
+            border-radius: 8px;
+            background-color: #222;
+            color: #ffffff;
+            font-size: 1rem;
+        }
+
+        .newsletter-input:focus {
+            outline: none;
+            border-color: #4ecdc4;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(78, 205, 196, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid #333;
+            padding: 40px 0;
+            margin-top: 80px;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .footer-nav a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-nav a:hover {
+            color: #4ecdc4;
+        }
+
+        .copyright {
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .journey-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .follow-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .tech-stack,
+            .follow-section,
+            .newsletter-section {
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .profile-image {
+                width: 220px;
+                height: 220px;
+                font-size: 3rem;
+            }
+
+            .tech-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .follow-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">D</div>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">About</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#newsletter">Newsletter</a></li>
+                    <li><a href="speaking.html">Speaking</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="hire-me.html">Hire Me</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <div class="nav-icon"></div>
+                    <div class="nav-icon"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <div class="greeting">Hello 👋 My Name is</div>
+                    <h1><span class="name">Dan</span></h1>
+                    <p class="hero-description">
+                        I am a Software Engineer living just outside of one of my favourite places 
+                        in the world - Vancouver, BC. I love tech and love my job. I want to help YOU 
+                        boost and advance your career as a Software Engineer. Visit my courses page for 
+                        more information.
+                    </p>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-image">👨‍💻</div>
+                    <div class="social-links">
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">💼</a>
+                        <a href="#" class="social-link">📺</a>
+                        <a href="#" class="social-link">📧</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section class="section">
+                <h2 class="section-title">Java Champion, Spring Developer Advocate, YouTuber and Lifelong Learner</h2>
+                <div class="badges">
+                    <span class="badge">Java Champion</span>
+                    <span class="badge">Spring Developer Advocate</span>
+                    <span class="badge">YouTuber</span>
+                    <span class="badge">Author</span>
+                </div>
+                <div class="about-content">
+                    <p>
+                        Dan is a 10+ years Software Developer, Spring Developer Advocate, Husband and Father who has travelled outside of 
+                        his Province 4 times in his entire life to speak at different conferences. He is extremely passionate about 
+                        software development and loves all things music, videos or courses which help to share a professor he gives something.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Journey Section -->
+            <section class="section">
+                <div class="journey-grid">
+                    <div class="journey-content">
+                        <h3>My Journey</h3>
+                        <p>
+                            My journey to becoming a more active programmer did not start as a 
+                            straight line or by mistake. Thanks to my mom, who made me a real a 
+                            computer when I was growing out of high school. At first, I was nervous 
+                            about getting into programming as a career.
+                        </p>
+                        <p>
+                            After being abroad in the UK was when I eventually decided that this was 
+                            the route I wanted to take as a life path, however it wasn't 
+                            straightforward as I was in school and still I needed to work. I 
+                            spent most of my time learning to both other people make 
+                            progress through on their work, and each after I spent most of my 
+                            free time learning online through free self education. I was most of my 
+                            first development experience by night. The Next-Week process was 
+                            typically marketed as hard as the first week.
+                        </p>
+                    </div>
+                    <div class="journey-content">
+                        <h3>Our blog has always dealt with code</h3>
+                        <p>
+                            Our thing has has always dealt with code over the years to have guided 
+                            us and still all of us people who taught and inspired this. The biggest sign 
+                            is every being what happens online teaching. Each year programming market. 
+                            My original how for people online can education. 
+                        </p>
+                        <p>
+                            In my personal life I am a husband to my bestfriend and a dad to two 
+                            wonderful children. I love to read in my free time. I really enjoy 
+                            getting outside, spending time at family and would say that most 
+                            of my time at home, I love my family dearly whether it's with my family.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tech Stack Section -->
+            <section class="tech-stack">
+                <h2 class="section-title">Technology Expertise</h2>
+                <p class="section-description">
+                    Technologies I work with daily to build robust, scalable applications
+                </p>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon">J</div>
+                        <div class="tech-name">Java</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">S</div>
+                        <div class="tech-name">Spring Boot</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">AWS</div>
+                        <div class="tech-name">AWS</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">μ</div>
+                        <div class="tech-name">Microservices</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🐳</div>
+                        <div class="tech-name">Docker</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">K</div>
+                        <div class="tech-name">Kubernetes</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">R</div>
+                        <div class="tech-name">React</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">DB</div>
+                        <div class="tech-name">PostgreSQL</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Blog Section -->
+            <section class="section" id="blog">
+                <h2 class="section-title">Latest Blog Posts</h2>
+                <p class="section-description">
+                    Sharing knowledge and insights about Java, Spring, and software development
+                </p>
+                
+                <div class="blog-grid">
+                    <div class="blog-card">
+                        <div class="blog-date">Jan 5, 2024</div>
+                        <h3 class="blog-title">Are Zip Files Magical? Virtual Threads Without Pinning</h3>
+                        <p class="blog-excerpt">
+                            Exploring the magical world of Zip files and how Virtual Threads work without pinning. 
+                            A deep dive into the underlying mechanisms that make this possible.
+                        </p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+
+                    <div class="blog-card">
+                        <div class="blog-date">Jan 1, 2024</div>
+                        <h3 class="blog-title">Running 24 Models Locally with Docker and Spring AI</h3>
+                        <p class="blog-excerpt">
+                            Learn how to run multiple AI models locally using Docker containers with Spring AI. 
+                            Perfect for development and testing without cloud dependencies.
+                        </p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+
+                    <div class="blog-card">
+                        <div class="blog-date">Jan 1, 2024</div>
+                        <h3 class="blog-title">Creating Your First Sealed Protocol and Server in Java</h3>
+                        <p class="blog-excerpt">
+                            A comprehensive guide to creating sealed protocols and servers in Java. 
+                            Learn best practices and implementation patterns for robust applications.
+                        </p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Follow Section -->
+            <section class="follow-section">
+                <h2 class="section-title">Stay Up to Date</h2>
+                <p class="section-description">
+                    Follow me on various platforms for the latest updates, tutorials, and insights
+                </p>
+
+                <div class="follow-grid">
+                    <div class="follow-item">
+                        <div class="follow-icon">🐦</div>
+                        <div class="follow-name">Twitter</div>
+                        <div class="follow-handle">@therealdanvega</div>
+                    </div>
+                    <div class="follow-item">
+                        <div class="follow-icon">📺</div>
+                        <div class="follow-name">YouTube</div>
+                        <div class="follow-handle">Dan Vega</div>
+                    </div>
+                    <div class="follow-item">
+                        <div class="follow-icon">💼</div>
+                        <div class="follow-name">LinkedIn</div>
+                        <div class="follow-handle">Dan Vega</div>
+                    </div>
+                    <div class="follow-item">
+                        <div class="follow-icon">🔗</div>
+                        <div class="follow-name">Mastodon</div>
+                        <div class="follow-handle">@danvega</div>
+                    </div>
+                    <div class="follow-item">
+                        <div class="follow-icon">📚</div>
+                        <div class="follow-name">Bluesky</div>
+                        <div class="follow-handle">@danvega</div>
+                    </div>
+                    <div class="follow-item">
+                        <div class="follow-icon">💻</div>
+                        <div class="follow-name">GitHub</div>
+                        <div class="follow-handle">danvega</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Newsletter Section -->
+            <section class="newsletter-section" id="newsletter">
+                <h2 class="section-title">Join My Newsletter</h2>
+                <p class="section-description">
+                    Get weekly updates about Java, Spring Boot, and software development directly to your inbox
+                </p>
+
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <nav class="footer-nav">
+                <a href="#">About</a>
+                <a href="#blog">Blog</a>
+                <a href="#newsletter">Newsletter</a>
+                <a href="speaking.html">Speaking</a>
+                <a href="courses.html">Courses</a>
+                <a href="hire-me.html">Hire Me</a>
+            </nav>
+            <p class="copyright">© 2024 Dan Vega. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
