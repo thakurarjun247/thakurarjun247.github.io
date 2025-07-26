@@ -32,7 +32,7 @@
         .logo {
             width: 40px;
             height: 40px;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            background: linear-gradient(45deg, #e57373, #4ecdc4);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -96,7 +96,7 @@
             font-weight: 700;
             margin-bottom: 30px;
             line-height: 1.1;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            background: linear-gradient(45deg, #e57373, #4ecdc4);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -135,7 +135,7 @@
         }
 
         .btn-primary {
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            background: linear-gradient(45deg, #e57373, #4ecdc4);
             color: #000;
         }
 
@@ -203,7 +203,7 @@
             left: 0;
             right: 0;
             height: 3px;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            background: linear-gradient(45deg, #e57373, #4ecdc4);
         }
 
         .service-card:hover {
@@ -215,7 +215,7 @@
         .service-icon {
             width: 60px;
             height: 60px;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            background: linear-gradient(45deg, #e57373, #4ecdc4);
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -300,7 +300,7 @@
         .tech-icon {
             width: 50px;
             height: 50px;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            background: linear-gradient(45deg, #e57373, #4ecdc4);
             border-radius: 8px;
             display: flex;
             align-items: center;
@@ -326,7 +326,7 @@
 
         .amazon-badge {
             display: inline-block;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            background: linear-gradient(45deg, #e57373, #4ecdc4);
             color: #000;
             padding: 10px 25px;
             border-radius: 25px;
@@ -408,7 +408,7 @@
 
         .submit-btn {
             padding: 15px 40px;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            background: linear-gradient(45deg, #e57373, #4ecdc4);
             color: #000;
             border: none;
             border-radius: 8px;
