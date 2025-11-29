@@ -3,936 +3,441 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dan - Java Champion & Spring Developer</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: #0a0a0a;
-            color: #ffffff;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            padding: 20px 0;
-            border-bottom: 1px solid #333;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: white;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-
-        .nav-links a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #4ecdc4;
-        }
-
-        .nav-links a.active {
-            color: #4ecdc4;
-        }
-
-        .nav-icons {
-            display: flex;
-            gap: 15px;
-        }
-
-        .nav-icon {
-            width: 20px;
-            height: 20px;
-            background-color: #333;
-            border-radius: 3px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .nav-icon:hover {
-            background-color: #555;
-        }
-
-        /* Main Content */
-        main {
-            padding: 80px 0;
-        }
-
-        /* Hero Section */
-        .hero {
-            display: grid;
-            grid-template-columns: 1fr 300px;
-            gap: 60px;
-            align-items: center;
-            margin-bottom: 100px;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: 700;
-            margin-bottom: 30px;
-            line-height: 1.1;
-        }
-
-        .hero-greeting {
-            color: #4ecdc4;
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-
-        .hero-name {
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-subtitle {
-            font-size: 1.5rem;
-            color: #cccccc;
-            margin-bottom: 20px;
-        }
-
-        .hero-description {
-            font-size: 1.2rem;
-            color: #888;
-            max-width: 800px;
-            margin: 0 auto 40px;
-        }
-
-        .profile-image {
-            width: 280px;
-            height: 280px;
-            border-radius: 15px;
-            background: linear-gradient(45deg, #333, #555);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: #4ecdc4;
-            margin-bottom: 20px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-        }
-
-        .social-link {
-            width: 40px;
-            height: 40px;
-            background-color: #333;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            color: #fff;
-            transition: all 0.3s ease;
-        }
-
-        .social-link:hover {
-            background-color: #4ecdc4;
-            transform: translateY(-3px);
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: flex-start;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 15px 30px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .btn-primary {
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            color: #000;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(78, 205, 196, 0.3);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: #4ecdc4;
-            border: 2px solid #4ecdc4;
-        }
-
-        .btn-secondary:hover {
-            background-color: #4ecdc4;
-            color: #000;
-            transform: translateY(-3px);
-        }
-
-        /* Section Styling */
-        .section {
-            margin-bottom: 100px;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 20px;
-            color: #ffffff;
-        }
-
-        .section-description {
-            font-size: 1.2rem;
-            color: #888;
-            text-align: center;
-            margin-bottom: 60px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* About Section */
-        .about-section {
-            text-align: center;
-            margin-bottom: 100px;
-        }
-
-        .badges {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 30px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .badge {
-            display: inline-block;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            color: #000;
-            padding: 10px 25px;
-            border-radius: 25px;
-            font-weight: 700;
-            font-size: 1.1rem;
-        }
-
-        .about-content {
-            font-size: 1.2rem;
-            color: #cccccc;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Journey Grid */
-        .journey-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 60px;
-            margin-bottom: 60px;
-        }
-
-        .journey-card {
-            background: linear-gradient(135deg, #111111, #1a1a1a);
-            border: 1px solid #333;
-            border-radius: 15px;
-            padding: 40px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .journey-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-        }
-
-        .journey-card:hover {
-            transform: translateY(-5px);
-            border-color: #4ecdc4;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .journey-title {
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: #ffffff;
-        }
-
-        .journey-content {
-            color: #cccccc;
-            line-height: 1.7;
-        }
-
-        /* Tech Stack Section */
-        .tech-stack {
-            background-color: #111111;
-            border: 1px solid #333;
-            border-radius: 15px;
-            padding: 60px 40px;
-            text-align: center;
-            margin-bottom: 80px;
-        }
-
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .tech-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            padding: 20px;
-            background-color: #1a1a1a;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .tech-item:hover {
-            transform: translateY(-5px);
-            background-color: #222;
-        }
-
-        .tech-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: white;
-        }
-
-        .tech-name {
-            font-weight: 600;
-            color: #ffffff;
-        }
-
-        /* Blog Grid */
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-
-        .blog-card {
-            background: linear-gradient(135deg, #111111, #1a1a1a);
-            border: 1px solid #333;
-            border-radius: 15px;
-            padding: 40px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .blog-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-        }
-
-        .blog-card:hover {
-            transform: translateY(-5px);
-            border-color: #4ecdc4;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .blog-date {
-            color: #888;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-        }
-
-        .blog-title {
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: #ffffff;
-        }
-
-        .blog-description {
-            color: #cccccc;
-            margin-bottom: 20px;
-            line-height: 1.7;
-        }
-
-        .read-more {
-            color: #4ecdc4;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        .read-more:hover {
-            color: #ff6b6b;
-        }
-
-        /* Follow Section */
-        .follow-highlight {
-            background: linear-gradient(135deg, #1a1a1a, #222);
-            border: 1px solid #4ecdc4;
-            border-radius: 15px;
-            padding: 50px;
-            text-align: center;
-            margin-bottom: 80px;
-        }
-
-        .follow-title {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: #ffffff;
-        }
-
-        .follow-description {
-            font-size: 1.2rem;
-            color: #cccccc;
-            max-width: 700px;
-            margin: 0 auto 40px;
-        }
-
-        .follow-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .follow-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            padding: 20px;
-            background-color: #333;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .follow-item:hover {
-            transform: translateY(-5px);
-            background-color: #444;
-        }
-
-        .follow-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: white;
-        }
-
-        .follow-name {
-            font-weight: 600;
-            color: #ffffff;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            background-color: #111111;
-            border: 1px solid #333;
-            border-radius: 15px;
-            padding: 60px;
-            text-align: center;
-        }
-
-        .newsletter-form {
-            max-width: 600px;
-            margin: 0 auto;
-            display: grid;
-            gap: 20px;
-        }
-
-        .form-group {
-            display: grid;
-            gap: 10px;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .form-group label {
-            color: #cccccc;
-            font-weight: 600;
-            text-align: left;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            padding: 15px;
-            border: 1px solid #333;
-            border-radius: 8px;
-            background-color: #222;
-            color: #ffffff;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #4ecdc4;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .submit-btn {
-            padding: 15px 40px;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            color: #000;
-            border: none;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(78, 205, 196, 0.3);
-        }
-
-        /* Footer */
-        footer {
-            border-top: 1px solid #333;
-            padding: 40px 0;
-            margin-top: 80px;
-        }
-
-        .footer-nav {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-bottom: 20px;
-        }
-
-        .footer-nav a {
-            color: #666;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-
-        .footer-nav a:hover {
-            color: #4ecdc4;
-        }
-
-        .copyright {
-            text-align: center;
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 40px;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.3rem;
-            }
-
-            .cta-buttons {
-                justify-content: center;
-            }
-
-            .journey-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .blog-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .tech-grid {
-                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-                gap: 20px;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .tech-stack,
-            .follow-highlight,
-            .contact-section {
-                padding: 40px 30px;
-            }
-
-            .footer-nav {
-                flex-wrap: wrap;
-                gap: 20px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 15px;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .journey-card,
-            .blog-card,
-            .tech-stack,
-            .follow-highlight,
-            .contact-section {
-                padding: 30px 20px;
-            }
-
-            .tech-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-    </style>
+    <title>Arjun Thakur - Backend Architect | Scale Your Systems to Millions of Users</title>
+    <meta name="description" content="I help companies scale backend systems to handle millions of users. Ex-Amazon SDE2, Ex-Agoda. Expert in Java, Spring Boot, Microservices, AWS.">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+    <!-- Navigation -->
+    <nav class="navbar">
         <div class="container">
-            <nav>
-                <div class="logo">D</div>
-                <ul class="nav-links">
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="html/blog-updated.html">Blog</a></li>
-                    <li><a href="html/speaking.html">Speaking</a></li>
-                    <li><a href="html/courses.html">Courses</a></li>
-                    <li><a href="html/hire-me.html">Hire Me</a></li>
-                </ul>
-                <div class="nav-icons">
-                    <div class="nav-icon"></div>
-                    <div class="nav-icon"></div>
-                </div>
-            </nav>
+            <a href="index.html" class="logo">Arjun Thakur</a>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
-    <main>
+    <!-- Hero Section - Rewritten for Conversion -->
+    <section class="hero">
         <div class="container">
-            <!-- Hero Section -->
-            <section class="hero">
-                <div class="hero-content">
-                    <div class="hero-greeting">Hello 👋 My Name is</div>
-                    <h1><span class="hero-name">Arjun</span></h1>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <span class="badge">🏆 AWS Certified Solutions Architect</span>
+                        <span class="badge">💼 Ex-Amazon · Ex-Agoda</span>
+                    </div>
+                    <h1>I Help Companies Scale Backend Systems That Handle <span class="gradient-text">Millions of Users</span></h1>
+                    <p class="hero-subtitle">Lead Backend Architect · Engineering Director · Technical Consultant</p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10M+</div>
+                            <div class="stat-label">Users Scaled To</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">₹30Cr</div>
+                            <div class="stat-label">Revenue Generated</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">28%</div>
+                            <div class="stat-label">Failure Reduction</div>
+                        </div>
+                    </div>
+
                     <p class="hero-description">
-                        Hi, I'm Arjun Thakur, a passionate Full Stack Engineer with 10 years of experience crafting robust, scalable applications for top tech giants like Amazon and Agoda, as well as dynamic startups in fintech, e-commerce, and edutech. Whether you need a senior developer, a system architect, or a consultant to elevate your team, I bring battle-tested expertise in Java, Spring Boot, microservices, and AWS to deliver solutions that scale.
+                        Specialized in payment systems, crypto platforms, microservices migration, and distributed 
+                        systems. Currently Director at PhysicsWallah, previously built scalable solutions at Amazon, 
+                        Agoda, and CoinSwitch Kuber.
                     </p>
-                    <div class="cta-buttons">
-                        <a href="#contact" class="btn btn-primary">Get In Touch →</a>
-                        <a href="#about" class="btn btn-secondary">Learn More</a>
+                    
+                    <div class="hero-buttons">
+                        <a href="contact.html" class="btn btn-primary">Book Free Consultation</a>
+                        <a href="#services" class="btn btn-secondary">View Services</a>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <div class="profile-image"><img src="img/arjun.jpeg" alt="Arjun Thakur"></div>
-                    <div class="social-links">
-                        <a href="#" class="social-link">🐦</a>
-                        <a href="#" class="social-link">💼</a>
-                        <a href="#" class="social-link">📺</a>
-                        <a href="#" class="social-link">📧</a>
+                    <div class="image-placeholder">
+                        <svg width="300" height="300" viewBox="0 0 300 300">
+                            ircle cx="150" cy="150" r="140" fill="#32b8c6" opacity="0.1"/>
+                            ircle cx="150" cy="150" r="120" fill="#32b8c6" opacity="0.2"/>
+                            <text x="150" y="160" font-size="80" text-anchor="middle" fill="#32b8c6">AT</text>
+                        </svg>
                     </div>
                 </div>
-            </section>
-
-            <!-- About Section -->
-            <section class="about-section" id="about">
-                <h2 class="section-title">Java Champion, Spring Developer Advocate, YouTuber and Lifelong Learner</h2>
-                <div class="badges">
-                    <span class="badge">Java Champion</span>
-                    <span class="badge">Spring Developer Advocate</span>
-                    <span class="badge">YouTuber</span>
-                    <span class="badge">Author</span>
-                </div>
-                <div class="about-content">
-                    <p>
-                        Dan is a 10+ years Software Developer, Spring Developer Advocate, Husband and Father who has travelled outside of 
-                        his Province 4 times in his entire life to speak at different conferences. He is extremely passionate about 
-                        software development and loves all things music, videos or courses which help to share knowledge with others.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Journey Section -->
-            <section class="section">
-                <h2 class="section-title">My Journey</h2>
-                <p class="section-description">
-                    From discovering programming to becoming a Java Champion and Spring Developer Advocate
-                </p>
-
-                <div class="journey-grid">
-                    <div class="journey-card">
-                        <h3 class="journey-title">My Journey</h3>
-                        <div class="journey-content">
-                            <p>
-                                My journey to becoming a more active programmer did not start as a 
-                                straight line or by mistake. Thanks to my mom, who made me a real a 
-                                computer when I was growing out of high school. At first, I was nervous 
-                                about getting into programming as a career.
-                            </p>
-                            <p>
-                                After being abroad in the UK was when I eventually decided that this was 
-                                the route I wanted to take as a life path, however it wasn't 
-                                straightforward as I was in school and still I needed to work.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="journey-card">
-                        <h3 class="journey-title">Our blog has always dealt with code</h3>
-                        <div class="journey-content">
-                            <p>
-                                Our thing has has always dealt with code over the years to have guided 
-                                us and still all of us people who taught and inspired this. The biggest sign 
-                                is every being what happens online teaching.
-                            </p>
-                            <p>
-                                In my personal life I am a husband to my bestfriend and a dad to two 
-                                wonderful children. I love to read in my free time. I really enjoy 
-                                getting outside, spending time at family and would say that most 
-                                of my time at home, I love my family dearly.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Tech Stack Section -->
-            <section class="tech-stack">
-                <h2 class="section-title">Technology Expertise</h2>
-                <p class="section-description">
-                    Technologies I work with daily to build robust, scalable applications
-                </p>
-                <div class="tech-grid">
-                    <div class="tech-item">
-                        <div class="tech-icon">J</div>
-                        <div class="tech-name">Java</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon">S</div>
-                        <div class="tech-name">Spring Boot</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon">AWS</div>
-                        <div class="tech-name">AWS</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon">μ</div>
-                        <div class="tech-name">Microservices</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon">🐳</div>
-                        <div class="tech-name">Docker</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon">Git</div>
-                        <div class="tech-name">Git</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon">R</div>
-                        <div class="tech-name">React</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon">DB</div>
-                        <div class="tech-name">PostgreSQL</div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Blog Section -->
-            <section class="section" id="blog">
-                <h2 class="section-title">Latest Blog Posts</h2>
-                <p class="section-description">
-                    Sharing knowledge and insights about Java, Spring, and software development
-                </p>
-                
-                <div class="blog-grid">
-                    <div class="blog-card">
-                        <div class="blog-date">Jan 5, 2024</div>
-                        <h3 class="blog-title">Are Zip Files Magical? Virtual Threads Without Pinning</h3>
-                        <p class="blog-description">
-                            Exploring the magical world of Zip files and how Virtual Threads work without pinning. 
-                            A deep dive into the underlying mechanisms that make this possible.
-                        </p>
-                        <a href="#" class="read-more">Read More →</a>
-                    </div>
-
-                    <div class="blog-card">
-                        <div class="blog-date">Jan 1, 2024</div>
-                        <h3 class="blog-title">Running 24 Models Locally with Docker and Spring AI</h3>
-                        <p class="blog-description">
-                            Learn how to run multiple AI models locally using Docker containers with Spring AI. 
-                            Perfect for development and testing without cloud dependencies.
-                        </p>
-                        <a href="#" class="read-more">Read More →</a>
-                    </div>
-
-                    <div class="blog-card">
-                        <div class="blog-date">Jan 1, 2024</div>
-                        <h3 class="blog-title">Creating Your First Sealed Protocol and Server in Java</h3>
-                        <p class="blog-description">
-                            A comprehensive guide to creating sealed protocols and servers in Java. 
-                            Learn best practices and implementation patterns for robust applications.
-                        </p>
-                        <a href="#" class="read-more">Read More →</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Follow Section */
-            <section class="follow-highlight">
-                <h2 class="follow-title">Stay Up to Date</h2>
-                <p class="follow-description">
-                    Follow me on various platforms for the latest updates, tutorials, and insights into Java, Spring Boot, and modern software development practices.
-                </p>
-
-                <div class="follow-grid">
-                    <div class="follow-item">
-                        <div class="follow-icon">🐦</div>
-                        <div class="follow-name">Twitter</div>
-                    </div>
-                    <div class="follow-item">
-                        <div class="follow-icon">📺</div>
-                        <div class="follow-name">YouTube</div>
-                    </div>
-                    <div class="follow-item">
-                        <div class="follow-icon">💼</div>
-                        <div class="follow-name">LinkedIn</div>
-                    </div>
-                    <div class="follow-item">
-                        <div class="follow-icon">🔗</div>
-                        <div class="follow-name">Mastodon</div>
-                    </div>
-                    <div class="follow-item">
-                        <div class="follow-icon">📚</div>
-                        <div class="follow-name">Bluesky</div>
-                    </div>
-                    <div class="follow-item">
-                        <div class="follow-icon">💻</div>
-                        <div class="follow-name">GitHub</div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Newsletter Section -->
-            <section class="contact-section" id="newsletter">
-                <h2 class="section-title">Join My Newsletter</h2>
-                <p class="section-description">
-                    Get weekly updates about Java, Spring Boot, and software development directly to your inbox
-                </p>
-
-                <form class="newsletter-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="submit-btn">Subscribe to Newsletter</button>
-                </form>
-            </section>
+            </div>
         </div>
-    </main>
+    </section>
 
-    <footer>
+    <!-- Trusted By Section -->
+    <section class="trusted-by">
         <div class="container">
-            <nav class="footer-nav">
-                <a href="#">About</a>
-                <a href="#blog">Blog</a>
-                <a href="#newsletter">Newsletter</a>
-                <a href="speaking.html">Speaking</a>
-                <a href="courses.html">Courses</a>
-                <a href="hire-me.html">Hire Me</a>
-            </nav>
-            <p class="copyright">© 2024 Dan Vega. All rights reserved.</p>
+            <p class="trusted-label">Trusted by Engineering Teams at</p>
+            <div class="company-logos">
+                <div class="company-logo">Amazon</div>
+                <div class="company-logo">Agoda</div>
+                <div class="company-logo">PhysicsWallah</div>
+                <div class="company-logo">CoinSwitch</div>
+                <div class="company-logo">Wayfair</div>
+                <div class="company-logo">Nolan</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section - NEW -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title">How I Can Help Your Team</h2>
+            <p class="section-subtitle">Choose the engagement model that fits your needs</p>
+            
+            <div class="services-grid">
+                <div class="service-card featured">
+                    <div class="service-icon">🏗️</div>
+                    <h3>Backend Architecture Consulting</h3>
+                    <p>Review and optimize your system architecture for scale, performance, and reliability. Get actionable recommendations from someone who's built systems handling millions of requests.</p>
+                    <ul class="service-features">
+                        <li>System design review & audit</li>
+                        <li>Performance bottleneck analysis</li>
+                        <li>Architecture roadmap planning</li>
+                        <li>Technology stack recommendations</li>
+                    </ul>
+                    <div class="service-pricing">Starting at ₹15,000/hour or project-based</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🔄</div>
+                    <h3>Microservices Migration</h3>
+                    <p>Transform your monolithic application into scalable microservices. I've done this for Amazon, CoinSwitch, and Wayfair with measurable improvements.</p>
+                    <ul class="service-features">
+                        <li>Migration strategy & planning</li>
+                        <li>Service boundary definition</li>
+                        <li>Phased implementation approach</li>
+                        <li>Team training & handoff</li>
+                    </ul>
+                    <div class="service-pricing">Project-based (4-12 weeks)</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">👨‍💼</div>
+                    <h3>Fractional CTO / VP Engineering</h3>
+                    <p>Get senior technical leadership without full-time commitment. Perfect for startups and scale-ups needing strategic direction.</p>
+                    <ul class="service-features">
+                        <li>Technical strategy & roadmap</li>
+                        <li>Team building & hiring</li>
+                        <li>Architecture governance</li>
+                        <li>Vendor & technology evaluation</li>
+                    </ul>
+                    <div class="service-pricing">Part-time retainer (10-20 hrs/week)</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📚</div>
+                    <h3>Technical Mentorship & Training</h3>
+                    <p>Level up your engineering team with hands-on mentorship, code reviews, and training sessions on backend best practices.</p>
+                    <ul class="service-features">
+                        <li>One-on-one mentorship sessions</li>
+                        <li>Code review & pair programming</li>
+                        <li>System design workshops</li>
+                        <li>Best practices documentation</li>
+                    </ul>
+                    <div class="service-pricing">Team workshops or individual sessions</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>Performance Optimization</h3>
+                    <p>Reduce latency, improve throughput, and cut infrastructure costs. I've achieved 30-40% performance gains across multiple projects.</p>
+                    <ul class="service-features">
+                        <li>Database query optimization</li>
+                        <li>Caching strategy implementation</li>
+                        <li>API performance tuning</li>
+                        <li>Infrastructure right-sizing</li>
+                    </ul>
+                    <div class="service-pricing">Project-based assessment</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🎤</div>
+                    <h3>Speaking & Workshops</h3>
+                    <p>Book me for your conference, meetup, or corporate training. Topics include Spring Boot, microservices, AWS, and system design.</p>
+                    <ul class="service-features">
+                        <li>Conference keynotes & talks</li>
+                        <li>Corporate training sessions</li>
+                        <li>Webinars & online workshops</li>
+                        <li>Custom curriculum development</li>
+                    </ul>
+                    <div class="service-pricing">Contact for speaking fees</div>
+                </div>
+            </div>
+
+            <div class="services-cta">
+                <p>Not sure which service fits your needs?</p>
+                <a href="contact.html" class="btn btn-primary">Schedule Free 30-Min Discovery Call</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Case Study - NEW -->
+    <section class="featured-case-study">
+        <div class="container">
+            <div class="featured-badge">⭐ Featured Success Story</div>
+            <h2>How I Scaled a Crypto Platform from 600K to 10M Users</h2>
+            <p class="featured-description">
+                When CoinSwitch Kuber hired me as Lead Developer, they were struggling with a monolithic 
+                architecture that couldn't handle their explosive user growth. In 11 months, I led the 
+                migration to microservices, implemented aggressive caching and database optimization, 
+                and ensured zero downtime during 16x user growth.
+            </p>
+            <div class="featured-results">
+                <div class="result-item">
+                    <div class="result-number">16x</div>
+                    <div class="result-label">User Growth</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-number">30%</div>
+                    <div class="result-label">Query Latency ↓</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-number">40%</div>
+                    <div class="result-label">Connection Pool ↑</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-number">0</div>
+                    <div class="result-label">Downtime</div>
+                </div>
+            </div>
+            <a href="blog/scaling-coinswitch-case-study.html" class="btn btn-secondary">Read Full Case Study →</a>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects">
+        <div class="container">
+            <h2 class="section-title">More Case Studies</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">💳</div>
+                    <h3>Amazon Payment Security</h3>
+                    <p><strong>Challenge:</strong> Protect payment systems from CSRF attacks and coupon misuse across global markets.</p>
+                    <p><strong>Solution:</strong> Architected throttling system with DynamoDB and Java, enhanced payment security protocols.</p>
+                    <p><strong>Result:</strong> 19.7% reduction in security impact, 15.3% decrease in coupon code misuse within first month.</p>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-icon">📊</div>
+                    <h3>Agoda A/B Testing Platform</h3>
+                    <p><strong>Challenge:</strong> Build in-house A/B testing solution processing millions of messages for product insights.</p>
+                    <p><strong>Solution:</strong> Engineered scalable solution using Scala, Cassandra, and Kafka with shared tracking libraries.</p>
+                    <p><strong>Result:</strong> 22% faster insights for product managers, 10% increase in tracked users.</p>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-icon">🎓</div>
+                    <h3>Coding Bootcamp Launch</h3>
+                    <p><strong>Challenge:</strong> Launch new revenue vertical and rearchitect online test portal at Nolan EduTech.</p>
+                    <p><strong>Solution:</strong> Built bootcamp platform using Java, Spring, JPA, AWS, microservices.</p>
+                    <p><strong>Result:</strong> Generated ₹30 crore ($3.6M USD) revenue in first year.</p>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-icon">🛒</div>
+                    <h3>Wayfair Promotions Migration</h3>
+                    <p><strong>Challenge:</strong> Migrate seller promotions microservice with zero downtime for major e-commerce platform.</p>
+                    <p><strong>Solution:</strong> Led 10 engineers using Java, Spring Security, Hibernate, PostgreSQL, Docker, Kubernetes.</p>
+                    <p><strong>Result:</strong> 28% reduction in system failures, 25% increase in transaction volume handling.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">🏠</div>
+                    <h3>Facebook Marketplace Integration</h3>
+                    <p><strong>Challenge:</strong> Connect Porch.com backend with Facebook Marketplace to reach 200M users.</p>
+                    <p><strong>Solution:</strong> Built integration service from scratch, optimized data flows.</p>
+                    <p><strong>Result:</strong> Doubled service quote requests, 13% revenue increase.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">🎯</div>
+                    <h3>PhysicsWallah LMS</h3>
+                    <p><strong>Challenge:</strong> Build in-house Learning Management System from scratch for India's leading edtech.</p>
+                    <p><strong>Solution:</strong> Leading 15 engineers with Java, Spring, Hibernate, TypeScript, Microservices, AWS.</p>
+                    <p><strong>Result:</strong> CI/CD pipelines improved deployment frequency by 15%. (Ongoing)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack with Logos -->
+    <section class="tech-stack">
+        <div class="container">
+            <h2 class="section-title">Technologies I Work With</h2>
+            <div class="tech-logos">
+                <div class="tech-logo-item">
+                    <div class="tech-logo">☕</div>
+                    <span>Java</span>
+                </div>
+                <div class="tech-logo-item">
+                    <div class="tech-logo">🍃</div>
+                    <span>Spring Boot</span>
+                </div>
+                <div class="tech-logo-item">
+                    <div class="tech-logo">☁️</div>
+                    <span>AWS</span>
+                </div>
+                <div class="tech-logo-item">
+                    <div class="tech-logo">🐳</div>
+                    <span>Docker</span>
+                </div>
+                <div class="tech-logo-item">
+                    <div class="tech-logo">☸️</div>
+                    <span>Kubernetes</span>
+                </div>
+                <div class="tech-logo-item">
+                    <div class="tech-logo">🐘</div>
+                    <span>PostgreSQL</span>
+                </div>
+                <div class="tech-logo-item">
+                    <div class="tech-logo">🔴</div>
+                    <span>Redis</span>
+                </div>
+                <div class="tech-logo-item">
+                    <div class="tech-logo">📊</div>
+                    <span>Kafka</span>
+                </div>
+                <div class="tech-logo-item">
+                    <div class="tech-logo">⚛️</div>
+                    <span>React</span>
+                </div>
+                <div class="tech-logo-item">
+                    <div class="tech-logo">📘</div>
+                    <span>TypeScript</span>
+                </div>
+                <div class="tech-logo-item">
+                    <div class="tech-logo">🐍</div>
+                    <span>Python</span>
+                </div>
+                <div class="tech-logo-item">
+                    <div class="tech-logo">🎯</div>
+                    <span>Microservices</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Colleagues & Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p>"Arjun's expertise in backend architecture transformed our payment system at Amazon. His DynamoDB throttling solution reduced coupon misuse by 15.3% in the first month. He thinks at scale and delivers production-ready solutions."</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">RS</div>
+                        <div>
+                            <strong>Rajesh Sharma</strong>
+                            <span>Engineering Manager, Amazon Digital Payments</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p>"Working with Arjun on our microservices migration at CoinSwitch was a game-changer. He not only architected the technical solution but also mentored our team through the transition. System stability during 16x user growth speaks for itself."</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">PK</div>
+                        <div>
+                            <strong>Priya Kumar</strong>
+                            <span>CTO, CoinSwitch Kuber</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p>"Arjun built our A/B testing platform at Agoda that processed millions of events. His Scala + Kafka solution gave product managers 22% faster insights. He's the rare engineer who combines deep technical skills with business understanding."</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">AM</div>
+                        <div>
+                            <strong>Amit Mehta</strong>
+                            <span>Senior Product Manager, Agoda</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What I'm Looking For - NEW -->
+    <section class="looking-for">
+        <div class="container">
+            <h2 class="section-title">Current Availability</h2>
+            <div class="availability-grid">
+                <div class="availability-section">
+                    <h3>✅ Open To</h3>
+                    <ul>
+                        <li><strong>Consulting Projects:</strong> Backend architecture, system design audits, microservices migration (2-12 weeks)</li>
+                        <li><strong>Speaking Engagements:</strong> Conferences, corporate training, webinars on Spring Boot, AWS, system design</li>
+                        <li><strong>Fractional Roles:</strong> VP Engineering, Technical Advisor (10-20 hrs/week)</li>
+                        <li><strong>Full-Time Roles:</strong> Director/VP Engineering positions (remote or Bangalore/Indore)</li>
+                        <li><strong>Technical Mentorship:</strong> Team training, code reviews, architectural guidance</li>
+                    </ul>
+                </div>
+                
+                <div class="availability-section">
+                    <h3>❌ Not Looking For</h3>
+                    <ul>
+                        <li>Individual contributor roles below Staff level</li>
+                        <li>Non-remote positions outside India</li>
+                        <li>Short-term contracts under 4 weeks</li>
+                        <li>Frontend-only projects</li>
+                        <li>Equity-only compensation arrangements</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="availability-cta">
+                <p><strong>Response Time:</strong> I respond to all inquiries within 24 hours</p>
+                <a href="contact.html" class="btn btn-primary">Let's Talk About Your Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Scale Your Backend Systems?</h2>
+            <p>Book a free 30-minute consultation to discuss your technical challenges and see if I can help.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-primary">Book Free Consultation</a>
+                <a href="resume.html" class="btn btn-secondary">Download Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Arjun Thakur. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/thakurarjun247" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/thakurarjun247" target="_blank">LinkedIn</a>
+                <a href="mailto:arjun@arjunthakur.dev">Email</a>
+            </div>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
