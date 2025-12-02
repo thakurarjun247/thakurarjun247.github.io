@@ -24,4 +24,4 @@ git commit -m "$commitMessage"
 
 git push
 
-echo "Pushed to Prod!\n"
+echo -e "\033[0;32m✅  Pushed to Prod!\033[0m"
