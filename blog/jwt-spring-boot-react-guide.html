@@ -74,7 +74,7 @@
                 </ul>
 
                 <div class="code-block">
-                    <pre>de>User Login Flow:
+                    <pre> <code>User Login Flow:
 1. User submits credentials (email + password)
 2. Server validates credentials
 3. Server generates access token (15 min) + refresh token (7 days)
@@ -88,7 +88,7 @@
                 
                 <h3>1. Dependencies (pom.xml)</h3>
                 <div class="code-block">
-                    <pre>de>&lt;dependency&gt;
+                    <pre> <code>&lt;dependency&gt;
     &lt;groupId&gt;io.jsonwebtoken&lt;/groupId&gt;
     &lt;artifactId&gt;jjwt-api&lt;/artifactId&gt;
     &lt;version&gt;0.11.5&lt;/version&gt;
@@ -111,7 +111,7 @@
 
                 <h3>2. JWT Utility Class</h3>
                 <div class="code-block">
-                    <pre>de>@Component
+                    <pre> <code>@Component
 public class JwtUtil {
     
     @Value("${jwt.secret}")
@@ -152,7 +152,7 @@ public class JwtUtil {
                 
                 <h3>API Service with Axios</h3>
                 <div class="code-block">
-                    <pre>de>import axios from 'axios';
+                    <pre><code>import axios from 'axios';
 
 const API_BASE_URL = 'http://localhost:8080/api';
 let accessToken = null;
@@ -274,19 +274,7 @@ export default api;</code></pre>
                 </div>
             </div>
 
-            <div class="related-posts">
-                <h3>Related Articles</h3>
-                <div class="related-posts-grid">
-                    <a href="#" class="related-post-card">
-                        <h4>How I Scaled CoinSwitch from 600K to 10M Users</h4>
-                        <p>Case study on scaling crypto platform through microservices migration</p>
-                    </a>
-                    <a href="#" class="related-post-card">
-                        <h4>Database Optimization: From Slow to Fast</h4>
-                        <p>Advanced PostgreSQL optimization techniques</p>
-                    </a>
-                </div>
-            </div>
+
 
         </div>
     </article>
