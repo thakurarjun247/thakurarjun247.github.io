@@ -109,3 +109,83 @@ function isValidEmail(email) {
 }
 
 console.log('Portfolio site loaded successfully!');
+
+// ============================================
+// TESTIMONIAL SLIDER
+// ============================================
+
+let currentSlideIndex = 1;
+let slideInterval;
+
+// Initialize slider
+document.addEventListener('DOMContentLoaded', function() {
+    showSlide(currentSlideIndex);
+    startAutoSlide();
+});
+
+function moveSlide(n) {
+    clearInterval(slideInterval); // Stop auto-slide when user interacts
+    showSlide(currentSlideIndex += n);
+    startAutoSlide(); // Restart auto-slide
+}
+
+function currentSlide(n) {
+    clearInterval(slideInterval);
+    showSlide(currentSlideIndex = n);
+    startAutoSlide();
+}
+
+function showSlide(n) {
+    let slides = document.getElementsByClassName("testimonial-slide");
+    let dots = document.getElementsByClassName("dot");
+    
+    if (n > slides.length) { currentSlideIndex = 1 }
+    if (n < 1) { currentSlideIndex = slides.length }
+    
+    // Hide all slides
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+    }
+    
+    // Remove active from all dots
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+    }
+    
+    // Show current slide
+    if (slides[currentSlideIndex - 1]) {
+        slides[currentSlideIndex - 1].classList.add("active");
+    }
+    if (dots[currentSlideIndex - 1]) {
+        dots[currentSlideIndex - 1].classList.add("active");
+    }
+}
+
+function startAutoSlide() {
+    slideInterval = setInterval(() => {
+        moveSlide(1);
+    }, 5000); // Change slide every 5 seconds
+}
+
+// Pause auto-slide on hover
+document.addEventListener('DOMContentLoaded', function() {
+    const sliderWrapper = document.querySelector('.slider-wrapper');
+    if (sliderWrapper) {
+        sliderWrapper.addEventListener('mouseenter', () => {
+            clearInterval(slideInterval);
+        });
+        
+        sliderWrapper.addEventListener('mouseleave', () => {
+            startAutoSlide();
+        });
+    }
+});
+
+// Keyboard navigation
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowLeft') {
+        moveSlide(-1);
+    } else if (e.key === 'ArrowRight') {
+        moveSlide(1);
+    }
+});
