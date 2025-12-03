@@ -177,11 +177,19 @@ body {
     }
 }
 
-.hero-badge {
+/* .hero-badge {
     display: flex;
     gap: 1rem;
     margin-bottom: 1.5rem;
     flex-wrap: wrap;
+} */
+
+.hero-badge {
+    display: flex;
+    flex-direction: column; /* stack badges vertically */
+    align-items: flex-start; /* align left */
+    gap: 0.5rem;            /* space between badges */
+    margin-bottom: 1rem;
 }
 
 .badge {
