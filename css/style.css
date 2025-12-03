@@ -1931,7 +1931,7 @@ section {
     }
 
     .nav-menu a {
-        font-size: 1.1rem; /* slightly bigger touch target */
+        font-size: 1.4rem; /* slightly bigger touch target */
         padding: 0.5rem 1rem;
     }
 }
