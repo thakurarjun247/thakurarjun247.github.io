@@ -157,6 +157,26 @@ body {
     align-items: center;
 }
 
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr; /* collapse grid */
+        gap: 1.5rem;                /* smaller gap */
+        text-align: center;
+    }
+}
+.profile-image {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .profile-image {
+        max-width: 180px;
+    }
+}
+
 .hero-badge {
     display: flex;
     gap: 1rem;
