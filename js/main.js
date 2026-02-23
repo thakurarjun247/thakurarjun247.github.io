@@ -189,3 +189,18 @@ document.addEventListener('keydown', function(e) {
         moveSlide(1);
     }
 });
+
+
+
+// ============================================
+// CONTACT REVEAL
+// ============================================
+document.querySelectorAll('.reveal-btn').forEach(btn => {
+    btn.addEventListener('click', function () {
+        if (this.dataset.revealed === 'true') return;
+        const link = document.createElement('a');
+        link.href = this.dataset.href;
+        link.textContent = this.dataset.value;
+        this.replaceWith(link);
+    });
+});
