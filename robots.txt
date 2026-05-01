@@ -1,4 +1,21 @@
 User-agent: *
 Allow: /
 
+# Sitemap
 Sitemap: https://arjunthakur.dev/sitemap.xml
+
+# Allow AI crawlers (GEO / LLM indexing)
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: CCBot
+Allow: /
