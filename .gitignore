@@ -1,0 +1,27 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+*.swp
+*.swo
+*.swn
+*~
+.vscode/
+.idea/
+*.sublime-*
+
+# Build / deps (just in case)
+node_modules/
+dist/
+build/
+.cache/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Env
+.env
+.env.local

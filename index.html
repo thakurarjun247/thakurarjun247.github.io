@@ -20,7 +20,7 @@
   <meta name="ICBM" content="22.7196, 75.8577">
 
   <!-- Theme -->
-  <meta name="theme-color" content="#32b8c6">
+  <meta name="theme-color" content="#22d3ee">
 
   <!-- Open Graph -->
   <meta property="og:type" content="profile">
@@ -49,7 +49,12 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
   <link rel="manifest" href="/images/favicon/site.webmanifest">
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" as="image" href="images/arjun.jpeg" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt — AI/LLM-friendly profile">
+  <link rel="stylesheet" href="css/style.css?v=20260504-3">
 
   <!-- JSON-LD: Person (GEO / LLM-friendly structured data) -->
   <script type="application/ld+json">
@@ -225,7 +230,7 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-menu" id="navMenu">
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
         <li><a href="resume.html">Resume</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="training.html">Training</a></li>
@@ -239,6 +244,11 @@
     <div class="container">
       <div class="hero-content">
         <div class="hero-text">
+          <a href="contact.html" class="status-pill" aria-label="Available for new engagements — book a call">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>Available for Lead AI / Fractional CTO engagements</span>
+          </a>
+
           <div class="hero-badge">
             <span class="badge">Founder @ Yuvan — AI Math Tutor</span>
             <span class="badge">ex-Amazon · ex-Agoda</span>
@@ -304,8 +314,8 @@
     <div class="container">
       <h2 class="section-title">Current Availability</h2>
 
-      <div style="background-color:var(--card-bg);padding:2.5rem;border-radius:12px;border-left:4px solid var(--success-color);margin-bottom:2rem;">
-        <h3 style="color:var(--success-color);margin-bottom:1.5rem;font-size:1.75rem;">Open To</h3>
+      <div class="callout callout--success">
+        <h3 class="callout-title is-success">Open To</h3>
         <ul class="summary-list">
           <li><strong>Lead / Principal AI Engineer</strong> — agentic systems, RAG, voice AI</li>
           <li><strong>AI Architect</strong> — end-to-end system design for AI-native products</li>
@@ -317,8 +327,8 @@
         </ul>
       </div>
 
-      <div style="background-color:var(--card-bg);padding:2.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);">
-        <h3 style="color:var(--secondary-color);margin-bottom:1.5rem;font-size:1.75rem;">Not Open To</h3>
+      <div class="callout callout--muted">
+        <h3 class="callout-title">Not Open To</h3>
         <ul class="summary-list">
           <li>Permanent relocation outside of Indore</li>
         </ul>
@@ -407,12 +417,12 @@
       <h2 class="section-title">Flagship Project: Yuvan — Voice-First AI Math Tutor</h2>
       <p class="section-subtitle">A production agentic system designed, built, and shipped solo — end-to-end</p>
 
-      <div style="background-color:var(--card-bg);padding:2.5rem;border-radius:12px;border-left:4px solid var(--primary-color);margin-bottom:2rem;">
-        <p style="margin-bottom:1.5rem;color:var(--text-secondary);font-size:1.05rem;">
-          <strong style="color:var(--text-primary);">Yuvan</strong> is a live, paying-customer AI product for CBSE Class 10 students. 5 schools are paying design partners on a B2B2C model (school recommends, parent pays). Full agentic architecture built by Arjun:
+      <div class="callout callout--brand">
+        <p class="flagship-lead">
+          <strong>Yuvan</strong> is a live, paying-customer AI product for CBSE Class 10 students. 5 schools are paying design partners on a B2B2C model (school recommends, parent pays). Full agentic architecture built by Arjun:
         </p>
 
-        <div class="services-grid" style="margin-top:1.5rem;">
+        <div class="services-grid">
           <div class="service-card">
             <h3>LangGraph State Machine</h3>
             <p>Per-doubt agent: embed → semantic FAQ-cache lookup → RAG retrieval over NCERT chunks → GPT-4o-mini generation → math verifier → topic auto-tagger → persistence → re-explain loop on detected student confusion.</p>
@@ -439,7 +449,7 @@
           </div>
         </div>
 
-        <p style="margin-top:1.5rem;color:var(--text-secondary);">
+        <p class="flagship-stack">
           <strong>Stack:</strong> LangGraph · FastAPI (async) · OpenAI GPT-4o-mini · OpenAI Realtime API · pgvector · Supabase · Next.js 15 · Railway · Vercel · LangSmith
         </p>
       </div>
@@ -534,7 +544,7 @@
     <div class="container">
       <h2 class="section-title">Core Technical Skills</h2>
 
-      <div class="card" style="background-color:var(--card-bg);padding:2.5rem;border-radius:12px;border-left:4px solid var(--primary-color);margin-bottom:2rem;">
+      <div class="callout callout--brand">
         <p><strong>Agentic AI and LLMs:</strong> LangChain, LangGraph (stateful agent graphs), RAG, semantic FAQ caching, function/tool calling, prompt engineering, evals, agent observability (LangSmith), guardrails and verifier patterns, multi-agent orchestration</p>
         <p><strong>LLM Providers and Voice:</strong> OpenAI GPT-4o / 4o-mini, Realtime API, Embeddings (text-embedding-3), Anthropic Claude, Gemini, OpenAI Whisper, WebRTC voice agents, streaming + interruption handling</p>
         <p><strong>Vector and Retrieval:</strong> pgvector, embeddings (OpenAI, Cohere, BGE), hybrid search, chunking strategies, cosine-similarity caching, retrieval evals</p>
@@ -556,24 +566,24 @@
     <div class="container">
       <h2 class="section-title">Frequently Asked Questions</h2>
 
-      <div style="display:flex;flex-direction:column;gap:1.5rem;">
-        <div class="card" style="background-color:var(--card-bg);padding:1.75rem;border-radius:12px;">
-          <h3 style="color:var(--primary-color);margin-bottom:0.75rem;">What kind of AI systems does Arjun Thakur build?</h3>
+      <div class="faq-stack">
+        <div class="faq-card">
+          <h3>What kind of AI systems does Arjun Thakur build?</h3>
           <p>Arjun builds production agentic AI systems from the ground up: LangGraph stateful agent graphs, RAG pipelines on pgvector, WebRTC voice agents using OpenAI Realtime API, multi-tenant AI backends with Supabase, and full-stack AI products with Next.js 15. He runs LangSmith evals and retrieval-precision metrics before anything is called production-ready.</p>
         </div>
 
-        <div class="card" style="background-color:var(--card-bg);padding:1.75rem;border-radius:12px;">
-          <h3 style="color:var(--primary-color);margin-bottom:0.75rem;">Is Arjun available as a Fractional CTO or for freelance AI projects?</h3>
+        <div class="faq-card">
+          <h3>Is Arjun available as a Fractional CTO or for freelance AI projects?</h3>
           <p>Yes. Arjun is available for fractional CTO engagements, senior freelance AI engineering contracts, and full-time Lead/Principal AI Engineer roles globally. Remote-first. Contact via the form or email at arjun@arjunthakur.dev.</p>
         </div>
 
-        <div class="card" style="background-color:var(--card-bg);padding:1.75rem;border-radius:12px;">
-          <h3 style="color:var(--primary-color);margin-bottom:0.75rem;">What is Arjun Thakur's background before AI?</h3>
+        <div class="faq-card">
+          <h3>What is Arjun Thakur's background before AI?</h3>
           <p>10+ years of production engineering: SDE2 at Amazon (payments/security), Senior Software Developer at Agoda (distributed systems with Scala/Cassandra/Kafka), Lead Developer at CoinSwitch Kuber (scaled 600K to 10M users), VP Engineering at Nolan EduTech (INR 30 crore revenue in one year), Senior Engineering Manager at ForaySoft/Wayfair, and Director of Engineering at PhysicsWallah (led 15-engineer team). Pivoted full-time into AI in late 2023, founded Yuvan in 2025.</p>
         </div>
 
-        <div class="card" style="background-color:var(--card-bg);padding:1.75rem;border-radius:12px;">
-          <h3 style="color:var(--primary-color);margin-bottom:0.75rem;">How does Arjun approach production AI quality?</h3>
+        <div class="faq-card">
+          <h3>How does Arjun approach production AI quality?</h3>
           <p>Arjun runs LangSmith evals, retrieval-precision metrics, and full agent traces before calling anything production-ready. He implements math verifier patterns to validate numerical claims, guardrails to prevent hallucinations, and semantic FAQ caches to manage per-session LLM costs. The same engineering rigor he brought from Amazon and Agoda applies to AI systems.</p>
         </div>
       </div>
@@ -606,6 +616,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=20260504-3" defer></script>
 </body>
 </html>
