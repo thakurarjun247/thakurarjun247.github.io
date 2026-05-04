@@ -54,7 +54,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
   <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt — AI/LLM-friendly profile">
-  <link rel="stylesheet" href="css/style.css?v=20260504-3">
+  <link rel="stylesheet" href="css/style.css?v=20260504-5">
 
   <!-- JSON-LD: Person (GEO / LLM-friendly structured data) -->
   <script type="application/ld+json">
@@ -261,15 +261,15 @@
 
           <div class="hero-stats">
             <div class="stat-item">
-              <div class="stat-number">10+</div>
+              <div class="stat-number" data-count-to="10" data-suffix="+">0</div>
               <div class="stat-label">Years Production Engineering</div>
             </div>
             <div class="stat-item">
-              <div class="stat-number">5</div>
+              <div class="stat-number" data-count-to="5" data-suffix="">0</div>
               <div class="stat-label">Paying Schools on Yuvan</div>
             </div>
             <div class="stat-item">
-              <div class="stat-number">900+</div>
+              <div class="stat-number" data-count-to="900" data-suffix="+">0</div>
               <div class="stat-label">AI Prototype Users</div>
             </div>
           </div>
@@ -288,6 +288,12 @@
         <div class="hero-image">
           <div class="profile-image-container">
             <img src="images/arjun.jpeg" alt="Arjun Thakur — Principal AI Engineer, LangGraph and RAG specialist, founder of Yuvan, ex-Amazon, ex-Agoda" class="profile-image" width="400" height="400" fetchpriority="high" decoding="async">
+            <div class="tech-orbit" aria-hidden="true">
+              <span class="orbit-chip">LangGraph</span>
+              <span class="orbit-chip is-accent">RAG · pgvector</span>
+              <span class="orbit-chip is-success">FastAPI</span>
+              <span class="orbit-chip">OpenAI Realtime</span>
+            </div>
           </div>
         </div>
       </div>
@@ -298,7 +304,7 @@
   <!-- Trusted By -->
   <section class="trusted-by">
     <div class="container">
-      <p class="trusted-label">Engineering Experience at</p>
+      <p class="trusted-label">ENGINEERING EXPERIENCE AT</p>
       <div class="company-logos">
         <div class="company-logo">Amazon</div>
         <div class="company-logo">Agoda</div>
@@ -306,6 +312,53 @@
         <div class="company-logo">CoinSwitch Kuber</div>
         <div class="company-logo">Wayfair</div>
       </div>
+    </div>
+  </section>
+
+  <!-- Tech Marquee -->
+  <section class="marquee" aria-label="Core technology stack">
+    <div class="marquee-track">
+      <span class="marquee-item">LangGraph</span>
+      <span class="marquee-item">LangChain</span>
+      <span class="marquee-item">RAG</span>
+      <span class="marquee-item">pgvector</span>
+      <span class="marquee-item">OpenAI Realtime</span>
+      <span class="marquee-item">WebRTC</span>
+      <span class="marquee-item">FastAPI</span>
+      <span class="marquee-item">Python 3.11+</span>
+      <span class="marquee-item">Pydantic v2</span>
+      <span class="marquee-item">Java 21</span>
+      <span class="marquee-item">Spring Boot</span>
+      <span class="marquee-item">Next.js 15</span>
+      <span class="marquee-item">TypeScript</span>
+      <span class="marquee-item">Supabase</span>
+      <span class="marquee-item">PostgreSQL</span>
+      <span class="marquee-item">Kafka</span>
+      <span class="marquee-item">Docker</span>
+      <span class="marquee-item">Kubernetes</span>
+      <span class="marquee-item">AWS</span>
+      <span class="marquee-item">LangSmith</span>
+      <!-- duplicate set for seamless loop -->
+      <span class="marquee-item">LangGraph</span>
+      <span class="marquee-item">LangChain</span>
+      <span class="marquee-item">RAG</span>
+      <span class="marquee-item">pgvector</span>
+      <span class="marquee-item">OpenAI Realtime</span>
+      <span class="marquee-item">WebRTC</span>
+      <span class="marquee-item">FastAPI</span>
+      <span class="marquee-item">Python 3.11+</span>
+      <span class="marquee-item">Pydantic v2</span>
+      <span class="marquee-item">Java 21</span>
+      <span class="marquee-item">Spring Boot</span>
+      <span class="marquee-item">Next.js 15</span>
+      <span class="marquee-item">TypeScript</span>
+      <span class="marquee-item">Supabase</span>
+      <span class="marquee-item">PostgreSQL</span>
+      <span class="marquee-item">Kafka</span>
+      <span class="marquee-item">Docker</span>
+      <span class="marquee-item">Kubernetes</span>
+      <span class="marquee-item">AWS</span>
+      <span class="marquee-item">LangSmith</span>
     </div>
   </section>
 
@@ -616,6 +669,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20260504-3" defer></script>
+  <script src="js/main.js?v=20260504-5" defer></script>
 </body>
 </html>
