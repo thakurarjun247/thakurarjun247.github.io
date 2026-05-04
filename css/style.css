@@ -2832,61 +2832,6 @@ time {
 
 
 /* ============================================
-   PROFILE PHOTO — orbiting tech badges
-   ============================================ */
-.hero-image {
-    position: relative;
-}
-
-.tech-orbit {
-    position: absolute;
-    inset: -30px;
-    pointer-events: none;
-    z-index: 2;
-}
-
-.orbit-chip {
-    position: absolute;
-    background: rgba(11, 15, 21, 0.85);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(34, 211, 238, 0.4);
-    color: var(--text-primary);
-    padding: 0.45rem 0.85rem;
-    border-radius: 999px;
-    font-size: 0.82rem;
-    font-weight: 600;
-    font-family: var(--font-mono);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.4), 0 0 0 1px rgba(34,211,238,0.1);
-    white-space: nowrap;
-    pointer-events: auto;
-    animation: chipFloat 6s ease-in-out infinite;
-    letter-spacing: -0.02em;
-}
-
-.orbit-chip.is-accent { border-color: rgba(168, 85, 247, 0.45); box-shadow: 0 8px 24px rgba(0,0,0,0.4), 0 0 0 1px rgba(168,85,247,0.12); }
-.orbit-chip.is-success { border-color: rgba(16, 185, 129, 0.45); box-shadow: 0 8px 24px rgba(0,0,0,0.4), 0 0 0 1px rgba(16,185,129,0.15); }
-
-.orbit-chip:nth-child(1) { top: 8%;   left: -10%; animation-delay: 0s; }
-.orbit-chip:nth-child(2) { top: 30%;  right: -14%; animation-delay: -1.5s; }
-.orbit-chip:nth-child(3) { bottom: 22%; left: -16%; animation-delay: -3s; }
-.orbit-chip:nth-child(4) { bottom: 4%;  right: -8%; animation-delay: -4.5s; }
-
-@keyframes chipFloat {
-    0%, 100% { transform: translateY(0); }
-    50%      { transform: translateY(-8px); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .orbit-chip { animation: none; }
-}
-
-@media (max-width: 768px) {
-    .tech-orbit { display: none; }
-}
-
-
-/* ============================================
    SECTION DIVIDER — subtle gradient line
    ============================================ */
 .section-divider {
