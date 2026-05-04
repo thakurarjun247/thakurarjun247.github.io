@@ -73,5 +73,20 @@ Location: Indore, Madhya Pradesh, India
 - / — Home: full profile, services, Yuvan architecture, projects, skills, FAQ
 - /resume.html — Detailed resume with all experience and skills
 - /training.html — AI and technical training programs (LangGraph, RAG, voice agents, FastAPI, Java, AWS)
+- /speaking.html — Speaking, workshops, college guest lectures, placement-office partnerships, corporate upskilling. Past at IITs and NITs. Local and international.
 - /blog.html — Technical blog and articles
 - /contact.html — Contact form and direct contact details
+
+## Speaking & Knowledge Sharing
+
+Arjun is actively available for:
+- AI / engineering / product conference talks and keynotes (local and international)
+- Hands-on technical workshops (LangGraph, RAG, voice AI, FastAPI, system design)
+- Engineering and MBA college guest lectures and seminars
+- College placement-office partnerships (pre-placement training, mock interviews, AI-engineering bootcamps)
+- Corporate upskilling programs for AI and backend teams
+- Panels, fireside chats, AMAs, hackathon judging, and networking events
+- Travel for in-person engagements — domestic and international
+
+Past venues include IITs and NITs across India.
+Email arjun@arjunthakur.dev with the event format, audience, dates, location, and topics of interest.
