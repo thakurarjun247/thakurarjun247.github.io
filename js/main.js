@@ -204,3 +204,31 @@ document.querySelectorAll('.reveal-btn').forEach(btn => {
         this.replaceWith(link);
     });
 });
+
+
+// ============================================
+// FORCE PDF DOWNLOAD (via blob)
+// ============================================
+document.querySelectorAll('a.download-pdf-btn').forEach(link => {
+    link.addEventListener('click', async function (e) {
+        e.preventDefault();
+        const url = this.getAttribute('href');
+        const filename = this.getAttribute('download') || url.split('/').pop();
+        try {
+            const res = await fetch(url);
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            const blob = await res.blob();
+            const blobUrl = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = blobUrl;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
+        } catch (err) {
+            console.error('PDF download failed, falling back to direct link:', err);
+            window.location.href = url;
+        }
+    });
+});

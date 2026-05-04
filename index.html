@@ -13,14 +13,28 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://arjunthakur.dev/">
 
+  <!-- Geo -->
+  <meta name="geo.region" content="IN-MP">
+  <meta name="geo.placename" content="Indore, Madhya Pradesh, India">
+  <meta name="geo.position" content="22.7196;75.8577">
+  <meta name="ICBM" content="22.7196, 75.8577">
+
+  <!-- Theme -->
+  <meta name="theme-color" content="#32b8c6">
+
   <!-- Open Graph -->
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="profile">
   <meta property="og:url" content="https://arjunthakur.dev/">
   <meta property="og:title" content="Arjun Thakur — Principal AI Engineer | LangGraph · RAG · Voice Agents">
   <meta property="og:description" content="Builds production agentic AI systems end-to-end — LangGraph, RAG, WebRTC voice agents. 10+ years at Amazon and Agoda. Founder of Yuvan (5 paying CBSE schools). Available for Lead AI Engineer, Architect, Fractional CTO roles.">
   <meta property="og:image" content="https://arjunthakur.dev/images/arjun.jpeg">
+  <meta property="og:image:width" content="400">
+  <meta property="og:image:height" content="400">
   <meta property="og:site_name" content="Arjun Thakur">
   <meta property="og:locale" content="en_US">
+  <meta property="profile:first_name" content="Arjun">
+  <meta property="profile:last_name" content="Thakur">
+  <meta property="profile:username" content="thakurarjun247">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
@@ -46,7 +60,7 @@
     "jobTitle": "Principal AI Engineer / Lead AI Architect / Fractional CTO",
     "description": "Principal AI Engineer and Fractional CTO who builds production agentic AI systems end-to-end — LangGraph agent graphs, RAG pipelines, WebRTC voice agents, and multi-tenant AI backends. 10+ years of production engineering at Amazon and Agoda. Founder of Yuvan, a voice-first AI math tutor live with 5 paying CBSE schools in India.",
     "url": "https://arjunthakur.dev",
-    "email": "thakurarjun247@gmail.com",
+    "email": "arjun@arjunthakur.dev",
     "telephone": "+91-9340158116",
     "image": "https://arjunthakur.dev/images/arjun.jpeg",
     "sameAs": [
@@ -87,12 +101,66 @@
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Arjun Thakur — Principal AI Engineer",
+    "alternateName": "arjunthakur.dev",
     "url": "https://arjunthakur.dev",
     "description": "Portfolio and consulting site of Arjun Thakur, Principal AI Engineer and Fractional CTO specialising in production agentic AI systems, LangGraph, RAG pipelines, and WebRTC voice agents.",
+    "inLanguage": "en",
+    "publisher": { "@type": "Person", "name": "Arjun Thakur", "url": "https://arjunthakur.dev" },
     "author": { "@type": "Person", "name": "Arjun Thakur" }
   }
   </script>
 
+  <!-- JSON-LD: Organization (Yuvan) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Yuvan",
+    "description": "Voice-first AI math tutor for CBSE Class 10 students. Live with 5 paying schools on a B2B2C model. Built on LangGraph, RAG (pgvector), and OpenAI Realtime WebRTC.",
+    "url": "https://arjunthakur.dev",
+    "logo": "https://arjunthakur.dev/images/arjun.jpeg",
+    "founder": { "@type": "Person", "name": "Arjun Thakur", "url": "https://arjunthakur.dev" },
+    "foundingDate": "2025-04",
+    "areaServed": "IN",
+    "address": { "@type": "PostalAddress", "addressLocality": "Indore", "addressRegion": "Madhya Pradesh", "addressCountry": "IN" }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arjunthakur.dev/" }
+    ]
+  }
+  </script>
+
+
+  <!-- JSON-LD: ProfilePage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "dateCreated": "2024-01-01",
+    "dateModified": "2026-05-04",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Arjun Thakur",
+      "identifier": "thakurarjun247",
+      "jobTitle": "Principal AI Engineer / Lead AI Architect / Fractional CTO",
+      "description": "Principal AI Engineer and Fractional CTO who builds production agentic AI systems end-to-end — LangGraph agent graphs, RAG pipelines, WebRTC voice agents, multi-tenant AI backends. 10+ years at Amazon and Agoda. Founder of Yuvan, a voice-first AI math tutor live with 5 paying CBSE schools.",
+      "url": "https://arjunthakur.dev",
+      "email": "arjun@arjunthakur.dev",
+      "image": "https://arjunthakur.dev/images/arjun.jpeg",
+      "sameAs": [
+        "https://linkedin.com/in/thakurarjun247",
+        "https://github.com/thakurarjun247"
+      ]
+    }
+  }
+  </script>
   <!-- JSON-LD: FAQPage -->
   <script type="application/ld+json">
   {
@@ -146,11 +214,14 @@
 
 <body>
 
+  <!-- Skip to main content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- Navigation -->
-  <nav class="navbar">
+  <nav class="navbar" aria-label="Main navigation">
     <div class="container">
       <a href="index.html" class="logo">Arjun Thakur</a>
-      <button class="hamburger" id="hamburger">
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-menu" id="navMenu">
@@ -206,13 +277,14 @@
 
         <div class="hero-image">
           <div class="profile-image-container">
-            <img src="images/arjun.jpeg" alt="Arjun Thakur — Principal AI Engineer, LangGraph and RAG specialist" class="profile-image">
+            <img src="images/arjun.jpeg" alt="Arjun Thakur — Principal AI Engineer, LangGraph and RAG specialist, founder of Yuvan, ex-Amazon, ex-Agoda" class="profile-image" width="400" height="400" fetchpriority="high" decoding="async">
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <main id="main-content">
   <!-- Trusted By -->
   <section class="trusted-by">
     <div class="container">
@@ -382,11 +454,11 @@
 
       <div class="testimonial-slider">
         <div class="slider-wrapper">
-          <div class="testimonial-slide active"><img src="images/recommendations/1.jpg" alt="LinkedIn recommendation for Arjun Thakur"></div>
-          <div class="testimonial-slide"><img src="images/recommendations/2.jpg" alt="LinkedIn recommendation for Arjun Thakur"></div>
-          <div class="testimonial-slide"><img src="images/recommendations/3.jpg" alt="LinkedIn recommendation for Arjun Thakur"></div>
-          <div class="testimonial-slide"><img src="images/recommendations/4.jpg" alt="LinkedIn recommendation for Arjun Thakur"></div>
-          <div class="testimonial-slide"><img src="images/recommendations/5.jpg" alt="LinkedIn recommendation for Arjun Thakur"></div>
+          <div class="testimonial-slide active"><img src="images/recommendations/1.jpg" alt="LinkedIn recommendation for Arjun Thakur" loading="lazy" width="700" height="250"></div>
+          <div class="testimonial-slide"><img src="images/recommendations/2.jpg" alt="LinkedIn recommendation for Arjun Thakur" loading="lazy" width="700" height="250"></div>
+          <div class="testimonial-slide"><img src="images/recommendations/3.jpg" alt="LinkedIn recommendation for Arjun Thakur" loading="lazy" width="700" height="250"></div>
+          <div class="testimonial-slide"><img src="images/recommendations/4.jpg" alt="LinkedIn recommendation for Arjun Thakur" loading="lazy" width="700" height="250"></div>
+          <div class="testimonial-slide"><img src="images/recommendations/5.jpg" alt="LinkedIn recommendation for Arjun Thakur" loading="lazy" width="700" height="250"></div>
         </div>
         <button class="slider-btn prev" onclick="moveSlide(-1)">&#10094;</button>
         <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
@@ -492,7 +564,7 @@
 
         <div class="card" style="background-color:var(--card-bg);padding:1.75rem;border-radius:12px;">
           <h3 style="color:var(--primary-color);margin-bottom:0.75rem;">Is Arjun available as a Fractional CTO or for freelance AI projects?</h3>
-          <p>Yes. Arjun is available for fractional CTO engagements, senior freelance AI engineering contracts, and full-time Lead/Principal AI Engineer roles globally. Remote-first. Contact via the form or email at thakurarjun247@gmail.com.</p>
+          <p>Yes. Arjun is available for fractional CTO engagements, senior freelance AI engineering contracts, and full-time Lead/Principal AI Engineer roles globally. Remote-first. Contact via the form or email at arjun@arjunthakur.dev.</p>
         </div>
 
         <div class="card" style="background-color:var(--card-bg);padding:1.75rem;border-radius:12px;">
@@ -507,6 +579,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- CTA -->
   <section class="cta-section">
@@ -526,7 +600,7 @@
       <div class="social-links">
         <a href="https://github.com/thakurarjun247" target="_blank" rel="noopener">GitHub</a>
         <a href="https://linkedin.com/in/thakurarjun247" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:thakurarjun247@gmail.com">Email</a>
+        <a href="mailto:arjun@arjunthakur.dev">Email</a>
         <a href="contact.html">Contact</a>
       </div>
     </div>

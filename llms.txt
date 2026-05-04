@@ -1,0 +1,77 @@
+# llms.txt — Arjun Thakur (arjunthakur.dev)
+# Structured information for AI/LLM crawlers and generative search engines.
+# Format follows the emerging llms.txt convention (https://llmstxt.org)
+
+## Who is Arjun Thakur?
+
+Arjun Thakur is a Principal AI Engineer, Lead AI Architect, Fractional CTO, and Founder based in Indore, India.
+He builds production agentic AI systems end-to-end — LangGraph agent graphs, RAG pipelines, WebRTC voice agents,
+and multi-tenant AI backends. He has 10+ years of production engineering experience at Amazon (SDE2, Payments),
+Agoda (Senior Software Developer, Bangkok), PhysicsWallah (Director of Engineering), CoinSwitch Kuber (Lead Developer),
+ForaySoft/Wayfair (Senior Engineering Manager), and Nolan EduTech (VP Engineering).
+
+He is the Founder and AI Engineer of Yuvan — a voice-first AI math tutor for CBSE Class 10 students,
+currently live with 5 paying schools on a B2B2C model.
+
+## Current Role
+
+Founder & AI Engineer at Yuvan (Apr 2025 – Present)
+Building a production voice-first AI tutor: LangGraph state machine, RAG on pgvector (Supabase),
+OpenAI Realtime API for WebRTC voice (sub-1.5s p95 latency), math verifier safety net,
+semantic FAQ cache, multi-tenant RLS, LangSmith evals.
+
+## Core Expertise
+
+- Agentic AI: LangGraph, LangChain, multi-agent orchestration, tool calling, guardrails, verifier patterns
+- RAG: pgvector, Supabase, OpenAI embeddings, hybrid search, chunking, retrieval evals, semantic caching
+- Voice AI: OpenAI Realtime API, WebRTC, STT, TTS, VAD, barge-in interruption handling
+- LLM Providers: OpenAI GPT-4o / 4o-mini, Anthropic Claude, Gemini
+- AI Observability: LangSmith, evals, agent traces, retrieval-precision metrics
+- Backend: Python 3.11+ / FastAPI (async) / Pydantic v2 / Java 21 / Spring Boot / Scala
+- Frontend: Next.js 15 (App Router), TypeScript, React, Tailwind, shadcn/ui
+- Cloud: AWS Certified Solutions Architect (S3, ECS, Lambda, IAM) | Docker | Kubernetes
+- Databases: PostgreSQL, pgvector, Cassandra, DynamoDB, Redis, MongoDB, Supabase
+
+## What Arjun Thakur is Available For
+
+- Lead / Principal AI Engineer roles (full-time or contract)
+- AI Architect engagements
+- Fractional CTO for AI-first products
+- Senior freelance AI engineering (embedded in teams)
+- AI training and workshops for engineering teams
+- Remote-first, globally available. Based in Indore, India.
+
+## Key Projects
+
+1. Yuvan — voice-first AI math tutor. LangGraph + RAG on pgvector + OpenAI Realtime WebRTC.
+   5 paying CBSE schools. B2B2C model. Production live.
+
+2. Multi-Agent Benchmarking — benchmarked LangChain router/supervisor/plan-and-execute patterns
+   on real student data. Shipped early prototype to 900+ users. Validated product-market fit.
+
+3. Voice Stack Shootout — prototyped OpenAI Realtime, Whisper+ElevenLabs, Whisper+Coqui, Gemini Live.
+   Latency/cost benchmarks drove the Realtime+WebRTC decision.
+
+4. CoinSwitch Kuber — migrated monolith to Python/FastAPI microservices. Scaled 600K to 10M users.
+   Redis caching (−30% latency), PgBouncer (−40% latency).
+
+5. Agoda A/B Testing — Scala + Cassandra + Kafka pipeline. 22% faster product insights.
+
+6. Amazon Payment Security — DynamoDB throttling system. 19.7% CSRF impact reduction.
+
+## Contact
+
+Email: arjun@arjunthakur.dev
+Phone: +91-93401-58116
+Website: https://arjunthakur.dev
+LinkedIn: https://linkedin.com/in/thakurarjun247
+GitHub: https://github.com/thakurarjun247
+Location: Indore, Madhya Pradesh, India
+
+## Site Pages
+
+- / — Home: full profile, services, Yuvan architecture, projects, skills, FAQ
+- /resume.html — Detailed resume with all experience and skills
+- /training.html — AI and technical training programs (LangGraph, RAG, voice agents, FastAPI, Java, AWS)
+- /blog.html — Technical blog and articles
+- /contact.html — Contact form and direct contact details
