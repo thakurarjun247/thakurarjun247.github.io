@@ -20,8 +20,8 @@
     --card-elevated: #171c25;         /* hover/active surface */
 
     --text-primary: #e6edf3;          /* near-white, slight cool tint */
-    --text-secondary: #9ba3af;        /* slate-400 */
-    --text-muted: #64748b;            /* slate-500 */
+    --text-secondary: #aab4c0;        /* slate-300/400 — raised for AA on dark */
+    --text-muted: #8592a3;            /* raised from #64748b → passes WCAG AA (~5.6:1) */
 
     --border-color: #1f2937;          /* slate-800 */
     --border-subtle: #2a3441;
@@ -1899,9 +1899,14 @@ section {
 .slider-wrapper {
     position: relative;
     overflow: hidden;
-    border-radius: 16px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-    background: #fff;
+    border-radius: 18px;
+    padding: 12px;
+    background: var(--card-elevated);
+    border: 1px solid var(--border-strong);
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.45),
+        0 0 50px rgba(34, 211, 238, 0.08),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.02);
 }
 
 /* Individual Slides */
@@ -1918,7 +1923,8 @@ section {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
 }
 
 /* Navigation Buttons */
@@ -2711,7 +2717,7 @@ time {
     font-size: 0.95rem;
     color: var(--text-primary);
     background: var(--dark-bg);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border-strong);
     border-radius: var(--radius-md);
     padding: 0.72rem 0.85rem;
     transition: border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
@@ -3247,13 +3253,39 @@ time {
     .gradient-text { animation: none; }
 }
 
+/* ============================================
+   INNER-PAGE HEADER — shared atmospheric backdrop
+   ============================================ */
+.page-header { position: relative; overflow: hidden; }
+.page-header::before,
+.page-header::after {
+    content: ""; position: absolute; border-radius: 50%;
+    filter: blur(72px); opacity: 0.6; pointer-events: none; z-index: 0; will-change: transform;
+}
+.page-header::before {
+    width: 360px; height: 360px;
+    background: radial-gradient(circle, rgba(34,211,238,0.22), transparent 70%);
+    top: -140px; left: -110px; animation: orbDrift1 18s ease-in-out infinite alternate;
+}
+.page-header::after {
+    width: 420px; height: 420px;
+    background: radial-gradient(circle, rgba(168,85,247,0.18), transparent 70%);
+    bottom: -180px; right: -130px; animation: orbDrift2 22s ease-in-out infinite alternate;
+}
+.page-header > .container { position: relative; z-index: 1; }
 
 /* ============================================
-   "AS SEEN IN / TRUSTED BY" REFRESH LABEL
+   PRIMARY CTA — subtle sheen sweep on hover
    ============================================ */
-.trusted-label {
-    color: var(--text-muted);
-    font-family: var(--font-mono);
-    font-size: 0.78rem;
-    letter-spacing: 0.18em;
+.btn-primary { position: relative; overflow: hidden; isolation: isolate; }
+.btn-primary::after {
+    content: ""; position: absolute; top: 0; left: -75%; width: 55%; height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+    transform: skewX(-20deg); transition: left 0.6s ease; pointer-events: none; z-index: -1;
+}
+.btn-primary:hover::after { left: 140%; }
+
+@media (prefers-reduced-motion: reduce) {
+    .page-header::before, .page-header::after { animation: none; }
+    .btn-primary::after { transition: none; }
 }
