@@ -2656,6 +2656,279 @@ time {
     border-color: var(--primary-color);
 }
 
+/* ───────────────────────────────────────────────────────────
+   Native contact form — styled to match the site, posts to
+   Google Forms. Replaces the old .google-form iframe.
+   ─────────────────────────────────────────────────────────── */
+.native-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.05rem;
+    padding: 0.35rem 0.35rem 0.15rem;
+}
+
+.native-form .nf-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.05rem;
+}
+
+.nf-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    min-width: 0;
+}
+
+.nf-label {
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.nf-req { color: var(--primary-color); font-weight: 700; }
+
+.nf-opt {
+    font-size: 0.68rem;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    color: var(--text-muted);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    padding: 0.05rem 0.45rem;
+}
+
+.native-form input,
+.native-form select,
+.native-form textarea {
+    width: 100%;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    background: var(--dark-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 0.72rem 0.85rem;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.native-form textarea {
+    resize: vertical;
+    min-height: 118px;
+    line-height: 1.55;
+}
+
+.native-form input::placeholder,
+.native-form textarea::placeholder {
+    color: var(--text-muted);
+    opacity: 1;
+}
+
+.native-form input:hover,
+.native-form select:hover,
+.native-form textarea:hover {
+    border-color: var(--border-strong);
+}
+
+.native-form input:focus,
+.native-form select:focus,
+.native-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background: var(--card-bg);
+    box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.14);
+}
+
+.native-form input.is-invalid,
+.native-form select.is-invalid,
+.native-form textarea.is-invalid {
+    border-color: var(--danger-color);
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.14);
+}
+
+/* Custom select chevron */
+.nf-select-wrap { position: relative; display: block; }
+
+.nf-select-wrap select {
+    padding-right: 2.4rem;
+    cursor: pointer;
+}
+
+.nf-select-wrap select option {
+    background: var(--light-bg);
+    color: var(--text-primary);
+}
+
+.nf-select-chevron {
+    position: absolute;
+    right: 0.95rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 8px;
+    color: var(--text-secondary);
+    pointer-events: none;
+}
+
+.nf-error {
+    font-size: 0.78rem;
+    color: var(--danger-color);
+    min-height: 0;
+    line-height: 1.3;
+}
+
+.nf-error:empty { display: none; }
+
+/* Submit button */
+.nf-submit {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    margin-top: 0.25rem;
+    padding: 0.85rem 1.5rem;
+    font-family: var(--font-sans);
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: #04121a;
+    background: var(--gradient-brand);
+    border: 0;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+    box-shadow: 0 8px 24px rgba(34, 211, 238, 0.18);
+}
+
+.nf-submit:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 30px rgba(34, 211, 238, 0.26);
+}
+
+.nf-submit:active { transform: translateY(0); }
+
+.nf-submit:disabled { cursor: progress; opacity: 0.85; }
+
+.nf-spinner {
+    display: none;
+    width: 15px;
+    height: 15px;
+    border: 2px solid rgba(4, 18, 26, 0.35);
+    border-top-color: #04121a;
+    border-radius: 50%;
+    animation: nf-spin 0.7s linear infinite;
+}
+
+.native-form.is-submitting .nf-spinner { display: inline-block; }
+.native-form.is-submitting .nf-submit-label { opacity: 0.75; }
+
+@keyframes nf-spin { to { transform: rotate(360deg); } }
+
+.nf-status {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    margin: 0.15rem 0 0;
+    min-height: 1em;
+    color: var(--text-muted);
+}
+
+.nf-status.is-error { color: var(--danger-color); }
+
+/* Success state */
+.nf-success {
+    text-align: center;
+    padding: 2.25rem 1.25rem 2.5rem;
+    animation: nf-fade-in 0.4s ease both;
+}
+
+.nf-success-icon {
+    width: 54px;
+    height: 54px;
+    margin: 0 auto 1rem;
+    display: grid;
+    place-items: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--success-color);
+    border-radius: 50%;
+    background: rgba(16, 185, 129, 0.12);
+    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0.07);
+}
+
+.nf-success h3 {
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem;
+    outline: none;
+}
+
+.nf-success p {
+    color: var(--text-secondary);
+    max-width: 34ch;
+    margin: 0 auto 1.4rem;
+    line-height: 1.6;
+}
+
+.nf-reset {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 0.55rem 1.1rem;
+    cursor: pointer;
+    transition: border-color 0.18s ease, color 0.18s ease;
+}
+
+.nf-reset:hover { color: var(--primary-color); border-color: var(--primary-color); }
+
+@keyframes nf-fade-in {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Prevent iOS auto-zoom on focus: font-size must be >= 16px on touch */
+@media (max-width: 768px) {
+    .native-form input,
+    .native-form select,
+    .native-form textarea {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 560px) {
+    .native-form { gap: 0.9rem; }
+    .native-form .nf-row { grid-template-columns: 1fr; gap: 0.9rem; }
+
+    /* Tighten the card frame so fields get more width on small screens */
+    .form-card-inner { padding: 0.85rem 0.85rem 0.65rem; }
+    .form-card-bar   { padding: 0.3rem 0.2rem 0.7rem; margin-bottom: 0.7rem; }
+    .form-card-foot  { padding: 0.7rem 0.2rem 0.3rem; font-size: 0.72rem; }
+
+    /* Full-width, comfortable tap target */
+    .nf-submit { width: 100%; padding: 0.95rem 1.25rem; }
+
+    .nf-success { padding: 1.75rem 0.75rem 2rem; }
+}
+
+@media (max-width: 380px) {
+    .form-card-label { font-size: 0.7rem; }
+    .form-card-label .dot-live { flex: 0 0 auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nf-submit, .nf-success { transition: none; animation: none; }
+    .nf-spinner { animation-duration: 1.4s; }
+}
+
 .contact-note {
     background: linear-gradient(180deg, rgba(34, 211, 238, 0.06), rgba(34, 211, 238, 0));
     border: 1px solid rgba(34, 211, 238, 0.18);
