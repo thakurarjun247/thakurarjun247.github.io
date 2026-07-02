@@ -1,0 +1,62 @@
+========================================
+LINKEDIN POST — copy the POST section, publish, then
+immediately post the FIRST COMMENT section below it.
+LinkedIn strips bold/italic — keep it plain text.
+========================================
+
+--- POST ---
+
+I shipped two AI agent systems on deliberately different stacks.
+Here's what the frameworks don't tell you until you're in production.
+
+Two systems, two foundations, on purpose:
+
+→ Watchlist shortlisting agent — native AWS Bedrock. Custom MCP servers + A2A protocol, Titan embeddings, Claude for reasoning.
+
+→ Yuvan (voice-first math tutor) — LangGraph + LangChain + GPT-4o-mini, pgvector, LangSmith for tracing and evals.
+
+Same core problem both times: orchestrate specialist agents, fuse their outputs, keep the reasoning grounded. Very different ergonomics getting there.
+
+What actually stood out:
+
+1. Orchestration is a protocol vs. a state machine.
+
+On the watchlist agent, an Orchestrator talks to an Analyst and a News agent over A2A — structured messages between autonomous services, each owning its own MCP server as a hard tool boundary.
+
+On Yuvan, LangGraph models the whole flow as one explicit graph:
+RAG → generate → verify → tag → persist, with shared state threaded through every node.
+
+A2A/MCP wins when agents are genuinely separate systems.
+LangGraph wins when you want one coherent, inspectable flow.
+
+2. Evals separated the two more than I expected.
+
+LangSmith on Yuvan gave me per-node traces, dataset-driven regression runs, and a way to actually diff prompt changes instead of eyeballing them. Every doubt is replayable.
+
+Bedrock's own eval flow is solid for grounding and quality scoring — but nowhere near the same granularity for debugging a multi-step chain.
+
+If you're iterating fast on a graph, trace-level observability isn't a nice-to-have.
+
+3. Grounding is the hard part in both.
+
+Neither stack saves you from hallucination.
+Watchlist: reasoning constrained strictly to structured scores + retrieved news.
+Yuvan: a math verifier re-checks every numerical claim before the AI speaks it.
+
+Same discipline, different tools — the model proposes, your guardrails dispose.
+
+The real lesson: the framework is not the architecture.
+
+A2A/MCP and LangGraph answer the same question — how do specialist agents cooperate without becoming spaghetti — under different constraints. Knowing when to reach for a protocol vs. a state machine is the actual skill.
+
+One piece I'm still refining: if you're running A2A/MCP in production, how are you handling agent versioning across the message contract? Genuinely want to hear how others solve this.
+
+I build production agentic systems — Bedrock/A2A/MCP and LangGraph/LangChain — with grounding and evals that hold up. If you're hiring for this or want it built, the full write-up and how to work with me are in the comments. 👇
+
+#AgenticAI #LangGraph #AWSBedrock #MCP #LLM
+
+--- FIRST COMMENT (post immediately after publishing) ---
+
+Full write-up: https://arjunthakur.dev/blog/two-agent-stacks-bedrock-vs-langgraph.html
+
+I take on agentic AI builds and advisory — services and background at https://arjunthakur.dev

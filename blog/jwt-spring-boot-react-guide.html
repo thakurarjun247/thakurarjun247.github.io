@@ -56,7 +56,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
   <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt — AI/LLM-friendly profile">
-  <link rel="stylesheet" href="../css/style.css?v=20260504-6">
+  <link rel="stylesheet" href="../css/style.css?v=20260702-1">
 
   <!-- JSON-LD: Article -->
   <script type="application/ld+json">
@@ -310,4 +310,48 @@ export default api;</code></pre>
                 <h3>2. Token Expiration</h3>
                 <ul>
                     <li><strong>Short-lived access tokens</strong> (15 minutes) limit damage if compromised</li>
-                    <li><strong>Longer ref
+                    <li><strong>Longer refresh tokens</strong> (7 days) keep users signed in without re-entering credentials</li>
+                    <li><strong>Rotate refresh tokens</strong> on every use so a stolen token is invalidated the moment the real user refreshes</li>
+                </ul>
+
+                <h3>3. Transport &amp; Storage Hardening</h3>
+                <ul>
+                    <li><strong>Always use HTTPS</strong> in production so tokens are never sent in clear text</li>
+                    <li><strong>Set Secure, HttpOnly, and SameSite=Strict</strong> on the refresh-token cookie</li>
+                    <li><strong>Keep the signing secret out of source control</strong> — load it from environment variables or a secrets manager</li>
+                    <li><strong>Maintain a token blacklist</strong> (or short expiry + rotation) so logout and compromise can revoke access</li>
+                </ul>
+
+                <h2>Wrapping Up</h2>
+                <p>
+                    That's the full pattern: short-lived access tokens for API calls, rotating refresh
+                    tokens in an HttpOnly cookie, and a stateless backend that scales horizontally. Get
+                    the storage and expiration right, keep the secret out of your repo, and you have an
+                    authentication layer that holds up in production — the same one I've shipped for
+                    apps serving millions of users.
+                </p>
+                <p>
+                    Questions or a pattern you'd do differently? I'd like to hear it — reach out via the
+                    <a href="../contact.html">contact page</a>.
+                </p>
+            </div>
+
+        </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="social-links">
+        <a href="https://github.com/thakurarjun247" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/thakurarjun247" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:arjun@arjunthakur.dev">Email</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=20260702-1" defer></script>
+</body>
+</html>

@@ -39,7 +39,7 @@
     --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
     --shadow-md: 0 4px 12px rgba(0,0,0,0.35);
     --shadow-lg: 0 12px 32px rgba(0,0,0,0.45);
-    --shadow-glow: 0 0 40px rgba(34, 211, 238, 0.15);
+    --shadow-glow: 0 0 28px rgba(34, 211, 238, 0.10);
 
     /* Type */
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -3026,21 +3026,10 @@ time {
 .status-dot::after {
     content: '';
     position: absolute;
-    inset: -3px;
+    inset: -2px;
     border-radius: 50%;
     background: var(--success-color);
-    opacity: 0.5;
-    animation: pulseRing 1.8s ease-out infinite;
-}
-
-@keyframes pulseRing {
-    0%   { transform: scale(0.6); opacity: 0.55; }
-    70%  { transform: scale(1.6); opacity: 0;    }
-    100% { transform: scale(1.6); opacity: 0;    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .status-dot::after { animation: none; opacity: 0; }
+    opacity: 0.22;
 }
 
 
@@ -3066,49 +3055,31 @@ time {
     position: absolute;
     border-radius: 50%;
     filter: blur(80px);
-    opacity: 0.55;
+    opacity: 0.3;
     pointer-events: none;
     z-index: 0;
-    will-change: transform;
 }
 
 .hero::before {
     width: 520px;
     height: 520px;
-    background: radial-gradient(circle, rgba(34, 211, 238, 0.35), transparent 70%);
+    background: radial-gradient(circle, rgba(34, 211, 238, 0.28), transparent 70%);
     top: -120px;
     left: -140px;
-    animation: orbDrift1 18s ease-in-out infinite alternate;
 }
 
 .hero::after {
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(168, 85, 247, 0.30), transparent 70%);
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.24), transparent 70%);
     bottom: -160px;
     right: -180px;
-    animation: orbDrift2 22s ease-in-out infinite alternate;
 }
 
 .hero > .container {
     position: relative;
     z-index: 1;
 }
-
-@keyframes orbDrift1 {
-    from { transform: translate(0, 0) scale(1); }
-    to   { transform: translate(60px, 40px) scale(1.1); }
-}
-
-@keyframes orbDrift2 {
-    from { transform: translate(0, 0) scale(1); }
-    to   { transform: translate(-50px, -30px) scale(1.08); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .hero::before, .hero::after { animation: none; }
-}
-
 
 /* ============================================
    SECTION DIVIDER — subtle gradient line
@@ -3237,20 +3208,9 @@ time {
 
 .gradient-text {
     background-image: var(--gradient-brand);
-    background-size: 200% auto;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: gradientShift 8s ease-in-out infinite;
-}
-
-@keyframes gradientShift {
-    0%, 100% { background-position: 0% center; }
-    50%      { background-position: 100% center; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .gradient-text { animation: none; }
 }
 
 /* ============================================
@@ -3260,17 +3220,17 @@ time {
 .page-header::before,
 .page-header::after {
     content: ""; position: absolute; border-radius: 50%;
-    filter: blur(72px); opacity: 0.6; pointer-events: none; z-index: 0; will-change: transform;
+    filter: blur(72px); opacity: 0.32; pointer-events: none; z-index: 0;
 }
 .page-header::before {
     width: 360px; height: 360px;
-    background: radial-gradient(circle, rgba(34,211,238,0.22), transparent 70%);
-    top: -140px; left: -110px; animation: orbDrift1 18s ease-in-out infinite alternate;
+    background: radial-gradient(circle, rgba(34,211,238,0.18), transparent 70%);
+    top: -140px; left: -110px;
 }
 .page-header::after {
     width: 420px; height: 420px;
-    background: radial-gradient(circle, rgba(168,85,247,0.18), transparent 70%);
-    bottom: -180px; right: -130px; animation: orbDrift2 22s ease-in-out infinite alternate;
+    background: radial-gradient(circle, rgba(168,85,247,0.15), transparent 70%);
+    bottom: -180px; right: -130px;
 }
 .page-header > .container { position: relative; z-index: 1; }
 
@@ -3286,6 +3246,5 @@ time {
 .btn-primary:hover::after { left: 140%; }
 
 @media (prefers-reduced-motion: reduce) {
-    .page-header::before, .page-header::after { animation: none; }
     .btn-primary::after { transition: none; }
 }
