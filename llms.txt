@@ -84,6 +84,7 @@ Location: Indore, Madhya Pradesh, India
 - /blog.html — Technical blog and articles
 - /contact.html — Contact form and direct contact details
 - /faq.html — FAQ: training, consulting, projects, speaking, availability, pricing, and how to book
+- /sitemap.html — Human-readable index of all pages
 
 ## Speaking & Knowledge Sharing
 
