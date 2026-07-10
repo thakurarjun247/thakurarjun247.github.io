@@ -40,6 +40,9 @@ semantic FAQ cache, multi-tenant RLS, LangSmith evals.
 - Senior freelance AI engineering (embedded in teams)
 - GEO / AI-search optimization: making sites findable and citable by ChatGPT, Claude, and Perplexity
 - AI training and workshops for engineering teams
+- Freelance AI engineer and freelance / corporate trainer (agentic AI, LangGraph, RAG, voice)
+- Collaborations with YouTubers, content creators, and industry leaders on AI content and projects
+- Running hands-on workshops and attending AI / tech events and conferences
 - 1:1 / private mentoring in agentic AI, LangGraph, RAG, MCP, and AI architecture (remote, global; live online)
 - Remote-first, globally available. Based in Indore, India.
 
@@ -69,6 +72,9 @@ Website: https://arjunthakur.dev
 Blog RSS: https://arjunthakur.dev/feed.xml
 LinkedIn: https://linkedin.com/in/thakurarjun247
 GitHub: https://github.com/thakurarjun247
+X (Twitter): https://x.com/arjunthakurdev
+YouTube: https://www.youtube.com/@ThakurArjun247
+Free Udemy course (SOLID principles): https://www.udemy.com/course/learn-solid-principles-of-oop-arjun-techproschool/
 Location: Indore, Madhya Pradesh, India
 
 ## Site Pages
