@@ -1,0 +1,75 @@
+X / TWITTER THREAD — "How I optimized my site for LLMs (GEO)"
+(post tweets in order; keep numbering or remove — your call)
+
+1/
+A US engineer found me on ChatGPT — searching for 1:1 agentic-AI training — and reached out.
+
+Not luck. GEO.
+
+Here's how I made my site findable + citable by ChatGPT, Claude & Perplexity 🧵
+
+2/
+SEO = rank on Google.
+GEO (Generative Engine Optimization) = get *quoted* by the AI.
+
+Buyers now ask an assistant "who can help me build/learn this?" and act on the answer.
+
+Being the source the model trusts is the new game.
+
+3/
+① llms.txt
+
+A clean, plain-text profile at your site root.
+
+LLMs love quotable text — this hands it to them without fighting your HTML.
+
+Who you are, what you do, what you're available for. That's it.
+
+4/
+② A connected entity graph (JSON-LD @id)
+
+Don't scatter separate Person / Org / Website blobs.
+
+Give each a stable @id and link them, so engines resolve you as ONE entity — not three strangers with the same name.
+
+5/
+③ Real FAQs as FAQPage schema
+
+LLMs extract question→answer pairs beautifully.
+
+Marking up genuine FAQs turns them into ready-made citations.
+
+6/
+④ Let the AI crawlers in
+
+Most sites silently block them. I explicitly allow:
+
+GPTBot, ClaudeBot, PerplexityBot, CCBot (Common Crawl — feeds many models)
+
+in robots.txt.
+
+7/
+⑤ Get indexed fast
+
+Fresh sitemap.xml + IndexNow → instant ping to Bing & Yandex.
+
+Bing's index feeds ChatGPT and Perplexity. That's the fast lane.
+
+8/
+Why it works:
+
+AI answers are sourced from search indexes + Common Crawl.
+
+Content that's structured, quotable & corroborated is what gets cited.
+
+GEO isn't a trick — it's making the truth about you easy for a machine to read.
+
+9/
+The proof: a real, paying lead straight from ChatGPT.
+
+I also open-sourced the whole site — schema, llms.txt, robots, sitemap, IndexNow. Want the source to copy? DM me.
+
+Full write-up + code 👇
+https://arjunthakur.dev/blog/how-i-optimized-my-site-for-llms.html
+
+#AI #GEO #LLM #LangGraph #AIEngineering
