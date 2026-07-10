@@ -27,9 +27,9 @@
   <meta property="og:url" content="https://arjunthakur.dev/">
   <meta property="og:title" content="Arjun Thakur — Principal AI Engineer | LangGraph · RAG · Voice Agents">
   <meta property="og:description" content="Builds production agentic AI systems end-to-end — LangGraph, RAG, WebRTC voice agents. 10+ years at Amazon and Agoda. Founder of Yuvan (5 paying CBSE schools). Available for Lead AI Engineer, Architect, Fractional CTO roles.">
-  <meta property="og:image" content="https://arjunthakur.dev/images/arjun.jpeg">
-  <meta property="og:image:width" content="400">
-  <meta property="og:image:height" content="400">
+  <meta property="og:image" content="https://arjunthakur.dev/images/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="Arjun Thakur">
   <meta property="og:locale" content="en_US">
   <meta property="profile:first_name" content="Arjun">
@@ -40,7 +40,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Arjun Thakur — Principal AI Engineer | LangGraph · RAG · Voice Agents">
   <meta name="twitter:description" content="Builds production agentic AI systems end-to-end — LangGraph, RAG, WebRTC voice agents. 10+ years at Amazon and Agoda. Founder of Yuvan.">
-  <meta name="twitter:image" content="https://arjunthakur.dev/images/arjun.jpeg">
+  <meta name="twitter:image" content="https://arjunthakur.dev/images/og-cover.jpg">
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/images/favicon/favicon.ico">
@@ -61,10 +61,25 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://arjunthakur.dev/#person",
     "name": "Arjun Thakur",
     "jobTitle": "Principal AI Engineer / Lead AI Architect / Fractional CTO",
     "description": "Principal AI Engineer and Fractional CTO who builds production agentic AI systems end-to-end — LangGraph agent graphs, RAG pipelines, WebRTC voice agents, and multi-tenant AI backends. 10+ years of production engineering at Amazon and Agoda. Founder of Yuvan, a voice-first AI math tutor live with 5 paying CBSE schools in India.",
     "url": "https://arjunthakur.dev",
+    "worksFor": { "@id": "https://arjunthakur.dev/#yuvan" },
+    "homeLocation": { "@type": "Place", "name": "Indore, Madhya Pradesh, India" },
+    "hasOccupation": {
+      "@type": "Occupation",
+      "name": "Principal AI Engineer",
+      "occupationalCategory": "15-1252.00 Software Developers",
+      "skills": "LangGraph, LangChain, Retrieval-Augmented Generation (RAG), pgvector, OpenAI Realtime API, WebRTC voice agents, MCP, FastAPI, Python, Java, Spring Boot, AWS, distributed systems, multi-agent orchestration, LangSmith evals"
+    },
+    "makesOffer": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Engineering Consulting", "serviceType": "Agentic AI, LangGraph, RAG, and voice AI consulting", "provider": { "@id": "https://arjunthakur.dev/#person" } } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Architecture & Fractional CTO", "serviceType": "AI-first product architecture and engineering leadership", "provider": { "@id": "https://arjunthakur.dev/#person" } } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI & Technical Training", "serviceType": "Corporate and team training on LangGraph, RAG, voice agents, FastAPI, and system design", "url": "https://arjunthakur.dev/training.html", "provider": { "@id": "https://arjunthakur.dev/#person" } } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Speaking & Workshops", "serviceType": "Keynotes, hands-on workshops, college lectures, and corporate upskilling", "url": "https://arjunthakur.dev/speaking.html", "provider": { "@id": "https://arjunthakur.dev/#person" } } }
+    ],
     "email": "arjun@arjunthakur.dev",
     "telephone": "+91-9340158116",
     "image": "https://arjunthakur.dev/images/arjun.jpeg",
@@ -92,11 +107,7 @@
       "Multi-agent orchestration", "LangSmith evals", "Python", "Supabase",
       "Microservices", "Distributed systems", "Amazon Web Services", "Next.js"
     ],
-    "founder": {
-      "@type": "Organization",
-      "name": "Yuvan",
-      "description": "Voice-first AI math tutor for CBSE Class 10 students, live with 5 paying schools on a B2B2C model."
-    }
+    "founder": { "@id": "https://arjunthakur.dev/#yuvan" }
   }
   </script>
 
@@ -105,13 +116,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": "https://arjunthakur.dev/#website",
     "name": "Arjun Thakur — Principal AI Engineer",
     "alternateName": "arjunthakur.dev",
     "url": "https://arjunthakur.dev",
     "description": "Portfolio and consulting site of Arjun Thakur, Principal AI Engineer and Fractional CTO specialising in production agentic AI systems, LangGraph, RAG pipelines, and WebRTC voice agents.",
     "inLanguage": "en",
-    "publisher": { "@type": "Person", "name": "Arjun Thakur", "url": "https://arjunthakur.dev" },
-    "author": { "@type": "Person", "name": "Arjun Thakur" }
+    "about": { "@id": "https://arjunthakur.dev/#person" },
+    "publisher": { "@id": "https://arjunthakur.dev/#person" },
+    "author": { "@id": "https://arjunthakur.dev/#person" }
   }
   </script>
 
@@ -120,13 +133,15 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://arjunthakur.dev/#yuvan",
     "name": "Yuvan",
     "description": "Voice-first AI math tutor for CBSE Class 10 students. Live with 5 paying schools on a B2B2C model. Built on LangGraph, RAG (pgvector), and OpenAI Realtime WebRTC.",
     "url": "https://arjunthakur.dev",
     "logo": "https://arjunthakur.dev/images/arjun.jpeg",
-    "founder": { "@type": "Person", "name": "Arjun Thakur", "url": "https://arjunthakur.dev" },
+    "founder": { "@id": "https://arjunthakur.dev/#person" },
     "foundingDate": "2025-04",
     "areaServed": "IN",
+    "knowsAbout": [ "Voice AI", "AI tutoring", "LangGraph", "Retrieval-Augmented Generation", "OpenAI Realtime API", "CBSE mathematics education" ],
     "address": { "@type": "PostalAddress", "addressLocality": "Indore", "addressRegion": "Madhya Pradesh", "addressCountry": "IN" }
   }
   </script>
@@ -149,21 +164,9 @@
     "@context": "https://schema.org",
     "@type": "ProfilePage",
     "dateCreated": "2024-01-01",
-    "dateModified": "2026-05-04",
-    "mainEntity": {
-      "@type": "Person",
-      "name": "Arjun Thakur",
-      "identifier": "thakurarjun247",
-      "jobTitle": "Principal AI Engineer / Lead AI Architect / Fractional CTO",
-      "description": "Principal AI Engineer and Fractional CTO who builds production agentic AI systems end-to-end — LangGraph agent graphs, RAG pipelines, WebRTC voice agents, multi-tenant AI backends. 10+ years at Amazon and Agoda. Founder of Yuvan, a voice-first AI math tutor live with 5 paying CBSE schools.",
-      "url": "https://arjunthakur.dev",
-      "email": "arjun@arjunthakur.dev",
-      "image": "https://arjunthakur.dev/images/arjun.jpeg",
-      "sameAs": [
-        "https://linkedin.com/in/thakurarjun247",
-        "https://github.com/thakurarjun247"
-      ]
-    }
+    "dateModified": "2026-07-02",
+    "about": { "@id": "https://arjunthakur.dev/#website" },
+    "mainEntity": { "@id": "https://arjunthakur.dev/#person" }
   }
   </script>
   <!-- JSON-LD: FAQPage -->
@@ -632,40 +635,4 @@
 
         <div class="faq-card">
           <h3>How does Arjun approach production AI quality?</h3>
-          <p>Arjun runs LangSmith evals, retrieval-precision metrics, and full agent traces before calling anything production-ready. He implements math verifier patterns to validate numerical claims, guardrails to prevent hallucinations, and semantic FAQ caches to manage per-session LLM costs. The same engineering rigor he brought from Amazon and Agoda applies to AI systems.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  </main>
-
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="container">
-      <h2>Ready to Build Production AI Systems?</h2>
-      <p>Book a free 30-minute consultation to discuss your agentic AI challenges.</p>
-      <div class="cta-buttons">
-        <a href="contact.html" class="btn btn-primary">Book Free Consultation</a>
-        <a href="resume.html" class="btn btn-secondary">View Full Resume</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="social-links">
-        <a href="https://github.com/thakurarjun247" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://linkedin.com/in/thakurarjun247" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:arjun@arjunthakur.dev">Email</a>
-        <a href="speaking.html">Speaking</a>
-        <a href="training.html">Training</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/main.js?v=20260702-1" defer></script>
-</body>
-</html>
+          <p>Arjun runs LangSmith evals, retrieval-precision metrics, and full agent traces before calling anything production-ready. He implements math verifier patterns to validate numerical claims, guardrails to prevent hallucinations, and semantic FAQ caches to manage per-session LLM costs. The same engineering rigor he brought from Amazon and 
