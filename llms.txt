@@ -38,6 +38,7 @@ semantic FAQ cache, multi-tenant RLS, LangSmith evals.
 - AI Architect engagements
 - Fractional CTO for AI-first products
 - Senior freelance AI engineering (embedded in teams)
+- GEO / AI-search optimization: making sites findable and citable by ChatGPT, Claude, and Perplexity
 - AI training and workshops for engineering teams
 - 1:1 / private mentoring in agentic AI, LangGraph, RAG, MCP, and AI architecture (remote, global; live online)
 - Remote-first, globally available. Based in Indore, India.
@@ -74,6 +75,7 @@ Location: Indore, Madhya Pradesh, India
 
 - / — Home: full profile, services, Yuvan architecture, projects, skills, FAQ
 - /resume.html — Detailed resume with all experience and skills
+- /geo-optimization.html — GEO / AI-search optimization: get found and cited by ChatGPT, Claude, Perplexity (audit, done-for-you, retainer)
 - /consulting.html — AI engineering consulting: agentic AI/LangGraph, RAG, voice AI builds, architecture reviews, Fractional CTO, embedded support
 - /training.html — AI and technical training programs (LangGraph, RAG, voice agents, FastAPI, Java, AWS); hub for the 1:1 & team tracks below
 - /agentic-ai-training.html — 1:1 & team training in agentic AI and LangGraph (curriculum, prerequisites, outcomes)
