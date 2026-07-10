@@ -69,7 +69,7 @@ semantic FAQ cache, multi-tenant RLS, LangSmith evals.
 Email: arjun@arjunthakur.dev
 Phone: +91-93401-58116
 Website: https://arjunthakur.dev
-Book a call (Zoho Bookings): https://arjunthakur.zohobookings.com/4939874000000047045
+Book a call: email arjun@arjunthakur.dev (online scheduling coming soon)
 Blog RSS: https://arjunthakur.dev/feed.xml
 LinkedIn: https://linkedin.com/in/thakurarjun247
 GitHub: https://github.com/thakurarjun247
