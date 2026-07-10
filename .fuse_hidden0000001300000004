@@ -125,7 +125,6 @@
         <li><a href="blog.html">Blog</a></li>
         <li><a href="training.html" class="active" aria-current="page">Training</a></li>
         <li><a href="speaking.html">Speaking</a></li>
-        <li><a href="faq.html">FAQ</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
@@ -144,21 +143,6 @@
   </header>
 
   <main id="main-content">
-  <!-- Specialized 1:1 & Team Tracks -->
-  <section class="projects">
-    <div class="container">
-      <h2 class="section-title">1:1 &amp; Team Training Tracks</h2>
-      <p class="section-subtitle">Deep-dive pages with curriculum, prerequisites, formats, and outcomes — book privately or for your team</p>
-      <div class="projects-grid">
-        <div class="project-card"><h3><a href="agentic-ai-training.html">Agentic AI Training →</a></h3><p>End-to-end agent stack with LangGraph: orchestration, tools/MCP, memory, guardrails, evals. 1:1 or team.</p></div>
-        <div class="project-card"><h3><a href="langgraph-training.html">LangGraph Training →</a></h3><p>Stateful, graph-based agents: state, edges, cycles, persistence, human-in-the-loop, multi-agent.</p></div>
-        <div class="project-card"><h3><a href="rag-training.html">RAG Training →</a></h3><p>Production retrieval: chunking, embeddings, pgvector, hybrid search, grounded answers, evals.</p></div>
-        <div class="project-card"><h3><a href="mcp-training.html">MCP Training →</a></h3><p>Model Context Protocol: build servers, expose tools safely, connect them to agents and Claude.</p></div>
-        <div class="project-card"><h3><a href="ai-architecture-mentoring.html">AI Architecture Mentoring →</a></h3><p>Senior-level 1:1 mentoring and design reviews for whole AI systems — de-risk your build.</p></div>
-      </div>
-    </div>
-  </section>
-
   <!-- Why Choose -->
   <section class="services-section">
     <div class="container">

@@ -3248,3 +3248,9 @@ time {
 @media (prefers-reduced-motion: reduce) {
     .btn-primary::after { transition: none; }
 }
+
+/* Breadcrumb (added for training/FAQ landing pages) */
+.breadcrumb{font-size:.85rem;color:var(--text-secondary,#94a3b8);margin-bottom:1rem;opacity:.85;}
+.breadcrumb a{color:var(--primary-color,#22d3ee);text-decoration:none;}
+.breadcrumb a:hover{text-decoration:underline;}
+.breadcrumb span{color:var(--text-secondary,#94a3b8);}

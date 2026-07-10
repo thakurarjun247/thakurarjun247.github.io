@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arjun Thakur — AI Engineering Blog</title>
+    <link>https://arjunthakur.dev/blog.html</link>
+    <atom:link href="https://arjunthakur.dev/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Technical articles on agentic AI, LangGraph, RAG, voice agents, FastAPI, and production AI engineering by Arjun Thakur, Principal AI Engineer.</description>
+    <language>en</language>
+    <managingEditor>arjun@arjunthakur.dev (Arjun Thakur)</managingEditor>
+    <webMaster>arjun@arjunthakur.dev (Arjun Thakur)</webMaster>
+    <lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://arjunthakur.dev/images/og-cover.jpg</url>
+      <title>Arjun Thakur — AI Engineering Blog</title>
+      <link>https://arjunthakur.dev/blog.html</link>
+    </image>
+    <item>
+      <title>Two Agent Stacks, One Problem: A2A/MCP on Bedrock vs. LangGraph</title>
+      <link>https://arjunthakur.dev/blog/two-agent-stacks-bedrock-vs-langgraph.html</link>
+      <guid isPermaLink="true">https://arjunthakur.dev/blog/two-agent-stacks-bedrock-vs-langgraph.html</guid>
+      <pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Shipping two agentic systems on deliberately different foundations — native AWS Bedrock with A2A/MCP vs. LangGraph + LangChain. What actually differed under the hood: orchestration, evals, and grounding.</description>
+      <author>arjun@arjunthakur.dev (Arjun Thakur)</author>
+      <category>Agentic AI</category>
+      <category>LangGraph</category>
+      <category>AWS Bedrock</category>
+      <category>MCP</category>
+    </item>
+    <item>
+      <title>JWT Authentication in Spring Boot + React: Complete Guide</title>
+      <link>https://arjunthakur.dev/blog/jwt-spring-boot-react-guide.html</link>
+      <guid isPermaLink="true">https://arjunthakur.dev/blog/jwt-spring-boot-react-guide.html</guid>
+      <pubDate>Fri, 15 Nov 2024 00:00:00 +0000</pubDate>
+      <description>Step-by-step guide to implementing secure JWT authentication in Spring Boot with a React frontend. Covers token generation, validation, refresh tokens, and production security best practices.</description>
+      <author>arjun@arjunthakur.dev (Arjun Thakur)</author>
+      <category>Spring Boot</category>
+      <category>JWT</category>
+      <category>React</category>
+      <category>Security</category>
+    </item>
+  </channel>
+</rss>

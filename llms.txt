@@ -39,6 +39,7 @@ semantic FAQ cache, multi-tenant RLS, LangSmith evals.
 - Fractional CTO for AI-first products
 - Senior freelance AI engineering (embedded in teams)
 - AI training and workshops for engineering teams
+- 1:1 / private mentoring in agentic AI, LangGraph, RAG, MCP, and AI architecture (remote, global; live online)
 - Remote-first, globally available. Based in Indore, India.
 
 ## Key Projects
@@ -64,6 +65,7 @@ semantic FAQ cache, multi-tenant RLS, LangSmith evals.
 Email: arjun@arjunthakur.dev
 Phone: +91-93401-58116
 Website: https://arjunthakur.dev
+Blog RSS: https://arjunthakur.dev/feed.xml
 LinkedIn: https://linkedin.com/in/thakurarjun247
 GitHub: https://github.com/thakurarjun247
 Location: Indore, Madhya Pradesh, India
@@ -72,10 +74,16 @@ Location: Indore, Madhya Pradesh, India
 
 - / — Home: full profile, services, Yuvan architecture, projects, skills, FAQ
 - /resume.html — Detailed resume with all experience and skills
-- /training.html — AI and technical training programs (LangGraph, RAG, voice agents, FastAPI, Java, AWS)
+- /training.html — AI and technical training programs (LangGraph, RAG, voice agents, FastAPI, Java, AWS); hub for the 1:1 & team tracks below
+- /agentic-ai-training.html — 1:1 & team training in agentic AI and LangGraph (curriculum, prerequisites, outcomes)
+- /langgraph-training.html — 1:1 & team LangGraph training (state machines, orchestration, persistence, evals)
+- /rag-training.html — 1:1 & team RAG training (chunking, embeddings, pgvector, hybrid search, evals)
+- /mcp-training.html — 1:1 & team Model Context Protocol (MCP) training (build servers, expose tools to agents)
+- /ai-architecture-mentoring.html — 1:1 AI architecture mentoring and design reviews for senior engineers and teams
 - /speaking.html — Speaking, workshops, college guest lectures, placement-office partnerships, corporate upskilling. Past at IITs and NITs. Local and international.
 - /blog.html — Technical blog and articles
 - /contact.html — Contact form and direct contact details
+- /faq.html — FAQ: training, consulting, projects, speaking, availability, pricing, and how to book
 
 ## Speaking & Knowledge Sharing
 

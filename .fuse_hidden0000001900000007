@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LangGraph Training — 1:1 &amp; Team | Build Production LangGraph Agents | Arjun Thakur</title>
+  <meta name="description" content="Hands-on LangGraph training by Arjun Thakur — build stateful, multi-agent LLM systems with LangGraph. Graphs, state, orchestration, persistence, human-in-the-loop, and evals. 1:1 or team, live online, worldwide.">
+  <meta name="keywords" content="LangGraph training, learn LangGraph, LangGraph course, LangGraph mentor, LangGraph tutorial 1:1, stateful agents, multi-agent LangGraph, Arjun Thakur">
+  <meta name="author" content="Arjun Thakur">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://arjunthakur.dev/langgraph-training.html">
+
+  <meta name="geo.region" content="IN-MP">
+  <meta name="geo.placename" content="Indore, Madhya Pradesh, India">
+  <meta name="geo.position" content="22.7196;75.8577">
+  <meta name="ICBM" content="22.7196, 75.8577">
+  <meta name="theme-color" content="#22d3ee">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arjunthakur.dev/langgraph-training.html">
+  <meta property="og:title" content="LangGraph Training — Build Production LangGraph Agents">
+  <meta property="og:description" content="Hands-on LangGraph training: graphs, state, orchestration, persistence, and evals. 1:1 or team, live online, from an engineer who ships LangGraph in production.">
+  <meta property="og:image" content="https://arjunthakur.dev/images/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Arjun Thakur">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LangGraph Training — Build Production LangGraph Agents">
+  <meta name="twitter:description" content="Hands-on LangGraph training: graphs, state, orchestration, persistence, and evals. 1:1 or team.">
+  <meta name="twitter:image" content="https://arjunthakur.dev/images/og-cover.jpg">
+
+  <link rel="icon" type="image/x-icon" href="/images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/images/favicon/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt — AI/LLM-friendly profile">
+  <link rel="stylesheet" href="css/style.css?v=20260702-1">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "@id": "https://arjunthakur.dev/langgraph-training.html#course",
+    "name": "LangGraph Training",
+    "description": "Hands-on training in LangGraph: building stateful, graph-based LLM agents. Nodes, edges, and state; conditional flow and cycles; persistence and checkpointing; human-in-the-loop; multi-agent orchestration; and production evals with LangSmith. 1:1 or team, live online.",
+    "url": "https://arjunthakur.dev/langgraph-training.html",
+    "inLanguage": "en",
+    "teaches": [ "LangGraph", "State machines for LLMs", "Conditional edges and cycles", "Persistence and checkpointing", "Human-in-the-loop", "Multi-agent orchestration", "LangSmith evals" ],
+    "provider": { "@id": "https://arjunthakur.dev/#person" },
+    "hasCourseInstance": [
+      { "@type": "CourseInstance", "courseMode": "online", "courseWorkload": "PT2H", "name": "1:1 Private Mentoring", "location": { "@type": "VirtualLocation", "url": "https://arjunthakur.dev/contact.html" } },
+      { "@type": "CourseInstance", "courseMode": "online", "courseWorkload": "P2D", "name": "Team Workshop", "location": { "@type": "VirtualLocation", "url": "https://arjunthakur.dev/contact.html" } }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "LangGraph training and mentoring",
+    "name": "LangGraph Training & Mentoring",
+    "url": "https://arjunthakur.dev/langgraph-training.html",
+    "provider": { "@id": "https://arjunthakur.dev/#person" },
+    "areaServed": "Worldwide",
+    "audience": { "@type": "Audience", "audienceType": "Python engineers and AI teams" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arjunthakur.dev/" },
+      { "@type": "ListItem", "position": 2, "name": "Training", "item": "https://arjunthakur.dev/training.html" },
+      { "@type": "ListItem", "position": 3, "name": "LangGraph Training", "item": "https://arjunthakur.dev/langgraph-training.html" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is LangGraph and why use it?", "acceptedAnswer": { "@type": "Answer", "text": "LangGraph is a library for building stateful, graph-based LLM applications. You model an agent as a graph of nodes (steps) and edges (control flow) over a shared state. It gives you deterministic control around non-deterministic models — cycles, branching, persistence, and human-in-the-loop — which is why it holds up better than linear chains for production agents." } },
+      { "@type": "Question", "name": "Do I need LangChain experience first?", "acceptedAnswer": { "@type": "Answer", "text": "No. The training starts from LLM basics and introduces LangChain concepts only where they matter. Prior LangChain experience helps but isn't required." } },
+      { "@type": "Question", "name": "Is this 1:1 or a group?", "acceptedAnswer": { "@type": "Answer", "text": "Both are available. 1:1 private mentoring is tailored to your codebase; team workshops run for groups of engineers." } },
+      { "@type": "Question", "name": "How much does it cost?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on format and duration. Book a free intro call for a proposal tailored to your goals." } }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="logo">Arjun Thakur</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="training.html" class="active" aria-current="page">Training</a></li>
+        <li><a href="speaking.html">Speaking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> / <a href="training.html">Training</a> / <span>LangGraph</span></nav>
+      <div class="hero-badge"><span class="badge">1:1 &amp; Team</span><span class="badge">Live Online · Worldwide</span></div>
+      <h1>LangGraph Training — Build <span class="gradient-text">Stateful, Reliable Agents</span></h1>
+      <p>Go from linear prompt chains to graph-based agents that branch, loop, remember, and recover. Taught from a LangGraph system that runs live in production (Yuvan), not from the docs.</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn btn-primary">Book a Free Intro Call</a>
+        <a href="#curriculum" class="btn btn-secondary">See the Curriculum</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+  <section class="services-section">
+    <div class="container">
+      <div class="callout callout--brand">
+        <div class="callout-title">What is LangGraph?</div>
+        <p>LangGraph models an LLM agent as a <strong>graph</strong>: nodes are steps, edges are control flow, and everything operates over a shared, typed state. That structure is what lets you add cycles, branching, persistence, and human review around a non-deterministic model — the difference between a demo and something you can trust with users.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="curriculum">
+    <div class="container">
+      <h2 class="section-title">Curriculum</h2>
+      <p class="section-subtitle">Shaped to your level; for 1:1, built around a graph you actually want to ship</p>
+      <div class="projects-grid">
+        <div class="project-card"><h3>1 · Mental model</h3><p>Graphs vs chains, when a graph earns its complexity, and how to scope a LangGraph agent so it stays debuggable.</p></div>
+        <div class="project-card"><h3>2 · State &amp; nodes</h3><p>Typed state, reducers, node functions, and keeping state clean as a graph grows.</p></div>
+        <div class="project-card"><h3>3 · Edges &amp; control flow</h3><p>Conditional edges, branching, and cycles — including safe loops and re-explain patterns without infinite runs.</p></div>
+        <div class="project-card"><h3>4 · Persistence &amp; checkpointing</h3><p>Checkpointers, resuming runs, session state, and durable long-running agents.</p></div>
+        <div class="project-card"><h3>5 · Human-in-the-loop</h3><p>Interrupts, approvals, and edits mid-run — putting a human in the graph where it matters.</p></div>
+        <div class="project-card"><h3>6 · Multi-agent</h3><p>Router, supervisor, and plan-and-execute topologies in LangGraph, and how to pick one.</p></div>
+        <div class="project-card"><h3>7 · Tools, memory &amp; RAG</h3><p>Wiring tool calls, memory, and retrieval into the graph without turning it into spaghetti.</p></div>
+        <div class="project-card"><h3>8 · Evals &amp; observability</h3><p>LangSmith traces, evals, and knowing a graph is production-ready. Testing non-deterministic flows.</p></div>
+        <div class="project-card"><h3>9 · Ship it</h3><p>Packaging the graph behind async FastAPI with streaming, plus cost and latency budgets.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-section">
+    <div class="container">
+      <h2 class="section-title">Formats &amp; Details</h2>
+      <div class="services-grid">
+        <div class="service-card featured"><h3>1:1 Private Mentoring</h3><p>Tailored to your codebase, paced to you.</p><ul class="service-features"><li>6–12 hours across sessions</li><li>Built around your real graph</li><li>Live code review + async follow-up</li></ul><div class="service-pricing">Best for: individual engineers</div></div>
+        <div class="service-card"><h3>Team Workshop</h3><p>Your team on one set of LangGraph patterns.</p><ul class="service-features"><li>2–4 days, live online</li><li>Hands-on labs + your use case</li><li>Reference architecture to keep</li></ul><div class="service-pricing">Best for: 5–30 engineers</div></div>
+        <div class="service-card"><h3>Prerequisites</h3><ul class="service-features"><li>Comfortable with Python</li><li>Called an LLM API before</li><li>No prior LangGraph needed</li></ul><div class="service-pricing">Outcome: ship a real graph</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-section" id="faq">
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq-stack">
+        <div class="faq-card"><h3>What is LangGraph and why use it?</h3><p>LangGraph is a library for stateful, graph-based LLM apps. You model an agent as nodes (steps) and edges (control flow) over shared state, which gives you cycles, branching, persistence, and human-in-the-loop — the reasons it holds up better than linear chains in production.</p></div>
+        <div class="faq-card"><h3>Do I need LangChain experience first?</h3><p>No. We start from LLM basics and bring in LangChain concepts only where they matter. Prior experience helps but isn't required.</p></div>
+        <div class="faq-card"><h3>Is this 1:1 or a group?</h3><p>Both. 1:1 mentoring is tailored to your codebase; team workshops run for groups.</p></div>
+        <div class="faq-card"><h3>How much does it cost?</h3><p>Depends on format and duration — book a free intro call for a tailored proposal.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects">
+    <div class="container">
+      <h2 class="section-title">Related Training</h2>
+      <div class="projects-grid">
+        <div class="project-card"><h3><a href="agentic-ai-training.html">Agentic AI Training →</a></h3><p>The full agent stack, with LangGraph as the backbone.</p></div>
+        <div class="project-card"><h3><a href="rag-training.html">RAG Training →</a></h3><p>Grounding your agents with retrieval that actually works.</p></div>
+        <div class="project-card"><h3><a href="mcp-training.html">MCP Training →</a></h3><p>Expose tools to your graph cleanly via MCP.</p></div>
+        <div class="project-card"><h3><a href="ai-architecture-mentoring.html">AI Architecture Mentoring →</a></h3><p>Zoom out to whole-system design and reviews.</p></div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Learn LangGraph from production, not the docs</h2>
+      <p>Book a free 30-minute intro call to plan a 1:1 track or a team workshop.</p>
+      <div class="cta-buttons"><a href="contact.html" class="btn btn-primary">Book Free Intro Call</a><a href="training.html" class="btn btn-secondary">All Training</a></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="social-links">
+        <a href="training.html">All Training</a>
+        <a href="faq.html">FAQ</a>
+        <a href="https://github.com/thakurarjun247" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/thakurarjun247" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js?v=20260702-1" defer></script>
+</body>
+</html>

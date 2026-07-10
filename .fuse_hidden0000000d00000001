@@ -54,7 +54,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
   <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt — AI/LLM-friendly profile">
-  <link rel="alternate" type="application/rss+xml" href="/feed.xml" title="Arjun Thakur — AI Engineering Blog (RSS)">
   <link rel="stylesheet" href="css/style.css?v=20260702-1">
 
   <!-- JSON-LD: Person (GEO / LLM-friendly structured data) -->
@@ -239,7 +238,6 @@
         <li><a href="blog.html">Blog</a></li>
         <li><a href="training.html">Training</a></li>
         <li><a href="speaking.html">Speaking</a></li>
-        <li><a href="faq.html">FAQ</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
@@ -464,28 +462,6 @@
     </div>
   </section>
 
-  <!-- 1:1 & Team Training -->
-  <section class="services-section">
-    <div class="container">
-      <h2 class="section-title">1:1 &amp; Team AI Training</h2>
-      <p class="section-subtitle">Private mentoring or team workshops — learn to ship agents from someone who runs them in production</p>
-
-      <div class="callout callout--brand">
-        <div class="callout-title">Found via AI search</div>
-        <p>An engineer in the US recently found this site through ChatGPT while searching for 1:1 agentic-AI training — and booked a track. If AI assistants are already recommending this work, it's because the material comes from shipping real systems.</p>
-      </div>
-
-      <div class="projects-grid">
-        <div class="project-card"><h3><a href="agentic-ai-training.html">Agentic AI Training →</a></h3><p>The full agent stack with LangGraph — 1:1 or team.</p></div>
-        <div class="project-card"><h3><a href="langgraph-training.html">LangGraph Training →</a></h3><p>Stateful, graph-based agents in depth.</p></div>
-        <div class="project-card"><h3><a href="rag-training.html">RAG Training →</a></h3><p>Retrieval that actually grounds answers.</p></div>
-        <div class="project-card"><h3><a href="mcp-training.html">MCP Training →</a></h3><p>Build MCP servers and tool your agents.</p></div>
-        <div class="project-card"><h3><a href="ai-architecture-mentoring.html">AI Architecture Mentoring →</a></h3><p>Senior-level 1:1 design reviews.</p></div>
-        <div class="project-card"><h3><a href="training.html">All Training &amp; Formats →</a></h3><p>Full catalog, formats, and how to book.</p></div>
-      </div>
-    </div>
-  </section>
-
   <!-- Flagship: Yuvan -->
   <section class="services-section">
     <div class="container">
@@ -644,4 +620,19 @@
       <div class="faq-stack">
         <div class="faq-card">
           <h3>What kind of AI systems does Arjun Thakur build?</h3>
-          <p>Arjun builds production agentic AI systems from the ground up: LangGraph stateful agent graphs, RAG pipelines on pg
+          <p>Arjun builds production agentic AI systems from the ground up: LangGraph stateful agent graphs, RAG pipelines on pgvector, WebRTC voice agents using OpenAI Realtime API, multi-tenant AI backends with Supabase, and full-stack AI products with Next.js 15. He runs LangSmith evals and retrieval-precision metrics before anything is called production-ready.</p>
+        </div>
+
+        <div class="faq-card">
+          <h3>Is Arjun available as a Fractional CTO or for freelance AI projects?</h3>
+          <p>Yes. Arjun is available for fractional CTO engagements, senior freelance AI engineering contracts, and full-time Lead/Principal AI Engineer roles globally. Remote-first. Contact via the form or email at arjun@arjunthakur.dev.</p>
+        </div>
+
+        <div class="faq-card">
+          <h3>What is Arjun Thakur's background before AI?</h3>
+          <p>10+ years of production engineering: SDE2 at Amazon (payments/security), Senior Software Developer at Agoda (distributed systems with Scala/Cassandra/Kafka), Lead Developer at CoinSwitch Kuber (scaled 600K to 10M users), VP Engineering at Nolan EduTech (INR 30 crore revenue in one year), Senior Engineering Manager at ForaySoft/Wayfair, and Director of Engineering at PhysicsWallah (led 15-engineer team). Pivoted full-time into AI in late 2023, founded Yuvan in 2025.</p>
+        </div>
+
+        <div class="faq-card">
+          <h3>How does Arjun approach production AI quality?</h3>
+          <p>Arjun runs LangSmith evals, retrieval-precision metrics, and full agent traces before calling anything production-ready. He implements math verifier patterns to validate numerical claims, guardrails to prevent hallucinations, and semantic FAQ caches to manage per-session LLM costs. The same engineering rigor he brought from Amazon and 

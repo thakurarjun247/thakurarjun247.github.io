@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCP Training — 1:1 &amp; Team | Model Context Protocol for Agents | Arjun Thakur</title>
+  <meta name="description" content="Hands-on Model Context Protocol (MCP) training by Arjun Thakur. Build MCP servers, expose tools and resources safely, and connect them to LLM agents and Claude. 1:1 or team, live online, worldwide.">
+  <meta name="keywords" content="MCP training, Model Context Protocol course, learn MCP, MCP server tutorial, MCP tools, MCP mentor, agent tools, Arjun Thakur">
+  <meta name="author" content="Arjun Thakur">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://arjunthakur.dev/mcp-training.html">
+  <meta name="geo.region" content="IN-MP">
+  <meta name="geo.placename" content="Indore, Madhya Pradesh, India">
+  <meta name="geo.position" content="22.7196;75.8577">
+  <meta name="ICBM" content="22.7196, 75.8577">
+  <meta name="theme-color" content="#22d3ee">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arjunthakur.dev/mcp-training.html">
+  <meta property="og:title" content="MCP Training — Model Context Protocol for Agents">
+  <meta property="og:description" content="Build MCP servers, expose tools and resources safely, and connect them to LLM agents. 1:1 or team, live online.">
+  <meta property="og:image" content="https://arjunthakur.dev/images/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Arjun Thakur">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MCP Training — Model Context Protocol for Agents">
+  <meta name="twitter:description" content="Build MCP servers, expose tools safely, and connect them to LLM agents. 1:1 or team.">
+  <meta name="twitter:image" content="https://arjunthakur.dev/images/og-cover.jpg">
+  <link rel="icon" type="image/x-icon" href="/images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/images/favicon/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt — AI/LLM-friendly profile">
+  <link rel="stylesheet" href="css/style.css?v=20260702-1">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "@id": "https://arjunthakur.dev/mcp-training.html#course",
+    "name": "Model Context Protocol (MCP) Training",
+    "description": "Hands-on training in the Model Context Protocol: building MCP servers, exposing tools and resources, transports, auth, and connecting MCP to LLM agents and clients like Claude. 1:1 or team, live online.",
+    "url": "https://arjunthakur.dev/mcp-training.html",
+    "inLanguage": "en",
+    "teaches": [ "Model Context Protocol", "MCP servers", "Tool and resource design", "MCP transports", "Connecting MCP to agents" ],
+    "provider": { "@id": "https://arjunthakur.dev/#person" },
+    "hasCourseInstance": [
+      { "@type": "CourseInstance", "courseMode": "online", "courseWorkload": "PT2H", "name": "1:1 Private Mentoring", "location": { "@type": "VirtualLocation", "url": "https://arjunthakur.dev/contact.html" } },
+      { "@type": "CourseInstance", "courseMode": "online", "courseWorkload": "P1D", "name": "Team Workshop", "location": { "@type": "VirtualLocation", "url": "https://arjunthakur.dev/contact.html" } }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "Service", "serviceType": "MCP training and mentoring", "name": "MCP Training & Mentoring", "url": "https://arjunthakur.dev/mcp-training.html", "provider": { "@id": "https://arjunthakur.dev/#person" }, "areaServed": "Worldwide", "audience": { "@type": "Audience", "audienceType": "AI engineers and platform teams" } }
+  </script>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arjunthakur.dev/" }, { "@type": "ListItem", "position": 2, "name": "Training", "item": "https://arjunthakur.dev/training.html" }, { "@type": "ListItem", "position": 3, "name": "MCP Training", "item": "https://arjunthakur.dev/mcp-training.html" } ] }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is the Model Context Protocol (MCP)?", "acceptedAnswer": { "@type": "Answer", "text": "MCP is an open standard for connecting LLM applications to external tools and data. Instead of hard-coding integrations per app, you build an MCP server that exposes tools and resources, and any MCP-aware client (like Claude or your own agent) can use them. It makes agent capabilities modular and reusable." } },
+      { "@type": "Question", "name": "Who is MCP training for?", "acceptedAnswer": { "@type": "Answer", "text": "Engineers building agents or internal AI platforms who want a clean, reusable way to give models access to tools, APIs, and data — and want to do it safely." } },
+      { "@type": "Question", "name": "Do we build a real MCP server?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You build a working MCP server, expose tools and resources, and connect it to an agent or client, so you leave with running code and the patterns to extend it." } },
+      { "@type": "Question", "name": "How much does it cost?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on format and duration. Book a free intro call for a proposal tailored to your goals." } }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="logo">Arjun Thakur</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="training.html" class="active" aria-current="page">Training</a></li>
+        <li><a href="speaking.html">Speaking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <header class="page-header">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> / <a href="training.html">Training</a> / <span>MCP</span></nav>
+      <div class="hero-badge"><span class="badge">1:1 &amp; Team</span><span class="badge">Live Online · Worldwide</span></div>
+      <h1>MCP Training — Give Your Agents <span class="gradient-text">Tools That Scale</span></h1>
+      <p>The Model Context Protocol is becoming the standard way to connect models to tools and data. Learn to build MCP servers and wire them into agents cleanly — modular, reusable, and safe.</p>
+      <div class="cta-buttons"><a href="contact.html" class="btn btn-primary">Book a Free Intro Call</a><a href="#curriculum" class="btn btn-secondary">See the Curriculum</a></div>
+    </div>
+  </header>
+  <main id="main-content">
+  <section class="services-section">
+    <div class="container">
+      <div class="callout callout--brand">
+        <div class="callout-title">What is MCP?</div>
+        <p>The <strong>Model Context Protocol</strong> is an open standard for connecting LLM apps to external tools and data. Rather than hard-coding a fresh integration in every app, you build an MCP server once that exposes tools and resources, and any MCP-aware client — Claude, or your own agent — can use them. It turns agent capabilities into modular, reusable building blocks.</p>
+      </div>
+    </div>
+  </section>
+  <section class="projects" id="curriculum">
+    <div class="container">
+      <h2 class="section-title">Curriculum</h2>
+      <p class="section-subtitle">For 1:1, built around tools your agents actually need</p>
+      <div class="projects-grid">
+        <div class="project-card"><h3>1 · Why MCP</h3><p>The problem MCP solves, how it compares to bespoke tool calling, and where it fits in an agent architecture.</p></div>
+        <div class="project-card"><h3>2 · Protocol basics</h3><p>Servers, clients, tools, resources, and prompts — the core primitives and how they fit together.</p></div>
+        <div class="project-card"><h3>3 · Build a server</h3><p>Stand up a working MCP server, expose your first tools and resources, and test it.</p></div>
+        <div class="project-card"><h3>4 · Tool design</h3><p>Designing tools an agent can use reliably — clear schemas, good errors, and safe side effects.</p></div>
+        <div class="project-card"><h3>5 · Transports &amp; auth</h3><p>stdio vs HTTP transports, deployment options, and handling authentication and secrets.</p></div>
+        <div class="project-card"><h3>6 · Connect to agents</h3><p>Wiring MCP into a LangGraph agent and into clients like Claude, and reasoning about tool selection.</p></div>
+        <div class="project-card"><h3>7 · Safety</h3><p>Permissions, guardrails, and keeping a tool-using agent from doing something you didn't intend.</p></div>
+        <div class="project-card"><h3>8 · Ship &amp; maintain</h3><p>Packaging, versioning, and evolving MCP servers as your tool surface grows.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="services-section">
+    <div class="container">
+      <h2 class="section-title">Formats &amp; Details</h2>
+      <div class="services-grid">
+        <div class="service-card featured"><h3>1:1 Private Mentoring</h3><p>Built around the tools and data you need to expose.</p><ul class="service-features"><li>4–10 hours across sessions</li><li>Ship a real MCP server</li><li>Live review + async follow-up</li></ul><div class="service-pricing">Best for: individual engineers</div></div>
+        <div class="service-card"><h3>Team Workshop</h3><p>Get a platform team fluent in MCP fast.</p><ul class="service-features"><li>1–2 days, live online</li><li>Labs + your integrations</li><li>Reusable server template</li></ul><div class="service-pricing">Best for: 5–20 engineers</div></div>
+        <div class="service-card"><h3>Prerequisites</h3><ul class="service-features"><li>Comfortable with Python or TypeScript</li><li>Basic API experience</li><li>No prior MCP needed</li></ul><div class="service-pricing">Outcome: a working MCP server</div></div>
+      </div>
+    </div>
+  </section>
+  <section class="services-section" id="faq">
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq-stack">
+        <div class="faq-card"><h3>What is the Model Context Protocol?</h3><p>MCP is an open standard for connecting LLM apps to external tools and data. You build a server that exposes tools and resources, and any MCP-aware client (like Claude or your own agent) can use them — making capabilities modular and reusable.</p></div>
+        <div class="faq-card"><h3>Who is it for?</h3><p>Engineers building agents or internal AI platforms who want a clean, reusable, safe way to give models access to tools, APIs, and data.</p></div>
+        <div class="faq-card"><h3>Do we build a real MCP server?</h3><p>Yes — you build one, expose tools and resources, and connect it to an agent or client, leaving with running code.</p></div>
+        <div class="faq-card"><h3>How much does it cost?</h3><p>Depends on format and duration — book a free intro call for a tailored proposal.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="projects">
+    <div class="container">
+      <h2 class="section-title">Related Training</h2>
+      <div class="projects-grid">
+        <div class="project-card"><h3><a href="agentic-ai-training.html">Agentic AI Training →</a></h3><p>Use MCP tools inside a full agent stack.</p></div>
+        <div class="project-card"><h3><a href="langgraph-training.html">LangGraph Training →</a></h3><p>Wire MCP tools into a stateful graph.</p></div>
+        <div class="project-card"><h3><a href="rag-training.html">RAG Training →</a></h3><p>Expose retrieval as an MCP tool.</p></div>
+        <div class="project-card"><h3><a href="ai-architecture-mentoring.html">AI Architecture Mentoring →</a></h3><p>Design a tool platform, not just one server.</p></div>
+      </div>
+    </div>
+  </section>
+  </main>
+  <section class="cta-section">
+    <div class="container">
+      <h2>Build agent tooling the standard way</h2>
+      <p>Book a free 30-minute intro call to plan a 1:1 track or a team workshop.</p>
+      <div class="cta-buttons"><a href="contact.html" class="btn btn-primary">Book Free Intro Call</a><a href="training.html" class="btn btn-secondary">All Training</a></div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="social-links">
+        <a href="training.html">All Training</a>
+        <a href="faq.html">FAQ</a>
+        <a href="https://github.com/thakurarjun247" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/thakurarjun247" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js?v=20260702-1" defer></script>
+</body>
+</html>
