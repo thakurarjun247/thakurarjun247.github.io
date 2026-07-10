@@ -74,6 +74,7 @@ Location: Indore, Madhya Pradesh, India
 
 - / — Home: full profile, services, Yuvan architecture, projects, skills, FAQ
 - /resume.html — Detailed resume with all experience and skills
+- /consulting.html — AI engineering consulting: agentic AI/LangGraph, RAG, voice AI builds, architecture reviews, Fractional CTO, embedded support
 - /training.html — AI and technical training programs (LangGraph, RAG, voice agents, FastAPI, Java, AWS); hub for the 1:1 & team tracks below
 - /agentic-ai-training.html — 1:1 & team training in agentic AI and LangGraph (curriculum, prerequisites, outcomes)
 - /langgraph-training.html — 1:1 & team LangGraph training (state machines, orchestration, persistence, evals)

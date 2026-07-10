@@ -3254,3 +3254,8 @@ time {
 .breadcrumb a{color:var(--primary-color,#22d3ee);text-decoration:none;}
 .breadcrumb a:hover{text-decoration:underline;}
 .breadcrumb span{color:var(--text-secondary,#94a3b8);}
+
+/* Calmer primary buttons (toned down 2026-07-10) — keep brand gradient, drop the flashy glow + sheen */
+.btn-primary { box-shadow: 0 2px 8px rgba(34, 211, 238, 0.12); }
+.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 5px 14px rgba(34, 211, 238, 0.16); }
+.btn-primary::after { display: none !important; }

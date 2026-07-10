@@ -15,6 +15,16 @@
       <link>https://arjunthakur.dev/blog.html</link>
     </image>
     <item>
+      <title>How I Optimized My Site for LLMs (GEO)</title>
+      <link>https://arjunthakur.dev/blog/how-i-optimized-my-site-for-llms.html</link>
+      <guid isPermaLink="true">https://arjunthakur.dev/blog/how-i-optimized-my-site-for-llms.html</guid>
+      <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+      <description>A condensed, practical guide to Generative Engine Optimization (GEO) — how I made my portfolio findable and citable by ChatGPT, Claude, and Perplexity, with real code. The site is open source.</description>
+      <author>arjun@arjunthakur.dev (Arjun Thakur)</author>
+      <category>GEO</category>
+      <category>AI Search</category>
+    </item>
+    <item>
       <title>Two Agent Stacks, One Problem: A2A/MCP on Bedrock vs. LangGraph</title>
       <link>https://arjunthakur.dev/blog/two-agent-stacks-bedrock-vs-langgraph.html</link>
       <guid isPermaLink="true">https://arjunthakur.dev/blog/two-agent-stacks-bedrock-vs-langgraph.html</guid>

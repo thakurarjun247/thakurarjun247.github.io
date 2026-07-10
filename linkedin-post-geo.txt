@@ -1,0 +1,27 @@
+A US engineer found me on ChatGPT — searching for 1:1 agentic-AI training — and reached out. That wasn't luck. It was GEO.
+
+SEO gets you ranked on Google. GEO — Generative Engine Optimization — gets you *quoted* by ChatGPT, Claude, and Perplexity. As buyers increasingly ask an AI "who can help me build/learn this?", being the source the model trusts is the new game.
+
+Here's what I did to my site (arjunthakur.dev):
+
+1. llms.txt — a clean, plain-text profile at the site root that AI crawlers can lift facts from.
+
+2. A connected entity graph (JSON-LD @id) — so engines resolve Person + Company + Website as ONE entity, not three strangers.
+
+3. Real FAQs marked up as FAQPage — question/answer pairs are ready-made citations for LLMs.
+
+4. robots.txt that explicitly ALLOWS the AI crawlers (GPTBot, ClaudeBot, PerplexityBot, CCBot). Most sites accidentally block them.
+
+5. sitemap + IndexNow to get indexed fast (Bing's index feeds ChatGPT and Perplexity).
+
+The significance: AI answers come from search indexes + Common Crawl. Content that's structured, quotable, and corroborated is what gets cited. GEO isn't a trick — it's making the truth about you easy for a machine to read.
+
+The proof: a real, paying lead straight from ChatGPT.
+
+I also open-sourced the whole site — schema, llms.txt, robots, sitemap, IndexNow, all of it. Want the source to replicate this? DM me and I'll share the repo.
+
+I'm Arjun Thakur — Principal AI Engineer & Fractional CTO. I build production agentic AI (LangGraph, RAG, voice) and help teams do the same through consulting and 1:1 / team training.
+
+Full write-up + code: https://arjunthakur.dev/blog/how-i-optimized-my-site-for-llms.html
+
+#AI #GEO #LLM #LangGraph #AIEngineering #SEO
