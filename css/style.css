@@ -3281,3 +3281,7 @@ time {
   box-shadow: 0 5px 14px rgba(34,211,238,0.18) !important;
 }
 .btn-primary::after { display: none !important; }
+
+/* hero image caption stack */
+.hero-image { flex-direction: column; }
+.hero-image > p { width: 100%; max-width: 420px; }

@@ -68,6 +68,7 @@ semantic FAQ cache, multi-tenant RLS, LangSmith evals.
 
 Email: arjun@arjunthakur.dev
 Phone: +91-93401-58116
+WhatsApp: +91-93401-58116 (same number — convenient for international clients): https://wa.me/919340158116
 Website: https://arjunthakur.dev
 Book a call: email arjun@arjunthakur.dev (online scheduling coming soon)
 Blog RSS: https://arjunthakur.dev/feed.xml
