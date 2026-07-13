@@ -12,6 +12,9 @@ desktop.ini
 .idea/
 *.sublime-*
 
+# Local agent / preview tooling (not part of the site)
+.claude/
+
 # Build / deps (just in case)
 node_modules/
 dist/
