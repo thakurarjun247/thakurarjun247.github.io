@@ -8,12 +8,24 @@
     <language>en</language>
     <managingEditor>arjun@arjunthakur.dev (Arjun Thakur)</managingEditor>
     <webMaster>arjun@arjunthakur.dev (Arjun Thakur)</webMaster>
-    <lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://arjunthakur.dev/images/og-cover.jpg</url>
       <title>Arjun Thakur — AI Engineering Blog</title>
       <link>https://arjunthakur.dev/blog.html</link>
     </image>
+    <item>
+      <title>Agents Don't Fail Like Services Fail — And We're Not Tooled For It</title>
+      <link>https://arjunthakur.dev/blog/agents-dont-fail-like-services-fail.html</link>
+      <guid isPermaLink="true">https://arjunthakur.dev/blog/agents-dont-fail-like-services-fail.html</guid>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+      <description>A microservice dies loudly — a 500, alerting, a tripped circuit breaker. An agent fails silently, synthesizing confidently on top of garbage or burning tokens in a reasoning loop. Building a multi-agent stock recommender exposed the gap in agent reliability tooling — and the gateway and chaos harness I'm building for it.</description>
+      <author>arjun@arjunthakur.dev (Arjun Thakur)</author>
+      <category>Agentic AI</category>
+      <category>Reliability</category>
+      <category>Distributed Systems</category>
+      <category>AI Engineering</category>
+    </item>
     <item>
       <title>How I Optimized My Site for LLMs (GEO)</title>
       <link>https://arjunthakur.dev/blog/how-i-optimized-my-site-for-llms.html</link>
