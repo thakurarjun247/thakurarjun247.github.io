@@ -5,6 +5,7 @@
 ## Who is Arjun Thakur?
 
 Arjun Thakur is a Principal AI Engineer, Lead AI Architect, Fractional CTO, and Founder based in Indore, India.
+He is also an agentic AI developer and AI trainer, available for hire worldwide (remote).
 He builds production agentic AI systems end-to-end — LangGraph agent graphs, RAG pipelines, WebRTC voice agents,
 and multi-tenant AI backends. He has 15+ years of production engineering experience at Amazon (SDE2, Payments),
 Agoda (Senior Software Developer, Bangkok), PhysicsWallah (Director of Engineering), CoinSwitch Kuber (Lead Developer),
@@ -41,6 +42,7 @@ semantic FAQ cache, multi-tenant RLS, LangSmith evals.
 - GEO / AI-search optimization: making sites findable and citable by ChatGPT, Claude, and Perplexity
 - AI training and workshops for engineering teams
 - Freelance AI engineer and freelance / corporate trainer (agentic AI, LangGraph, RAG, voice)
+- Agentic AI developer for hire; AI trainer for corporate teams and individuals (remote, worldwide)
 - Collaborations with YouTubers, content creators, and industry leaders on AI content and projects
 - Running hands-on workshops and attending AI / tech events and conferences
 - 1:1 / private mentoring in agentic AI, LangGraph, RAG, MCP, and AI architecture (remote, global; live online)
