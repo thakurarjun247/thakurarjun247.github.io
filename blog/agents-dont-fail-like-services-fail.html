@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>Agents Don't Fail Like Services Fail — And We're Not Tooled For It — Arjun Thakur</title>
+  <meta name="description" content="Agents fail silently with a confident face. Building a multi-agent stock recommender exposed a gap in agent reliability tooling — here's the gateway and chaos harness I'm building for it.">
+  <meta name="keywords" content="agentic AI, agent reliability, multi-agent systems, LLM observability, reasoning loops, chaos engineering for agents, AI infrastructure, agent gateway, verifier hooks, cost attribution, LangGraph, freelance AI engineer, freelance agentic AI developer, freelance AI trainer, corporate trainer, AI workshop facilitator, hire freelance AI engineer">
+  <meta name="author" content="Arjun Thakur">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://arjunthakur.dev/blog/agents-dont-fail-like-services-fail.html">
+
+  <!-- Geo -->
+  <meta name="geo.region" content="IN-MP">
+  <meta name="geo.placename" content="Indore, Madhya Pradesh, India">
+  <meta name="geo.position" content="22.7196;75.8577">
+  <meta name="ICBM" content="22.7196, 75.8577">
+
+  <!-- Open Graph (Article) -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://arjunthakur.dev/blog/agents-dont-fail-like-services-fail.html">
+  <meta property="og:title" content="Agents Don't Fail Like Services Fail — And We're Not Tooled For It">
+  <meta property="og:description" content="Silent failure with a confident face is the hardest failure mode there is. What building a multi-agent stock recommender taught me about the gap in agent reliability tooling.">
+  <meta property="og:image" content="https://arjunthakur.dev/images/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Arjun Thakur">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:published_time" content="2026-07-13">
+  <meta property="article:author" content="Arjun Thakur">
+  <meta property="article:tag" content="Agentic AI">
+  <meta property="article:tag" content="LLM">
+  <meta property="article:tag" content="AI Engineering">
+  <meta property="article:tag" content="Distributed Systems">
+  <meta property="article:tag" content="Reliability">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Agents Don't Fail Like Services Fail — And We're Not Tooled For It">
+  <meta name="twitter:description" content="Silent failure with a confident face is the hardest failure mode there is. The gap in agent reliability tooling, and what I'm building for it.">
+  <meta name="twitter:image" content="https://arjunthakur.dev/images/og-cover.jpg">
+
+  <!-- Theme & Performance -->
+  <meta name="theme-color" content="#22d3ee">
+  <link rel="dns-prefetch" href="https://github.com">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../images/favicon/site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt — AI/LLM-friendly profile">
+  <link rel="stylesheet" href="../css/style.css?v=20260710-1">
+
+  <!-- JSON-LD: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Agents Don't Fail Like Services Fail — And We're Not Tooled For It",
+    "description": "Building a multi-agent stock recommender exposed a gap in agent reliability tooling. Silent failure with a confident face is the hardest failure mode there is — here's the gateway and chaos harness I'm building for it.",
+    "url": "https://arjunthakur.dev/blog/agents-dont-fail-like-services-fail.html",
+    "datePublished": "2026-07-13",
+    "dateModified": "2026-07-13",
+    "author": {
+      "@type": "Person",
+      "name": "Arjun Thakur",
+      "url": "https://arjunthakur.dev",
+      "jobTitle": "Principal AI Engineer",
+      "sameAs": ["https://linkedin.com/in/thakurarjun247", "https://github.com/thakurarjun247",
+        "https://x.com/arjunthakurdev",
+        "https://www.youtube.com/@ThakurArjun247"]
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Arjun Thakur",
+      "url": "https://arjunthakur.dev"
+    },
+    "image": "https://arjunthakur.dev/images/arjun.jpeg",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://arjunthakur.dev/blog/agents-dont-fail-like-services-fail.html"
+    },
+    "keywords": ["Agentic AI", "Agent Reliability", "Multi-agent systems", "LLM Observability", "Reasoning loops", "Chaos Engineering", "AI Infrastructure", "Distributed Systems"],
+    "articleSection": "AI Engineering",
+    "timeRequired": "PT5M",
+    "inLanguage": "en-US",
+    "isPartOf": {
+      "@type": "CollectionPage",
+      "name": "Blog — Arjun Thakur",
+      "url": "https://arjunthakur.dev/blog.html"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arjunthakur.dev/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://arjunthakur.dev/blog.html" },
+      { "@type": "ListItem", "position": 3, "name": "Agents Don't Fail Like Services Fail — And We're Not Tooled For It" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Skip to main content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="container">
+      <a href="../index.html" class="logo">Arjun Thakur</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../consulting.html">Consulting</a></li>
+        <li><a href="../training.html">Training</a></li>
+        <li><a href="../speaking.html">Speaking</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../resume.html">Resume</a></li>
+        <li><a href="../faq.html">FAQ</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <!-- Blog Post -->
+    <article class="blog-post">
+        <div class="container blog-post-container">
+
+            <div class="blog-post-header">
+                <a href="../blog.html" class="back-link">← Back to Blog</a>
+                <div class="blog-post-meta">
+                    <span class="blog-post-date">July 13, 2026</span>
+                    <span class="blog-post-reading-time">5 min read</span>
+                </div>
+                <h1>Agents Don't Fail Like Services Fail — And We're Not Tooled For It</h1>
+                <div class="blog-post-tags">
+                    <span class="tag">Agentic AI</span>
+                    <span class="tag">LLM</span>
+                    <span class="tag">AI Engineering</span>
+                    <span class="tag">Distributed Systems</span>
+                    <span class="tag">Reliability</span>
+                </div>
+            </div>
+
+            <div class="blog-post-content">
+                <p class="lead">
+                    Agents don't fail like services fail. And we're not tooled for it.
+                </p>
+
+                <p>
+                    I built a multi-agent stock recommender. One agent reads news. One runs technical
+                    and fundamental analysis. A coordinator queries both, reconciles their rankings, and
+                    explains its reasoning.
+                </p>
+                <p>
+                    It works. Building it also made something uncomfortable obvious.
+                </p>
+
+                <h2>When a service dies, it dies loudly</h2>
+                <p>
+                    When a microservice dies, it dies loudly. You get a 500. Alerting fires. The circuit
+                    breaker trips. Thirty years of distributed systems practice exists for exactly this.
+                </p>
+                <p>
+                    When an agent fails, it often keeps going.
+                </p>
+                <p>
+                    The news agent returns something plausible but wrong. The coordinator has no way to
+                    know. It synthesizes confidently on top of garbage — and the output looks exactly like
+                    a good output.
+                </p>
+                <p>
+                    Or the coordinator sits waiting on a specialist quietly stuck in a reasoning loop. No
+                    exception. No error. Just tokens burning and nothing coming back.
+                </p>
+                <p>
+                    <strong>Silent failure with a confident face is the hardest failure mode there is.</strong>
+                </p>
+
+                <h2>"But the tooling exists" — not quite</h2>
+                <p>
+                    Portkey and LiteLLM make model calls reliable: routing, caching, fallbacks. LangSmith
+                    measures quality. Neither knows what a reasoning loop is, or what it costs you when one
+                    happens.
+                </p>
+                <p>
+                    The gap is the agent loop itself. So I'm building for it.
+                </p>
+
+                <h2>A gateway — sits in the request path</h2>
+                <p>
+                    Verifier hooks before output reaches the caller. Loop detection and circuit breaking.
+                    Hard cost caps per session. The point is to put something in the path that can say
+                    <em>no</em> before a confident-but-wrong answer, or a runaway loop, ever reaches the
+                    caller.
+                </p>
+
+                <h2>A harness — breaks agents on purpose</h2>
+                <p>
+                    Tool timeouts, malformed responses, forced loops. It measures recovery rate, p95 under
+                    fault, and the number nobody publishes: what a failing agent actually costs you.
+                </p>
+                <p>
+                    Envoy and AWS FIS, for agents.
+                </p>
+
+                <h2>Where I'm genuinely unsure — and where I'd want to be told I'm wrong</h2>
+                <ul>
+                    <li><strong>Loop detection heuristics.</strong> State repetition is the obvious signal
+                        — but agents legitimately revisit states. Where's the line before you start killing
+                        healthy runs?</li>
+                    <li><strong>Verifier placement.</strong> Per tool call is expensive. Only at the end is
+                        too late. Is there a principled middle?</li>
+                    <li><strong>Cost attribution in multi-agent topologies.</strong> When a coordinator's
+                        spend explodes, which specialist actually caused it?</li>
+                </ul>
+
+                <h2>Building this in public</h2>
+                <p>
+                    I'm building this over the next month, in public. If you've run agents in production and
+                    hit these — I want to hear where my design breaks.
+                </p>
+            </div>
+
+        </div>
+    </article>
+    <section class="services-section">
+      <div class="container">
+        <div class="callout callout--brand">
+          <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;">
+            <img src="../images/arjun.jpeg" width="72" height="72" loading="lazy" style="width:72px;height:72px;border-radius:50%;flex-shrink:0;" alt="Arjun Thakur">
+            <div><strong>Arjun Thakur</strong> — Principal AI Engineer &amp; Fractional CTO. I build production agentic AI (LangGraph, RAG, voice) and help teams do the same through <a href="../consulting.html">consulting</a> and <a href="../training.html">training</a>. <a href="../contact.html">Work with me &rarr;</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="social-links">
+        <a href="https://github.com/thakurarjun247" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/thakurarjun247" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://x.com/arjunthakurdev" target="_blank" rel="noopener">X</a>
+        <a href="https://www.youtube.com/@ThakurArjun247" target="_blank" rel="noopener">YouTube</a>
+        <a href="mailto:arjun@arjunthakur.dev">Email</a>
+        <a href="../contact.html">Contact</a>
+        <a href="/sitemap.html">Site map</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=20260702-1" defer></script>
+</body>
+</html>
