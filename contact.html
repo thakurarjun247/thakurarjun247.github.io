@@ -137,16 +137,8 @@
       <!-- Promise / SLA strip -->
       <div class="contact-promise" role="region" aria-label="Response promise">
         <div class="promise-item">
-          <div class="promise-num">&lt; 24h</div>
-          <div class="promise-label">Email response</div>
-        </div>
-        <div class="promise-item">
           <div class="promise-num">30 min</div>
           <div class="promise-label">Free intro call</div>
-        </div>
-        <div class="promise-item">
-          <div class="promise-num">Worldwide</div>
-          <div class="promise-label">Remote-first, any TZ</div>
         </div>
       </div>
 
@@ -433,11 +425,20 @@
       form.classList.add("is-submitting");
       submit.disabled = true;
 
-      // Google Forms returns an opaque cross-origin response; no-cors + assume success.
+      // no-cors POST resolves to .then with an opaque response on success,
+      // and only rejects on a genuine network failure — so treat .catch as an error.
       fetch(GFORM.action, { method: "POST", mode: "no-cors", body: fd })
         .then(showSuccess)
-        .catch(showSuccess); // opaque responses can still resolve to catch in some engines
+        .catch(showError);
     });
+
+    function showError() {
+      form.classList.remove("is-submitting");
+      submit.disabled = false;
+      status.innerHTML = 'Something went wrong sending your brief. Please email me directly at <a href="mailto:arjun@arjunthakur.dev">arjun@arjunthakur.dev</a>.';
+      status.classList.add("is-error");
+      status.focus && status.focus();
+    }
 
     function showSuccess() {
       form.classList.remove("is-submitting");

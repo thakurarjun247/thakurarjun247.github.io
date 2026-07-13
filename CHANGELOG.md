@@ -1,5 +1,35 @@
 # Changelog
 
+## 2026-07-13 — Contact + homepage UX pass (SEO/GEO-preserving)
+
+User-friendliness improvements made without sacrificing SEO or GEO — every keyword kept in
+crawlable text, JSON-LD untouched and validated, heading semantics improved.
+
+### Changed
+- **index.html**
+  - Reworked the "Core Technical Skills" block from 12 stacked paragraphs into a scannable
+    `.skills-grid` card grid (reusing existing `.skill-category` CSS — no new styles, no cache-bust).
+    Each category label is now a real `<h3>` under the section `<h2>`, adding structured subheadings
+    for crawlers/LLMs. All keywords preserved verbatim.
+  - Deduped the "Current Availability → Open To" list from 11 near-duplicate bullets to 8 distinct
+    ones (removed keyword-stuffing repetition; every distinct keyword still present once).
+- **contact.html**
+  - Trimmed the promise/SLA strip from three tiles to one ("30 min · Free intro call"). Removed
+    "< 24h Email response" and "Worldwide · Remote-first" — both still covered by the form success
+    message and the JSON-LD `areaServed`, so no crawlable content lost.
+
+### Fixed
+- **contact.html**
+  - Contact form no longer fakes success on failure. A genuine network failure now shows an error
+    prompting the user to email directly, instead of silently showing "Brief received" and dropping
+    the lead. (`.catch` → real error handler rather than `showSuccess`.)
+
+### Docs / SEO housekeeping
+- **sitemap.xml** — bumped `<lastmod>` to `2026-07-13` for `/` and `/contact.html`.
+- **CHECKLIST.md** — rewritten: added Scenario C (editing an existing page), a universal SEO/GEO
+  invariants pre-commit pass, an explicit "SEO/GEO before human UX" priority note, and a contact-detail
+  anti-spam gotcha.
+
 ## 2026-07-10 — SEO / GEO optimization pass
 
 Optimization of the existing site for traditional search (Google) and AI/generative
