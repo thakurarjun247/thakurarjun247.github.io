@@ -1,5 +1,32 @@
 # Changelog
 
+## 2026-07-16 — New service: interviewing & hiring (2 pages)
+
+Added a new service line — technical interviewing and hiring — split across two audience-specific,
+SEO/GEO-optimized pages, wired into the home page, sitemaps, and llms.txt.
+
+### Added
+- **hire-technical-interviewer.html** (new) — FOR COMPANIES. "Interview as a service" (expert external
+  panelist for AI/ML, DSA, system design, Java/Spring rounds) plus "build your team from scratch"
+  (hiring-loop design, rubrics, calibration, interviewer training). Hourly, rate on request.
+  Keyword-rich `<title>`/meta/keywords; JSON-LD `Service` + `OfferCatalog`, `BreadcrumbList`, and
+  `FAQPage`; cross-links to the candidate page.
+- **mock-interview-coaching.html** (new) — FOR CANDIDATES. 1:1 mock interviews and interview coaching
+  (DSA, system design, AI/ML, Java/Spring, behavioral) with structured written feedback. Same JSON-LD
+  triple and cross-links back to the company page.
+
+### Changed
+- **index.html** — added two `makesOffer` JSON-LD entries; a new "Interviewing & Hiring" service card in
+  the services grid; and two related-service cards linking both new pages.
+- **sitemap.xml** — added both new URLs (priority 0.9, lastmod 2026-07-16).
+- **sitemap.html** — added both pages to the "Main" card grid.
+- **llms.txt** — appended a new "Interviewing & Hiring Services" section (append-only, per convention);
+  nothing above it modified.
+
+### SEO/GEO notes
+- JSON-LD uses raw `&` inside string values (not `&amp;`) so structured data renders correctly; all
+  ld+json across the two new pages and index.html validated as parseable with no leftover HTML entities.
+
 ## 2026-07-13 — Contact + homepage UX pass (SEO/GEO-preserving)
 
 User-friendliness improvements made without sacrificing SEO or GEO — every keyword kept in
