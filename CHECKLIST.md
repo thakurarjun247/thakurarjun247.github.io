@@ -105,9 +105,11 @@ but these still apply:
 ---
 
 ## Gotchas
-- Blog posts live in `/blog/` → use `../` relative paths. Top-level pages use root-relative (`/` or bare).
-- Nav bars are **copy-pasted into every file** — there's no shared include. A nav change means editing every page.
-- CSS/JS are cache-busted via `?v=YYYYMMDD-n` query strings. Bump these only if you change `css/style.css` or `js/main.js` (not when you merely reuse existing classes in HTML).
+- Blog posts live in `/blog/` → use `../` relative paths **for page body content**. The shared nav/footer use root-relative (`/`) paths and work from any directory.
+- **Nav and footer are now shared Jekyll includes** (`_includes/nav.html`, `_includes/footer.html`) — edit them ONCE, not per page. The site is built by Jekyll (see `_config.yml`); do NOT re-add `.nojekyll`. Every page starts with an empty front-matter block (`---` / `---`) so Jekyll processes it.
+  - The nav marks the current page with a non-clickable `<span class="nav-current" aria-current="page">` (accent-coloured). Logic lives in `_includes/nav.html`, keyed off `page.url`. A new top-level page added to the nav needs a new `{% if %}` line there.
+  - To preview locally: `bundle exec jekyll serve` (needs Ruby + `bundle install`). Output builds to `_site/`.
+- CSS/JS are cache-busted via `?v=YYYYMMDD-n` query strings. Bump these only if you change `css/style.css` or `js/main.js` (not when you merely reuse existing classes in HTML). The link tags live in each page's `<head>` (not the includes), so a bump still touches every page.
 - `feed.xml` dates are RFC-822 (`Mon, 13 Jul 2026 ...`); `sitemap.xml` and JSON-LD dates are ISO (`2026-07-13`). Don't mix them.
 - Keep the JWT post's date as `2024-11-15` everywhere (it was previously mismatched — see CHANGELOG).
 - Validate JSON-LD after editing (no trailing commas, valid JSON).

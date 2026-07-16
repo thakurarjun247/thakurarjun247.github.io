@@ -1,0 +1,46 @@
+# Jekyll configuration for arjunthakur.dev
+# Static HTML site — Jekyll is used ONLY to de-duplicate shared nav/footer/head
+# via _layouts + _includes. URLs are unchanged: every page keeps its .html filename.
+
+title: Arjun Thakur
+url: https://arjunthakur.dev
+
+# Keep .html extensions exactly as they are (no pretty permalinks) so URLs never change.
+permalink: /:basename:output_ext
+
+# Do not let Jekyll's Markdown/other processors touch anything unexpectedly.
+# These files/dirs are copied verbatim into the build output.
+keep_files:
+  - images
+  - css
+  - js
+  - resumes
+  - social
+  - CNAME
+
+# Exclude non-page files and tooling from processing (served as-is or ignored).
+exclude:
+  - README.md
+  - CHANGELOG.md
+  - CHECKLIST.md
+  - git.sh
+  - git.bat
+  - git.ps1
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - .github
+
+# These are hand-maintained; Jekyll must not template or rewrite them.
+# (They contain no Liquid, so they pass through untouched, but listing for clarity.)
+# sitemap.xml, llms.txt, robots.txt, feed.xml, sitemap.html, 404.html,
+# and google*.html remain static.
+
+# Safety: don't run the site through any Markdown/Liquid on the Google verification file.
+defaults:
+  - scope:
+      path: "google71637f77eb0874f5.html"
+    values:
+      layout: null
+      sitemap: false
