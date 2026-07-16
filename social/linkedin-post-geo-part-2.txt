@@ -1,0 +1,43 @@
+========================================
+LINKEDIN POST — GEO Part 2 (Exa)
+Copy the POST section, publish, then immediately post the
+FIRST COMMENT section below it (link goes in the comment so
+LinkedIn doesn't throttle reach on an outbound link).
+LinkedIn strips bold/italic — keep it plain text.
+========================================
+
+--- POST ---
+
+A founder I've never met emailed me last week.
+
+Not a referral. Not a Google search. A neural search engine put my name in front of them — and I only found out because I asked how they found me.
+
+Their answer: their outreach uses a people-search endpoint (Exa) to find people their product fits. My name surfaced — "a combination of your LinkedIn and your web presence."
+
+Here's why that stopped me.
+
+In Part 1 of this series, the proof was a paying lead from ChatGPT. Someone typed a question, and I was the answer.
+
+This was different. No one typed my name. An embeddings-based search engine matched my site to an intent and surfaced me to a stranger — at the retrieval layer, before any chat, before any prompt.
+
+That's the part most people miss about being found by AI now. It isn't only about ranking on Google, or even being quoted by ChatGPT. It's about being a clean, verifiable entity that a machine can retrieve with confidence.
+
+And there's one step almost everyone skips: proving your profiles are actually yours.
+
+A backlink from your LinkedIn or GitHub to your site is only half the signal — anyone can link to you. Ownership is the round-trip. I wired three things to close it: schema.org sameAs, rel="me" links (the web standard for verified identity), and a plain-English ownership statement in llms.txt.
+
+I wrote the whole thing up — what Exa actually is, every SEO/GEO move I've shipped to date, and the exact ownership loop, with code you can copy.
+
+Full read 👇 (link in the comments)
+
+I'm Arjun Thakur — Principal AI Engineer & Fractional CTO. I build production agentic AI (LangGraph, RAG, voice) and help people and teams get found and cited by AI. If you want this done for your site or company, my email's in the comments.
+
+#GEO #AISearch #Exa #LLM #AIEngineering #SEO
+
+--- FIRST COMMENT (post immediately after publishing) ---
+
+Full write-up + code: https://arjunthakur.dev/blog/how-exa-search-found-me-geo-part-2.html
+
+New to the series? Start with Part 1 — How I Optimized My Site for LLMs (GEO): https://arjunthakur.dev/blog/how-i-optimized-my-site-for-llms.html
+
+Want this for your own site or company? Email me: arjun@arjunthakur.dev — or see more at https://arjunthakur.dev
