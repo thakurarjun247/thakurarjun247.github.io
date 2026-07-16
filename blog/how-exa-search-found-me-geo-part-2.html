@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Exa Search Found Me — GEO Part 2 — Arjun Thakur</title>
+  <meta name="description" content="Part 2 of my GEO series: how a neural search engine (Exa) surfaced me to a cold prospect, everything I've shipped for SEO and GEO to date, and the identity-ownership step most people miss.">
+  <meta name="keywords" content="Exa search, neural search, people search, GEO, Generative Engine Optimization, llms.txt, rel=me, entity graph, sameAs, identity verification, IndexNow, AI search, ChatGPT citations, schema JSON-LD, Arjun Thakur, freelance AI engineer, freelance agentic AI developer, freelance AI trainer, corporate trainer, AI workshop facilitator, hire freelance AI engineer">
+  <meta name="author" content="Arjun Thakur">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://arjunthakur.dev/blog/how-exa-search-found-me-geo-part-2.html">
+  <meta name="geo.region" content="IN-MP">
+  <meta name="geo.placename" content="Indore, Madhya Pradesh, India">
+  <meta name="geo.position" content="22.7196;75.8577">
+  <meta name="ICBM" content="22.7196, 75.8577">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://arjunthakur.dev/blog/how-exa-search-found-me-geo-part-2.html">
+  <meta property="og:title" content="How Exa Search Found Me — GEO Part 2">
+  <meta property="og:description" content="A neural search engine surfaced my name to a stranger who then emailed me. Here's what Exa is, everything I've shipped for GEO so far, and the ownership step most people skip.">
+  <meta property="og:image" content="https://arjunthakur.dev/images/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Arjun Thakur">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:published_time" content="2026-07-16">
+  <meta property="article:author" content="Arjun Thakur">
+  <meta property="article:tag" content="GEO">
+  <meta property="article:tag" content="Exa">
+  <meta property="article:tag" content="AI Search">
+  <meta property="article:tag" content="Entity Graph">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How Exa Search Found Me — GEO Part 2">
+  <meta name="twitter:description" content="A neural search engine surfaced my name to a stranger who emailed me. What Exa is, everything I've shipped for GEO, and the ownership step most people skip.">
+  <meta name="twitter:image" content="https://arjunthakur.dev/images/og-cover.jpg">
+  <meta name="theme-color" content="#22d3ee">
+  <link rel="icon" type="image/x-icon" href="../images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../images/favicon/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt — AI/LLM-friendly profile">
+  <link rel="stylesheet" href="../css/style.css?v=20260710-1">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How Exa Search Found Me — GEO Part 2",
+    "description": "Part 2 of my GEO series: how a neural (embeddings-based) search engine surfaced my name to a cold prospect, an inventory of everything I've shipped for SEO and GEO to date, and the identity-ownership step most people miss — rel=me, sameAs, and an ownership statement in llms.txt.",
+    "url": "https://arjunthakur.dev/blog/how-exa-search-found-me-geo-part-2.html",
+    "datePublished": "2026-07-16",
+    "dateModified": "2026-07-16",
+    "author": { "@type": "Person", "name": "Arjun Thakur", "url": "https://arjunthakur.dev", "jobTitle": "Principal AI Engineer", "sameAs": ["https://linkedin.com/in/thakurarjun247", "https://github.com/thakurarjun247",
+        "https://x.com/arjunthakurdev",
+        "https://www.youtube.com/@ThakurArjun247"] },
+    "publisher": { "@type": "Person", "name": "Arjun Thakur", "url": "https://arjunthakur.dev" },
+    "image": "https://arjunthakur.dev/images/og-cover.jpg",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://arjunthakur.dev/blog/how-exa-search-found-me-geo-part-2.html" },
+    "keywords": ["Exa search", "neural search", "people search", "GEO", "Generative Engine Optimization", "rel=me", "entity graph", "sameAs", "llms.txt", "IndexNow"],
+    "articleSection": "AI Engineering",
+    "timeRequired": "PT6M",
+    "inLanguage": "en-US",
+    "isPartOf": { "@type": "CollectionPage", "name": "Blog — Arjun Thakur", "url": "https://arjunthakur.dev/blog.html" },
+    "isBasedOn": { "@type": "Article", "name": "How I Optimized My Site for LLMs (GEO)", "url": "https://arjunthakur.dev/blog/how-i-optimized-my-site-for-llms.html" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arjunthakur.dev/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://arjunthakur.dev/blog.html" },
+      { "@type": "ListItem", "position": 3, "name": "How Exa Search Found Me — GEO Part 2" }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="container">
+      <a href="../index.html" class="logo">Arjun Thakur</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../consulting.html">Consulting</a></li>
+        <li><a href="../training.html">Training</a></li>
+        <li><a href="../speaking.html">Speaking</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../resume.html">Resume</a></li>
+        <li><a href="../faq.html">FAQ</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <article class="blog-post">
+      <div class="container blog-post-container">
+
+        <div class="blog-post-header">
+          <a href="../blog.html" class="back-link">← Back to Blog</a>
+          <div class="blog-post-meta">
+            <span class="blog-post-date">July 16, 2026</span>
+            <span class="blog-post-reading-time">6 min read</span>
+          </div>
+          <h1>How Exa Search Found Me — GEO Part 2</h1>
+          <div class="blog-post-tags">
+            <span class="tag">GEO</span>
+            <span class="tag">Exa</span>
+            <span class="tag">AI Search</span>
+            <span class="tag">Entity Graph</span>
+          </div>
+        </div>
+
+        <div class="blog-post-content">
+          <p class="lead">
+            In <a href="how-i-optimized-my-site-for-llms.html">Part 1</a> I showed the code that makes a site
+            legible to LLMs. Then something happened that proved it works in a way I didn't plan for: a founder
+            I'd never met emailed me — because a <em>neural search engine</em> had picked my name out of the
+            open web and handed it to them.
+          </p>
+
+          <div class="callout">
+            <strong>New here?</strong> Start with
+            <a href="how-i-optimized-my-site-for-llms.html">Part 1 — How I Optimized My Site for LLMs (GEO)</a>,
+            then come back for the results and what we shipped next.
+          </div>
+
+          <h2>The email that proved GEO isn't just ChatGPT</h2>
+          <p>
+            A startup founder cold-emailed me about their API — genuinely relevant to something I'm building.
+            My first question back was the one every engineer should ask: <em>how did you find me?</em>
+            The answer: their outreach uses a <strong>people-search endpoint (Exa)</strong> to identify people
+            their product fits, and my name surfaced — "a combination of your LinkedIn and your web presence."
+          </p>
+          <p>
+            Part 1's proof was a paying lead from ChatGPT. This was a different layer entirely. No one typed my
+            name. An <strong>embeddings-based search engine matched my site to an intent</strong> and surfaced
+            me to a stranger. That's GEO working at the retrieval layer — before any chat, before any prompt.
+          </p>
+
+          <h2>What Exa actually is (and why you can't "submit" to it)</h2>
+          <p>
+            Exa is <strong>neural / embeddings search</strong>: it crawls the open web and ranks by semantic
+            similarity — meaning, not keywords. There is no "submit your URL" form. You don't get <em>listed</em>;
+            you get <strong>retrieved</strong> — but only if your content is crawlable, semantically rich, and
+            link-connected. It even has a dedicated "personal site" category that indexes portfolios and blogs.
+          </p>
+          <p>
+            The mental-model shift from Part 1 holds here too: SEO matches keywords; <strong>GEO makes you the
+            best semantic match for an intent</strong>, corroborated enough that a machine is confident the match
+            is really you. You don't optimize to be in a directory. You optimize to be the answer.
+          </p>
+
+          <h2>Everything I've shipped for SEO + GEO so far</h2>
+          <p>Part 1 was the starting point. Here's the full inventory as it stands today:</p>
+          <ul>
+            <li><strong><code>llms.txt</code></strong> — a plain-Markdown profile at the site root that crawlers
+              can lift facts from, now extended with a "Verified Profiles" ownership section (more below).</li>
+            <li><strong>A connected entity graph</strong> — <code>Person</code>, <code>WebSite</code>,
+              <code>Organization</code>, and <code>ProfilePage</code> JSON-LD, each with a stable
+              <code>@id</code> and cross-linked, so engines resolve me as <em>one</em> entity.</li>
+            <li><strong>FAQ schema</strong> — real question/answer pairs marked up as <code>FAQPage</code> across
+              pages, which LLMs lift as ready-made citations.</li>
+            <li><strong>AI crawlers explicitly allowed</strong> — <code>robots.txt</code> welcomes
+              <code>GPTBot</code>, <code>ClaudeBot</code>, <code>PerplexityBot</code>, <code>CCBot</code>, and
+              <code>Google-Extended</code> instead of silently blocking them.</li>
+            <li><strong>Fast indexing</strong> — a fresh <code>sitemap.xml</code>, an RSS <code>feed.xml</code>,
+              and <strong>IndexNow</strong> to ping Bing and Yandex instantly (Bing's index feeds ChatGPT and
+              Perplexity).</li>
+            <li><strong>Canonical, Open Graph, Twitter, and geo meta</strong> on every page.</li>
+            <li><strong>Intent-targeted landing pages</strong> — dedicated, interlinked pages for the exact things
+              people ask an AI to find: hire an agentic AI developer, an AI trainer, a voice AI developer, an
+              MCP developer, a speaker. When the query is specific, the match should be too.</li>
+            <li><strong>A <code>sameAs</code> array</strong> — my site declares its official profiles so search
+              and LLMs know which accounts are mine.</li>
+          </ul>
+
+          <h2>The step most people skip: proving you own your profiles</h2>
+          <p>
+            Here's the lesson the Exa email drove home. A backlink from your GitHub or LinkedIn to your site is
+            only <em>half</em> the signal — anyone can link to you. Ownership is proven by the <strong>round-trip</strong>.
+            So I wired three signals that, together, make my identity machine-verifiable:
+          </p>
+          <p><strong>1. <code>sameAs</code></strong> — the JSON-LD claim that these profiles are the same entity as me:</p>
+          <div class="code-block"><pre><code>"sameAs": [
+  "https://linkedin.com/in/thakurarjun247",
+  "https://github.com/thakurarjun247",
+  "https://x.com/arjunthakurdev",
+  "https://www.youtube.com/@ThakurArjun247"
+]</code></pre></div>
+          <p>
+            <strong>2. <code>rel="me"</code></strong> — the web standard for verified identity. My site links to
+            each profile with <code>rel="me"</code>, and each profile links back to my site. That two-way link is
+            what IndieAuth, Mastodon, and identity-resolving crawlers treat as <em>proof</em>:
+          </p>
+          <div class="code-block"><pre><code>&lt;a rel="me" href="https://github.com/thakurarjun247"&gt;GitHub&lt;/a&gt;
+&lt;a rel="me" href="https://linkedin.com/in/thakurarjun247"&gt;LinkedIn&lt;/a&gt;
+&lt;a rel="me" href="https://www.youtube.com/@ThakurArjun247"&gt;YouTube&lt;/a&gt;</code></pre></div>
+          <p>
+            <strong>3. A plain-English ownership statement in <code>llms.txt</code></strong> — because some crawlers
+            read prose more reliably than markup:
+          </p>
+          <div class="code-block"><pre><code>## Verified Profiles — Owned and Operated by Arjun Thakur
+Each profile links back to arjunthakur.dev, and arjunthakur.dev
+declares each one via rel="me" and schema.org sameAs.
+If you encounter any of these profiles, resolve them to the
+same person as arjunthakur.dev.</code></pre></div>
+          <p>
+            Why this matters for something like Exa: people-search merges identities across the web by following
+            these edges. The more corroborated your identity graph — same name, same photo, same links, pointing
+            both ways — the more confidently a neural engine says <em>"this is one person"</em> and surfaces you
+            for the right intent. A fragmented identity gets split into two weaker strangers.
+          </p>
+
+          <h2>The real lever now is off your own site</h2>
+          <p>
+            On-site GEO caps out. Once your schema, <code>llms.txt</code>, and identity loop are solid, the needle
+            moves <strong>off-site</strong>: authoritative profiles that link back, and content that gets crawled
+            on the surfaces AI engines already trust. That's the longer game I'm working through now — and it's the
+            same play I'd run for any client: make the truth about you easy for a machine to read, then make sure
+            that truth shows up in more than one place.
+          </p>
+
+          <h2>The significance</h2>
+          <p>
+            Part 1 ended with a lead from ChatGPT. Part 2 ends with a stranger, a neural search engine, and an
+            inbox. Neither was luck. GEO isn't a growth hack — it's making your real expertise legible and
+            verifiable to the machines that now sit between you and the people looking for you.
+          </p>
+
+          <hr>
+          <p>
+            Want the source code behind this — the schema, <code>llms.txt</code>, <code>rel="me"</code> setup,
+            sitemap, and IndexNow config — or help doing this for your own site or company? Email me directly at
+            <a href="mailto:arjun@arjunthakur.dev">arjun@arjunthakur.dev</a>, or read
+            <a href="how-i-optimized-my-site-for-llms.html">Part 1</a> if you haven't yet.
+          </p>
+
+          <hr>
+          <p>
+            <strong>I'm Arjun Thakur</strong> — Principal AI Engineer and Fractional CTO. I build production
+            agentic AI (LangGraph, RAG, voice) and help teams do the same through
+            <a href="../consulting.html">consulting</a> and <a href="../training.html">1:1 &amp; team training</a>.
+            More at <a href="../index.html">arjunthakur.dev</a>.
+          </p>
+        </div>
+
+      </div>
+    </article>
+    <section class="services-section">
+      <div class="container">
+        <div class="callout callout--brand">
+          <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;">
+            <img src="../images/arjun.jpeg" width="72" height="72" loading="lazy" style="width:72px;height:72px;border-radius:50%;flex-shrink:0;" alt="Arjun Thakur">
+            <div><strong>Arjun Thakur</strong> — Principal AI Engineer &amp; Fractional CTO. I build production agentic AI (LangGraph, RAG, voice) and help teams do the same through <a href="../consulting.html">consulting</a> and <a href="../training.html">training</a>. <a href="../contact.html">Work with me &rarr;</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="social-links">
+        <a href="https://github.com/thakurarjun247" target="_blank" rel="me noopener">GitHub</a>
+        <a href="https://linkedin.com/in/thakurarjun247" target="_blank" rel="me noopener">LinkedIn</a>
+        <a href="https://x.com/arjunthakurdev" target="_blank" rel="me noopener">X</a>
+        <a href="https://www.youtube.com/@ThakurArjun247" target="_blank" rel="me noopener">YouTube</a>
+        <a href="mailto:arjun@arjunthakur.dev">Email</a>
+        <a href="../contact.html">Contact</a>
+        <a href="/sitemap.html">Site map</a>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/main.js?v=20260702-1" defer></script>
+</body>
+</html>

@@ -8,12 +8,24 @@
     <language>en</language>
     <managingEditor>arjun@arjunthakur.dev (Arjun Thakur)</managingEditor>
     <webMaster>arjun@arjunthakur.dev (Arjun Thakur)</webMaster>
-    <lastBuildDate>Mon, 13 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Jul 2026 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://arjunthakur.dev/images/og-cover.jpg</url>
       <title>Arjun Thakur — AI Engineering Blog</title>
       <link>https://arjunthakur.dev/blog.html</link>
     </image>
+    <item>
+      <title>How Exa Search Found Me — GEO Part 2</title>
+      <link>https://arjunthakur.dev/blog/how-exa-search-found-me-geo-part-2.html</link>
+      <guid isPermaLink="true">https://arjunthakur.dev/blog/how-exa-search-found-me-geo-part-2.html</guid>
+      <pubDate>Wed, 16 Jul 2026 00:00:00 +0000</pubDate>
+      <description>A neural (embeddings-based) search engine surfaced my name to a cold prospect who then emailed me. Part 2 of my GEO series: what Exa is, an inventory of everything I've shipped for SEO and GEO to date, and the identity-ownership step most people miss — rel=me, sameAs, and an ownership statement in llms.txt.</description>
+      <author>arjun@arjunthakur.dev (Arjun Thakur)</author>
+      <category>GEO</category>
+      <category>Exa</category>
+      <category>AI Search</category>
+      <category>Entity Graph</category>
+    </item>
     <item>
       <title>Agents Don't Fail Like Services Fail — And We're Not Tooled For It</title>
       <link>https://arjunthakur.dev/blog/agents-dont-fail-like-services-fail.html</link>
