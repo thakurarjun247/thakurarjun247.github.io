@@ -28,3 +28,6 @@ npm-debug.log*
 # Env
 .env
 .env.local
+
+# FUSE mount artifacts (temp files from the desktop file layer)
+.fuse_hidden*
