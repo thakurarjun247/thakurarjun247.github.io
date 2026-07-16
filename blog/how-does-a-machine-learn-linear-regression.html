@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Does a Machine Learn? The Intuition Behind Linear Regression — Arjun Thakur</title>
+  <meta name="description" content="A beginner-friendly walkthrough of linear regression: predict a salary from years of experience, guess the line y = mx + c, and see how a machine learns by reducing its error — from a demo session at Masai School.">
+  <meta name="keywords" content="linear regression, how does a machine learn, machine learning intuition, y = mx + c, gradient descent, regression explained, Masai School, AI trainer, Arjun Thakur, freelance AI engineer, freelance agentic AI developer, freelance AI trainer, corporate trainer, AI workshop facilitator">
+  <meta name="author" content="Arjun Thakur">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://arjunthakur.dev/blog/how-does-a-machine-learn-linear-regression.html">
+  <meta name="geo.region" content="IN-MP">
+  <meta name="geo.placename" content="Indore, Madhya Pradesh, India">
+  <meta name="geo.position" content="22.7196;75.8577">
+  <meta name="ICBM" content="22.7196, 75.8577">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://arjunthakur.dev/blog/how-does-a-machine-learn-linear-regression.html">
+  <meta property="og:title" content="How Does a Machine Learn? The Intuition Behind Linear Regression">
+  <meta property="og:description" content="Predict a salary from years of experience, guess the line y = mx + c, and watch a machine learn by shrinking its own error. A demo session from Masai School.">
+  <meta property="og:image" content="https://arjunthakur.dev/images/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Arjun Thakur">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:published_time" content="2026-07-16">
+  <meta property="article:author" content="Arjun Thakur">
+  <meta property="article:tag" content="Machine Learning">
+  <meta property="article:tag" content="Linear Regression">
+  <meta property="article:tag" content="Teaching">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How Does a Machine Learn? The Intuition Behind Linear Regression">
+  <meta name="twitter:description" content="Predict a salary from years of experience, guess the line y = mx + c, and watch a machine learn by shrinking its own error.">
+  <meta name="twitter:image" content="https://arjunthakur.dev/images/og-cover.jpg">
+  <meta name="theme-color" content="#22d3ee">
+  <link rel="icon" type="image/x-icon" href="../images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../images/favicon/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt — AI/LLM-friendly profile">
+  <link rel="stylesheet" href="../css/style.css?v=20260710-1">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How Does a Machine Learn? The Intuition Behind Linear Regression",
+    "description": "A beginner-friendly walkthrough of linear regression from a demo session at Masai School: predict a salary from years of experience, guess the line y = mx + c, and see how a machine learns by reducing its error.",
+    "url": "https://arjunthakur.dev/blog/how-does-a-machine-learn-linear-regression.html",
+    "datePublished": "2026-07-16",
+    "dateModified": "2026-07-16",
+    "author": { "@type": "Person", "name": "Arjun Thakur", "url": "https://arjunthakur.dev", "jobTitle": "Principal AI Engineer", "sameAs": ["https://linkedin.com/in/thakurarjun247", "https://github.com/thakurarjun247",
+        "https://x.com/arjunthakurdev",
+        "https://www.youtube.com/@ThakurArjun247"] },
+    "publisher": { "@type": "Person", "name": "Arjun Thakur", "url": "https://arjunthakur.dev" },
+    "image": "https://arjunthakur.dev/images/og-cover.jpg",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://arjunthakur.dev/blog/how-does-a-machine-learn-linear-regression.html" },
+    "keywords": ["linear regression", "machine learning", "gradient descent", "y = mx + c", "regression", "AI training"],
+    "articleSection": "Machine Learning",
+    "timeRequired": "PT5M",
+    "inLanguage": "en-US",
+    "isPartOf": { "@type": "CollectionPage", "name": "Blog — Arjun Thakur", "url": "https://arjunthakur.dev/blog.html" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arjunthakur.dev/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://arjunthakur.dev/blog.html" },
+      { "@type": "ListItem", "position": 3, "name": "How Does a Machine Learn? The Intuition Behind Linear Regression" }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="container">
+      <a href="../index.html" class="logo">Arjun Thakur</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../consulting.html">Consulting</a></li>
+        <li><a href="../training.html">Training</a></li>
+        <li><a href="../speaking.html">Speaking</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../resume.html">Resume</a></li>
+        <li><a href="../faq.html">FAQ</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <article class="blog-post">
+      <div class="container blog-post-container">
+
+        <div class="blog-post-header">
+          <a href="../blog.html" class="back-link">← Back to Blog</a>
+          <div class="blog-post-meta">
+            <span class="blog-post-date">July 16, 2026</span>
+            <span class="blog-post-reading-time">5 min read</span>
+          </div>
+          <h1>How Does a Machine Learn? The Intuition Behind Linear Regression</h1>
+          <div class="blog-post-tags">
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Linear Regression</span>
+            <span class="tag">Gradient Descent</span>
+            <span class="tag">Teaching</span>
+          </div>
+        </div>
+
+        <div class="blog-post-content">
+          <p class="lead">
+            Intuition behind Linear Regression — a demo session at Masai School. How does a machine
+            actually learn? We'll get there with nothing more than a salary, a straight line, and a few guesses.
+          </p>
+
+          <h2>Can You Predict My Salary?</h2>
+          <p>Here's a tiny dataset — years of experience and the salary that goes with it:</p>
+          <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-family:'JetBrains Mono',monospace;">
+            <thead>
+              <tr style="border-bottom:2px solid rgba(34,211,238,0.5);">
+                <th style="text-align:left;padding:0.6rem 0.8rem;">Years of Experience</th>
+                <th style="text-align:left;padding:0.6rem 0.8rem;">Salary</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.1);"><td style="padding:0.6rem 0.8rem;">1</td><td style="padding:0.6rem 0.8rem;">5</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.1);"><td style="padding:0.6rem 0.8rem;">3</td><td style="padding:0.6rem 0.8rem;">9</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.1);"><td style="padding:0.6rem 0.8rem;">5</td><td style="padding:0.6rem 0.8rem;">13</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.1);"><td style="padding:0.6rem 0.8rem;">7</td><td style="padding:0.6rem 0.8rem;">17</td></tr>
+              <tr><td style="padding:0.6rem 0.8rem;">9</td><td style="padding:0.6rem 0.8rem;">21</td></tr>
+            </tbody>
+          </table>
+          <p><strong>6 Years Experience — what salary would you predict?</strong></p>
+
+          <h2>Let's Build a Prediction Machine</h2>
+          <p>
+            Let <code>x</code> = Years of Experience and <code>y</code> = Salary. A straight line is all we need:
+          </p>
+          <div class="code-block"><pre><code>y = mx + c
+
+Salary = m × Experience + c</code></pre></div>
+          <p>Play with <code>m</code> and <code>c</code> live:</p>
+          <ul>
+            <li>Desmos — interactive line: <a href="https://www.desmos.com/calculator/5kn5x8f7zk" target="_blank" rel="noopener">desmos.com/calculator/5kn5x8f7zk</a></li>
+            <li>GeoGebra — interactive line: <a href="https://www.geogebra.org/m/s3jEhYHw" target="_blank" rel="noopener">geogebra.org/m/s3jEhYHw</a></li>
+          </ul>
+
+          <h2>First Guess</h2>
+          <p>Pick <code>m = 1</code> and <code>c = 2</code>:</p>
+          <div class="code-block"><pre><code>Salary = 1 × 5 + 2 = 7
+Actual = 13 ❌</code></pre></div>
+
+          <h2>Second Guess</h2>
+          <p>Nudge <code>m = 1.5</code>, keep <code>c = 2</code>:</p>
+          <div class="code-block"><pre><code>Salary = 1.5 × 5 + 2 = 9.5
+Actual = 13</code></pre></div>
+          <p>Closer, but still wrong.</p>
+
+          <h2>Great! The Pattern Fits</h2>
+          <p>Try <code>m = 2</code> and <code>c = 3</code>:</p>
+          <div class="code-block"><pre><code>2 × 5 + 3 = 13 ✅
+2 × 7 + 3 = 17 ✅</code></pre></div>
+          <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;font-family:'JetBrains Mono',monospace;">
+            <thead>
+              <tr style="border-bottom:2px solid rgba(34,211,238,0.5);">
+                <th style="text-align:left;padding:0.6rem 0.8rem;">Years of Experience</th>
+                <th style="text-align:left;padding:0.6rem 0.8rem;">Salary</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.1);"><td style="padding:0.6rem 0.8rem;">1</td><td style="padding:0.6rem 0.8rem;">5</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.1);"><td style="padding:0.6rem 0.8rem;">3</td><td style="padding:0.6rem 0.8rem;">9</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.1);"><td style="padding:0.6rem 0.8rem;">5</td><td style="padding:0.6rem 0.8rem;">13</td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.1);"><td style="padding:0.6rem 0.8rem;">7</td><td style="padding:0.6rem 0.8rem;">17</td></tr>
+              <tr><td style="padding:0.6rem 0.8rem;">9</td><td style="padding:0.6rem 0.8rem;">21</td></tr>
+            </tbody>
+          </table>
+
+          <h2>How Does the Computer Learn?</h2>
+          <div class="code-block"><pre><code>Random m, c
+   ↓
+Predict
+   ↓
+Compare
+   ↓
+Adjust m, c
+   ↓
+Repeat
+   ↓  =  the learning loop, repeated</code></pre></div>
+
+          <h2>Why is it called Linear?</h2>
+          <p>Every choice of <code>m</code> and <code>c</code> creates a straight line.</p>
+          <div class="code-block"><pre><code>y = x + 2
+y = 1.5x + 2
+y = 2x + 3</code></pre></div>
+          <p><strong>Linear = Finding the best straight line.</strong></p>
+
+          <h2>Why is it called Regression?</h2>
+          <p><strong>Regression = Predicting a continuous numeric value.</strong></p>
+          <p>Examples:</p>
+          <ul>
+            <li>Salary</li>
+            <li>House Price</li>
+            <li>Temperature</li>
+            <li>Sales</li>
+          </ul>
+          <p>Years of Experience → Salary.</p>
+
+          <h2>How Does the Computer Learn?</h2>
+          <ol>
+            <li>Start with random <code>m</code> and <code>c</code> — <code>m=1, c=2</code></li>
+            <li>Predict using <code>Salary = m × Experience + c</code></li>
+            <li>Compare prediction with actual value</li>
+            <li>If error decreases → continue. If error increases → change direction</li>
+            <li>Repeat until error is very small.</li>
+          </ol>
+
+          <h2>Summary</h2>
+          <ul>
+            <li>✓ Linear = Straight Line</li>
+            <li>✓ Regression = Predict Continuous Values</li>
+            <li>✓ Machine Learning = Reduce prediction error repeatedly</li>
+          </ul>
+          <div class="callout">
+            <strong>Linear Regression</strong> = Finding the best straight line (<code>y = mx + c</code>)
+            that predicts a continuous value.
+          </div>
+
+          <h2>How Gradient Descent Tunes m and c</h2>
+          <p>
+            Every wrong guess has an error. Gradient descent uses the slope of that error to nudge
+            <code>m</code> and <code>c</code> the right way — automatically.
+          </p>
+          <div class="code-block"><pre><code>Update m:
+m  ←  m − (learning rate × slope of error w.r.t. m)
+
+Update c:
+c  ←  c − (learning rate × slope of error w.r.t. c)</code></pre></div>
+          <ol>
+            <li>Big error — large slope → big step: <code>m</code> and <code>c</code> move a lot</li>
+            <li>Getting closer — smaller slope → smaller steps: fine-tuning</li>
+            <li>Near the best fit — slope ≈ 0 → <code>m</code> and <code>c</code> barely change: it stops</li>
+          </ol>
+
+          <hr>
+          <p>
+            <strong>Thank you for your time.</strong> Questions? This walkthrough is from a demo session
+            I ran at <strong>Masai School</strong>.
+          </p>
+          <p>
+            <strong>I'm Arjun Thakur</strong> — Agentic AI Developer, AI Trainer, and Principal AI Engineer.
+            Founder @ Yuvan · ex-Amazon · ex-Agoda. I build production agentic AI and help teams and learners
+            build the intuition behind it through <a href="../training.html">1:1 &amp; team training</a> and
+            <a href="../speaking.html">talks</a>. More at <a href="../index.html">arjunthakur.dev</a>.
+          </p>
+        </div>
+
+      </div>
+    </article>
+    <section class="services-section">
+      <div class="container">
+        <div class="callout callout--brand">
+          <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;">
+            <img src="../images/arjun.jpeg" width="72" height="72" loading="lazy" style="width:72px;height:72px;border-radius:50%;flex-shrink:0;" alt="Arjun Thakur">
+            <div><strong>Arjun Thakur</strong> — Agentic AI Developer, AI Trainer &amp; Principal AI Engineer. I build production agentic AI and help teams and learners build the intuition through <a href="../training.html">training</a> and <a href="../speaking.html">talks</a>. <a href="../contact.html">Work with me &rarr;</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="social-links">
+        <a href="https://github.com/thakurarjun247" target="_blank" rel="me noopener">GitHub</a>
+        <a href="https://linkedin.com/in/thakurarjun247" target="_blank" rel="me noopener">LinkedIn</a>
+        <a href="https://x.com/arjunthakurdev" target="_blank" rel="me noopener">X</a>
+        <a href="https://www.youtube.com/@ThakurArjun247" target="_blank" rel="me noopener">YouTube</a>
+        <a href="mailto:arjun@arjunthakur.dev">Email</a>
+        <a href="../contact.html">Contact</a>
+        <a href="/sitemap.html">Site map</a>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/main.js?v=20260702-1" defer></script>
+</body>
+</html>
