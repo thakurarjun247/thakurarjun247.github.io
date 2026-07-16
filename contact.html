@@ -179,7 +179,7 @@
         </div>
 
         <div class="contact-form-container">
-          <h2>Contact form</h2>
+          <h2>Send me a brief</h2>
 
           <div class="form-card">
             <div class="form-card-inner">
@@ -188,75 +188,20 @@
                   <span></span><span></span><span></span>
                 </span>
                 <span class="form-card-label">
-                  <span class="dot-live"></span> contact-form · secure
+                  <span class="dot-live"></span> email · direct
                 </span>
               </div>
 
-              <form id="contactForm" class="native-form" novalidate aria-label="Contact form">
-                <div class="nf-row">
-                  <div class="nf-field">
-                    <label class="nf-label" for="nf-name">Name <span class="nf-req" aria-hidden="true">*</span></label>
-                    <input id="nf-name" type="text" name="name" autocomplete="name" required>
-                    <span class="nf-error" data-for="name"></span>
-                  </div>
-                  <div class="nf-field">
-                    <label class="nf-label" for="nf-email">Email <span class="nf-req" aria-hidden="true">*</span></label>
-                    <input id="nf-email" type="email" name="email" autocomplete="email" required>
-                    <span class="nf-error" data-for="email"></span>
-                  </div>
-                </div>
-
-                <div class="nf-field">
-                  <label class="nf-label" for="nf-inquiry">Inquiry type <span class="nf-req" aria-hidden="true">*</span></label>
-                  <div class="nf-select-wrap">
-                    <select id="nf-inquiry" name="inquiry" required>
-                      <option value="" disabled selected hidden>Choose…</option>
-                      <option>Consulting Project</option>
-                      <option>Speaking Engagement</option>
-                      <option>Full-time Role</option>
-                      <option>Fractional CTO/Advisor</option>
-                      <option>Technical Mentorship</option>
-                      <option>Other</option>
-                    </select>
-                    <svg class="nf-select-chevron" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5 6 6.5l5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </div>
-                  <span class="nf-error" data-for="inquiry"></span>
-                </div>
-
-                <div class="nf-field">
-                  <label class="nf-label" for="nf-message">Message <span class="nf-req" aria-hidden="true">*</span></label>
-                  <textarea id="nf-message" name="message" rows="5" required></textarea>
-                  <span class="nf-error" data-for="message"></span>
-                </div>
-
-                <div class="nf-row">
-                  <div class="nf-field">
-                    <label class="nf-label" for="nf-company">Company <span class="nf-opt">optional</span></label>
-                    <input id="nf-company" type="text" name="company" autocomplete="organization">
-                  </div>
-                  <div class="nf-field">
-                    <label class="nf-label" for="nf-phone">Phone <span class="nf-opt">optional</span></label>
-                    <input id="nf-phone" type="tel" name="phone" autocomplete="tel">
-                  </div>
-                </div>
-
-                <button type="submit" class="nf-submit">
-                  <span class="nf-submit-label">Send brief</span>
-                  <span class="nf-spinner" aria-hidden="true"></span>
-                </button>
-                <p class="nf-status" role="status" aria-live="polite"></p>
-              </form>
-
-              <div class="nf-success" hidden>
-                <div class="nf-success-icon" aria-hidden="true">✓</div>
-                <h3>Brief received</h3>
-                <p>Thanks — your message is in. I reply to every inbound within 24 hours, usually much faster.</p>
-                <button type="button" class="nf-reset">Send another</button>
+              <div style="padding:1.75rem 1.5rem;">
+                <p style="margin-top:0;">The quickest way to reach me is a short email — tell me what you're building or hiring for, your timeline, and how to reach you. I reply to every inbound within 24 hours, usually much faster.</p>
+                <p style="margin:.75rem 0 1.25rem;">Useful to include: the kind of engagement (consulting, training, speaking, an interviewer, mock-interview prep, or fractional CTO), a line or two on scope, and your company if relevant.</p>
+                <a class="btn btn-primary" href="mailto:arjun@arjunthakur.dev?subject=Project%20brief%20%E2%80%94%20arjunthakur.dev&amp;body=Hi%20Arjun%2C%0A%0AWhat%20I%27m%20after%3A%20%0ATimeline%3A%20%0ACompany%20(optional)%3A%20%0AHow%20to%20reach%20me%3A%20%0A%0AA%20bit%20more%20detail%3A%20%0A">Email me your brief →</a>
+                <a class="btn btn-secondary" href="https://wa.me/919340158116" target="_blank" rel="noopener" style="margin-left:.5rem;">WhatsApp →</a>
               </div>
 
               <div class="form-card-foot">
-                <span>Native form · posts securely to Google Forms · responses go straight to <a href="mailto:arjun@arjunthakur.dev">arjun@arjunthakur.dev</a></span>
-                <span>End-to-end TLS</span>
+                <span>Goes straight to <a href="mailto:arjun@arjunthakur.dev">arjun@arjunthakur.dev</a></span>
+                <span>Reply within 24h</span>
               </div>
             </div>
           </div>
@@ -296,147 +241,5 @@
 {% include footer.html %}
 
   <script src="js/main.js?v=20260702-1" defer></script>
-
-  <!-- Native contact form → Google Forms submission -->
-  <script>
-  (function () {
-    "use strict";
-
-    /* ────────────────────────────────────────────────────────────────
-       CONFIG — the ONLY thing that needs your real Google Form IDs.
-       Get them from the form's "Get pre-filled link" and paste below.
-       Each value must look like "entry.123456789".
-       ──────────────────────────────────────────────────────────────── */
-    var GFORM = {
-      action: "https://docs.google.com/forms/d/e/1FAIpQLScWtls4oJYGe8rc7_ulHQdOIZ1A8deBrN7aqeF-SdrDTgeDNw/formResponse",
-      entries: {
-        name:    "entry.2005620554",
-        email:   "entry.1045781291",
-        inquiry: "entry.839337160",
-        message: "entry.823534367",
-        company: "entry.1065046570",
-        phone:   "entry.1166974658"
-      }
-    };
-    /* ──────────────────────────────────────────────────────────────── */
-
-    var form    = document.getElementById("contactForm");
-    if (!form) return;
-    var success = document.querySelector(".nf-success");
-    var status  = form.querySelector(".nf-status");
-    var submit  = form.querySelector(".nf-submit");
-
-    var RULES = {
-      name:    { required: true,  msg: "Please enter your name." },
-      email:   { required: true,  email: true, msg: "Please enter your email.", emailMsg: "That email doesn't look right." },
-      inquiry: { required: true,  msg: "Please pick an inquiry type." },
-      message: { required: true,  msg: "A line or two about the project helps." }
-    };
-    var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    function fieldEl(name) { return form.elements[name]; }
-    function errEl(name)   { return form.querySelector('.nf-error[data-for="' + name + '"]'); }
-
-    function setError(name, message) {
-      var el = fieldEl(name), e = errEl(name);
-      if (el) el.classList.toggle("is-invalid", !!message);
-      if (el) el.setAttribute("aria-invalid", message ? "true" : "false");
-      if (e)  e.textContent = message || "";
-    }
-
-    function validateField(name) {
-      var rule = RULES[name];
-      if (!rule) return true;
-      var val = (fieldEl(name).value || "").trim();
-      if (rule.required && !val) { setError(name, rule.msg); return false; }
-      if (rule.email && val && !EMAIL_RE.test(val)) { setError(name, rule.emailMsg); return false; }
-      setError(name, "");
-      return true;
-    }
-
-    // Live-clear errors once the user fixes a field.
-    Object.keys(RULES).forEach(function (name) {
-      var el = fieldEl(name);
-      if (!el) return;
-      var ev = el.tagName === "SELECT" ? "change" : "blur";
-      el.addEventListener(ev, function () { validateField(name); });
-      el.addEventListener("input", function () {
-        if (el.classList.contains("is-invalid")) validateField(name);
-      });
-    });
-
-    function idsConfigured() {
-      return Object.keys(GFORM.entries).every(function (k) {
-        return !/REPLACE_/.test(GFORM.entries[k]);
-      });
-    }
-
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      status.textContent = "";
-      status.className = "nf-status";
-
-      var ok = Object.keys(RULES).map(validateField).every(Boolean);
-      if (!ok) {
-        var firstBad = form.querySelector(".is-invalid");
-        if (firstBad) firstBad.focus();
-        return;
-      }
-
-      if (!idsConfigured()) {
-        status.textContent = "Form isn't wired up yet — entry IDs are missing.";
-        status.classList.add("is-error");
-        return;
-      }
-
-      var fd = new FormData();
-      Object.keys(GFORM.entries).forEach(function (key) {
-        var el = fieldEl(key);
-        var val = el ? (el.value || "").trim() : "";
-        if (val) fd.append(GFORM.entries[key], val);
-      });
-
-      form.classList.add("is-submitting");
-      submit.disabled = true;
-
-      // no-cors POST resolves to .then with an opaque response on success,
-      // and only rejects on a genuine network failure — so treat .catch as an error.
-      fetch(GFORM.action, { method: "POST", mode: "no-cors", body: fd })
-        .then(showSuccess)
-        .catch(showError);
-    });
-
-    function showError() {
-      form.classList.remove("is-submitting");
-      submit.disabled = false;
-      status.innerHTML = 'Something went wrong sending your brief. Please email me directly at <a href="mailto:arjun@arjunthakur.dev">arjun@arjunthakur.dev</a>.';
-      status.classList.add("is-error");
-      status.focus && status.focus();
-    }
-
-    function showSuccess() {
-      form.classList.remove("is-submitting");
-      submit.disabled = false;
-      form.setAttribute("hidden", "");
-      if (success) {
-        success.removeAttribute("hidden");
-        success.scrollIntoView({ behavior: "smooth", block: "nearest" });
-        var h = success.querySelector("h3");
-        if (h) { h.setAttribute("tabindex", "-1"); h.focus(); }
-      }
-    }
-
-    var resetBtn = document.querySelector(".nf-reset");
-    if (resetBtn) resetBtn.addEventListener("click", function () {
-      form.reset();
-      Object.keys(RULES).forEach(function (n) { setError(n, ""); });
-      if (success) success.setAttribute("hidden", "");
-      form.removeAttribute("hidden");
-      status.textContent = "";
-      var first = fieldEl("name");
-      if (first) first.focus();
-    });
-  })();
-  </script>
 </body>
 </html>
