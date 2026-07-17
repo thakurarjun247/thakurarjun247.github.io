@@ -31,3 +31,9 @@ npm-debug.log*
 
 # FUSE mount artifacts (temp files from the desktop file layer)
 .fuse_hidden*
+
+# FUSE mount artifacts (temp files from the desktop file layer)
+.fuse_hidden*
+
+# FUSE mount artifacts (temp files from the desktop file layer)
+.fuse_hidden*
