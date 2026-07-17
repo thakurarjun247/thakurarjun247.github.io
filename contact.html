@@ -192,14 +192,76 @@
                 </span>
               </div>
 
-              <div style="padding:1.75rem 1.5rem;">
-                <p style="margin:0 0 1.25rem;">Email me what you're building or hiring for — consulting, training, speaking, an interviewer, mock-interview prep, or fractional CTO — with a line on scope and timeline. I reply within 24 hours.</p>
-                <a class="btn btn-primary" href="mailto:arjun@arjunthakur.dev?subject=Project%20brief%20%E2%80%94%20arjunthakur.dev&amp;body=Hi%20Arjun%2C%0A%0AWhat%20I%27m%20after%3A%20%0ATimeline%3A%20%0ACompany%20(optional)%3A%20%0AHow%20to%20reach%20me%3A%20%0A%0AA%20bit%20more%20detail%3A%20%0A">Email me your brief →</a>
-                <a class="btn btn-secondary" href="https://wa.me/919340158116" target="_blank" rel="noopener" style="margin-left:.5rem;">WhatsApp →</a>
+              <form id="contactForm" class="native-form" aria-label="Contact form">
+                <input type="hidden" name="access_key" value="5909c2de-e35e-4b19-a97f-c6253f704818">
+                <input type="hidden" name="subject" value="New brief from arjunthakur.dev">
+                <input type="hidden" name="from_name" value="arjunthakur.dev contact form">
+                <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
+
+                <div class="nf-row">
+                  <div class="nf-field">
+                    <label class="nf-label" for="nf-name">Name <span class="nf-req" aria-hidden="true">*</span></label>
+                    <input id="nf-name" type="text" name="name" autocomplete="name" required>
+                    <span class="nf-error" data-for="name"></span>
+                  </div>
+                  <div class="nf-field">
+                    <label class="nf-label" for="nf-email">Email <span class="nf-req" aria-hidden="true">*</span></label>
+                    <input id="nf-email" type="email" name="email" autocomplete="email" required>
+                    <span class="nf-error" data-for="email"></span>
+                  </div>
+                </div>
+
+                <div class="nf-field">
+                  <label class="nf-label" for="nf-inquiry">Inquiry type <span class="nf-req" aria-hidden="true">*</span></label>
+                  <div class="nf-select-wrap">
+                    <select id="nf-inquiry" name="inquiry" required>
+                      <option value="" disabled selected hidden>Choose&hellip;</option>
+                      <option>Consulting</option>
+                      <option>Training</option>
+                      <option>Speaking</option>
+                      <option>Hire an Interviewer</option>
+                      <option>Mock Interview / Prep</option>
+                      <option>Fractional CTO / Advisor</option>
+                      <option>Other</option>
+                    </select>
+                    <svg class="nf-select-chevron" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5 6 6.5l5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </div>
+                  <span class="nf-error" data-for="inquiry"></span>
+                </div>
+
+                <div class="nf-field">
+                  <label class="nf-label" for="nf-message">Message <span class="nf-req" aria-hidden="true">*</span></label>
+                  <textarea id="nf-message" name="message" rows="5" required></textarea>
+                  <span class="nf-error" data-for="message"></span>
+                </div>
+
+                <div class="nf-row">
+                  <div class="nf-field">
+                    <label class="nf-label" for="nf-company">Company <span class="nf-opt">optional</span></label>
+                    <input id="nf-company" type="text" name="company" autocomplete="organization">
+                  </div>
+                  <div class="nf-field">
+                    <label class="nf-label" for="nf-phone">Phone <span class="nf-opt">optional</span></label>
+                    <input id="nf-phone" type="tel" name="phone" autocomplete="tel">
+                  </div>
+                </div>
+
+                <button type="submit" class="nf-submit">
+                  <span class="nf-submit-label">Send brief</span>
+                  <span class="nf-spinner" aria-hidden="true"></span>
+                </button>
+                <p class="nf-status" role="status" aria-live="polite"></p>
+              </form>
+
+              <div class="nf-success" hidden>
+                <div class="nf-success-icon" aria-hidden="true">&check;</div>
+                <h3>Brief received</h3>
+                <p>Thanks &mdash; your message is in. I reply to every inbound within 24 hours, usually much faster.</p>
+                <button type="button" class="nf-reset">Send another</button>
               </div>
 
               <div class="form-card-foot">
-                <span>Goes straight to <a href="mailto:arjun@arjunthakur.dev">arjun@arjunthakur.dev</a></span>
+                <span>Delivered to <a href="mailto:arjun@arjunthakur.dev">arjun@arjunthakur.dev</a> &middot; or <a href="https://wa.me/919340158116" target="_blank" rel="noopener">WhatsApp</a></span>
                 <span>Reply within 24h</span>
               </div>
             </div>
@@ -240,5 +302,80 @@
 {% include footer.html %}
 
   <script src="js/main.js?v=20260702-1" defer></script>
+
+  <!-- Contact form -> Web3Forms (real success/error handling) -->
+  <script>
+  (function () {
+    "use strict";
+    var form    = document.getElementById("contactForm");
+    if (!form) return;
+    var success = document.querySelector(".nf-success");
+    var status  = form.querySelector(".nf-status");
+    var submit  = form.querySelector(".nf-submit");
+    var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    var RULES = {
+      name:    { required: true, msg: "Please enter your name." },
+      email:   { required: true, email: true, msg: "Please enter your email.", emailMsg: "That email doesn't look right." },
+      inquiry: { required: true, msg: "Please pick an inquiry type." },
+      message: { required: true, msg: "A line or two about the project helps." }
+    };
+    function fieldEl(n){ return form.elements[n]; }
+    function errEl(n){ return form.querySelector('.nf-error[data-for="' + n + '"]'); }
+    function setError(n, m){ var el=fieldEl(n), e=errEl(n); if(el){el.classList.toggle("is-invalid",!!m); el.setAttribute("aria-invalid", m?"true":"false");} if(e) e.textContent=m||""; }
+    function validateField(n){ var r=RULES[n]; if(!r) return true; var v=(fieldEl(n).value||"").trim();
+      if(r.required && !v){ setError(n,r.msg); return false; }
+      if(r.email && v && !EMAIL_RE.test(v)){ setError(n,r.emailMsg); return false; }
+      setError(n,""); return true; }
+
+    Object.keys(RULES).forEach(function(n){ var el=fieldEl(n); if(!el) return;
+      var ev = el.tagName==="SELECT" ? "change" : "blur";
+      el.addEventListener(ev, function(){ validateField(n); });
+      el.addEventListener("input", function(){ if(el.classList.contains("is-invalid")) validateField(n); });
+    });
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      status.textContent = ""; status.className = "nf-status";
+      var ok = Object.keys(RULES).map(validateField).every(Boolean);
+      if (!ok){ var b=form.querySelector(".is-invalid"); if(b) b.focus(); return; }
+
+      form.classList.add("is-submitting");
+      submit.disabled = true;
+
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Accept": "application/json" },
+        body: new FormData(form)
+      })
+      .then(function(r){ return r.json().then(function(d){ return { ok: r.ok, data: d }; }); })
+      .then(function(res){
+        form.classList.remove("is-submitting"); submit.disabled = false;
+        if (res.ok && res.data && res.data.success) {
+          form.setAttribute("hidden", "");
+          if (success){ success.removeAttribute("hidden"); success.scrollIntoView({behavior:"smooth",block:"nearest"});
+            var h=success.querySelector("h3"); if(h){ h.setAttribute("tabindex","-1"); h.focus(); } }
+        } else {
+          status.innerHTML = (res.data && res.data.message ? res.data.message + " " : "") +
+            'Please email me directly at <a href="mailto:arjun@arjunthakur.dev">arjun@arjunthakur.dev</a>.';
+          status.classList.add("is-error");
+        }
+      })
+      .catch(function(){
+        form.classList.remove("is-submitting"); submit.disabled = false;
+        status.innerHTML = 'Something went wrong. Please email me at <a href="mailto:arjun@arjunthakur.dev">arjun@arjunthakur.dev</a>.';
+        status.classList.add("is-error");
+      });
+    });
+
+    var resetBtn = document.querySelector(".nf-reset");
+    if (resetBtn) resetBtn.addEventListener("click", function(){
+      form.reset(); Object.keys(RULES).forEach(function(n){ setError(n,""); });
+      if (success) success.setAttribute("hidden","");
+      form.removeAttribute("hidden"); status.textContent="";
+      var first=fieldEl("name"); if(first) first.focus();
+    });
+  })();
+  </script>
 </body>
 </html>
