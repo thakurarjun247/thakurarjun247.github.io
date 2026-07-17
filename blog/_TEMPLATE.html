@@ -1,0 +1,206 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--
+    ┌──────────────────────────────────────────────────────────────────────┐
+    │  NEW BLOG POST TEMPLATE — copy this file, rename to blog/<slug>.html   │
+    │  Replace every  REPLACE_*  placeholder below. Search the file for      │
+    │  "REPLACE_" to find them all. Then follow CHECKLIST.md scenario A      │
+    │  (update blog.html, sitemap.xml, feed.xml, sitemap.html).              │
+    │  Do NOT touch the nav/footer includes or the favicon/font/css block.   │
+    │  Dates: ISO here + JSON-LD (2026-07-17); RFC-822 only in feed.xml.     │
+    └──────────────────────────────────────────────────────────────────────┘
+  -->
+
+  <!-- Primary SEO -->
+  <title>REPLACE_TITLE — Arjun Thakur</title>
+  <meta name="description" content="REPLACE_META_DESCRIPTION (≈150–160 chars, includes the primary keyword).">
+  <meta name="keywords" content="REPLACE_KEYWORD_1, REPLACE_KEYWORD_2, REPLACE_KEYWORD_3, Arjun Thakur">
+  <meta name="author" content="Arjun Thakur">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://arjunthakur.dev/blog/REPLACE_SLUG.html">
+
+  <!-- Geo -->
+  <meta name="geo.region" content="IN-MP">
+  <meta name="geo.placename" content="Indore, Madhya Pradesh, India">
+  <meta name="geo.position" content="22.7196;75.8577">
+  <meta name="ICBM" content="22.7196, 75.8577">
+
+  <!-- Open Graph (Article) -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://arjunthakur.dev/blog/REPLACE_SLUG.html">
+  <meta property="og:title" content="REPLACE_TITLE">
+  <meta property="og:description" content="REPLACE_OG_DESCRIPTION (can match meta description or be a touch punchier).">
+  <meta property="og:image" content="https://arjunthakur.dev/images/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Arjun Thakur">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:published_time" content="REPLACE_ISO_DATE (e.g. 2026-07-17)">
+  <meta property="article:author" content="Arjun Thakur">
+  <meta property="article:tag" content="REPLACE_TAG_1">
+  <meta property="article:tag" content="REPLACE_TAG_2">
+  <meta property="article:tag" content="REPLACE_TAG_3">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="REPLACE_TITLE">
+  <meta name="twitter:description" content="REPLACE_TWITTER_DESCRIPTION (short, punchy).">
+  <meta name="twitter:image" content="https://arjunthakur.dev/images/og-cover.jpg">
+
+  <!-- Theme & Performance -->
+  <meta name="theme-color" content="#22d3ee">
+  <link rel="dns-prefetch" href="https://github.com">
+
+  <!-- Favicon (do not edit) -->
+  <link rel="icon" type="image/x-icon" href="../images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../images/favicon/site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt — AI/LLM-friendly profile">
+  <link rel="stylesheet" href="../css/style.css?v=20260716-1">
+
+  <!-- JSON-LD: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "REPLACE_TITLE",
+    "description": "REPLACE_META_DESCRIPTION",
+    "url": "https://arjunthakur.dev/blog/REPLACE_SLUG.html",
+    "datePublished": "REPLACE_ISO_DATE",
+    "dateModified": "REPLACE_ISO_DATE",
+    "author": {
+      "@type": "Person",
+      "name": "Arjun Thakur",
+      "url": "https://arjunthakur.dev",
+      "jobTitle": "Principal AI Engineer",
+      "sameAs": ["https://linkedin.com/in/thakurarjun247", "https://github.com/thakurarjun247",
+        "https://x.com/arjunthakurdev",
+        "https://www.youtube.com/@ThakurArjun247"]
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Arjun Thakur",
+      "url": "https://arjunthakur.dev"
+    },
+    "image": "https://arjunthakur.dev/images/arjun.jpeg",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://arjunthakur.dev/blog/REPLACE_SLUG.html"
+    },
+    "keywords": ["REPLACE_TAG_1", "REPLACE_TAG_2", "REPLACE_TAG_3"],
+    "articleSection": "REPLACE_SECTION (e.g. Backend Development, Agentic AI)",
+    "timeRequired": "REPLACE_ISO_DURATION (e.g. PT8M for 8 min read)",
+    "inLanguage": "en-US",
+    "isPartOf": {
+      "@type": "CollectionPage",
+      "name": "Blog — Arjun Thakur",
+      "url": "https://arjunthakur.dev/blog.html"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arjunthakur.dev/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://arjunthakur.dev/blog.html" },
+      { "@type": "ListItem", "position": 3, "name": "REPLACE_TITLE" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Skip to main content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation (shared include — do not edit here) -->
+{% include nav.html %}
+
+  <main id="main-content">
+    <!-- Blog Post -->
+    <article class="blog-post">
+        <div class="container blog-post-container">
+
+            <div class="blog-post-header">
+                <a href="../blog.html" class="back-link">← Back to Blog</a>
+                <div class="blog-post-meta">
+                    <span class="blog-post-date">REPLACE_HUMAN_DATE (e.g. July 17, 2026)</span>
+                    <span class="blog-post-reading-time">REPLACE_READING_TIME (e.g. 8 min read)</span>
+                </div>
+                <h1>REPLACE_TITLE</h1>
+                <div class="blog-post-tags">
+                    <span class="tag">REPLACE_TAG_1</span>
+                    <span class="tag">REPLACE_TAG_2</span>
+                    <span class="tag">REPLACE_TAG_3</span>
+                </div>
+            </div>
+
+            <div class="blog-post-content">
+
+                <!-- ═══════════ ARTICLE BODY START — write the post below ═══════════ -->
+
+                <p class="lead">
+                    REPLACE_LEAD_PARAGRAPH — the hook. One or two sentences that state what the
+                    reader will get and why it's worth their time. Include the primary keyword naturally.
+                </p>
+
+                <h2>REPLACE_FIRST_SECTION_HEADING</h2>
+                <p>
+                    REPLACE_BODY. Use &lt;h2&gt; for main sections, &lt;h3&gt; for sub-sections,
+                    &lt;p&gt; for prose, &lt;ul&gt;/&lt;li&gt; for lists. For code, use:
+                </p>
+
+                <div class="code-block">
+                    <pre><code>REPLACE_CODE (escape &lt; &gt; &amp; inside code)</code></pre>
+                </div>
+
+                <h2>REPLACE_CLOSING_SECTION_HEADING</h2>
+                <p>
+                    REPLACE_CLOSING — wrap up with the takeaway. Optionally invite a reply:
+                    Questions or a different take? Reach out via the
+                    <a href="../contact.html">contact page</a>.
+                </p>
+
+                <!-- ═══════════ ARTICLE BODY END ═══════════ -->
+
+            </div>
+
+        </div>
+    </article>
+
+    <!-- Author callout (shared block — usually leave as-is) -->
+    <section class="services-section">
+      <div class="container">
+        <div class="callout callout--brand">
+          <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;">
+            <img src="../images/arjun.jpeg" width="72" height="72" loading="lazy" style="width:72px;height:72px;border-radius:50%;flex-shrink:0;" alt="Arjun Thakur">
+            <div><strong>Arjun Thakur</strong> — Principal AI Engineer &amp; Fractional CTO. I build production agentic AI (LangGraph, RAG, voice) and help teams do the same through <a href="../consulting.html">consulting</a> and <a href="../training.html">training</a>. <a href="../contact.html">Work with me &rarr;</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer (shared include — do not edit here) -->
+{% include footer.html %}
+
+  <script src="../js/main.js?v=20260702-1" defer></script>
+</body>
+</html>

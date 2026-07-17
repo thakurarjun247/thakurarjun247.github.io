@@ -31,6 +31,7 @@ exclude:
   - vendor
   - node_modules
   - .github
+  - blog/_TEMPLATE.html    # new-post starter; must never be published as a live page
 
 # These are hand-maintained; Jekyll must not template or rewrite them.
 # (They contain no Liquid, so they pass through untouched, but listing for clarity.)
