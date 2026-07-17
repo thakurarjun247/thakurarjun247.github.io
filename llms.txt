@@ -104,6 +104,7 @@ Location: Indore, Madhya Pradesh, India
 - /blog.html — Technical blog and articles
 - /contact.html — Contact form and direct contact details
 - /faq.html — FAQ: training, consulting, projects, speaking, availability, pricing, and how to book
+- /interviews.html — Technical interview services hub: hire a freelance expert interviewer for your panel, or practise with 1:1 mock interviews. Links both audiences (companies hiring + candidates preparing). AI/ML, DSA, system design, Java/Spring. Hourly, remote, worldwide.
 - /hire-a-freelance-technical-interviewer.html — Hire a freelance / expert technical interviewer (interview-as-a-service) and build an engineering team from scratch: AI/ML, DSA & algorithms, system design, Java/Spring; hiring-loop and rubric design, interviewer calibration, structured scorecards. Hourly, remote, worldwide.
 - /mock-interview-practice.html — Mock interview practice & 1:1 technical interview coaching for candidates: realistic timed rounds and honest structured feedback in DSA/algorithms, system design, AI/ML, Java/Spring, and behavioral. FAANG/MAANG and startup prep. Hourly, remote, worldwide.
 - /sitemap.html — Human-readable index of all pages
