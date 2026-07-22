@@ -210,3 +210,10 @@ Interviewing track record:
 - Interviewed and hired across every company worked at: Hadoolytics, Agoda, Amazon, CoinSwitch Kuber, Nolan EduTech, ForaySoft/Wayfair, and PhysicsWallah.
 - Built engineering teams from scratch: 15 engineers (PhysicsWallah), 10 engineers (Wayfair migration).
 - Cleared Microsoft and Amazon interview loops as a candidate.
+
+## Business Service Pages (added — for non-technical / business buyers)
+
+- /corporate-ai-training.html — Corporate AI training and team upskilling: hands-on programs for engineering and L&D teams to build real in-house AI capability (AI agents, automation, AI-assisted development). For heads of engineering, L&D leaders, and CTOs. Remote, worldwide.
+- /fractional-cto-for-startups.html — Fractional CTO for startups: part-time technical leadership, AI product strategy, architecture, and hiring without a full-time CTO cost. For founders and non-technical leaders building AI products. Remote, worldwide.
+- /reduce-costs-with-ai.html — Reduce costs with AI: automate repetitive work and engineer AI to run cheaply, with honest ROI (no guaranteed magic numbers). For operations leaders, founders, and business owners. Remote, worldwide.
+- /ai-adoption-for-business.html — AI adoption for business: AI readiness assessment, strategy and roadmap, and first-project scoping for non-technical leaders. Vendor-neutral, plain-language guidance. Remote, worldwide.
