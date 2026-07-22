@@ -8,12 +8,24 @@
     <language>en</language>
     <managingEditor>arjun@arjunthakur.dev (Arjun Thakur)</managingEditor>
     <webMaster>arjun@arjunthakur.dev (Arjun Thakur)</webMaster>
-    <lastBuildDate>Wed, 16 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://arjunthakur.dev/images/og-cover.jpg</url>
       <title>Arjun Thakur — AI Engineering Blog</title>
       <link>https://arjunthakur.dev/blog.html</link>
     </image>
+    <item>
+      <title>Will AI Recommend Your Business? What Generative Search Means for Getting Found</title>
+      <link>https://arjunthakur.dev/blog/will-ai-recommend-your-business.html</link>
+      <guid isPermaLink="true">https://arjunthakur.dev/blog/will-ai-recommend-your-business.html</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Your customers now ask ChatGPT, Claude, and Perplexity for recommendations instead of scrolling Google. A plain-language guide for business owners on how AI search decides who it recommends — and how to be the answer.</description>
+      <author>arjun@arjunthakur.dev (Arjun Thakur)</author>
+      <category>AI Search</category>
+      <category>Business Growth</category>
+      <category>Getting Found</category>
+    </item>
+
     <item>
       <title>How Does a Machine Learn? The Intuition Behind Linear Regression</title>
       <link>https://arjunthakur.dev/blog/how-does-a-machine-learn-linear-regression.html</link>
