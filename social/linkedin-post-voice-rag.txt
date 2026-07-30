@@ -1,0 +1,49 @@
+========================================
+LINKEDIN POST — copy the POST section, publish, then
+immediately post the FIRST COMMENT section below it.
+LinkedIn strips bold/italic — keep it plain text.
+Tip: attach the pre-RAG-vs-post-RAG image, or the AC/customer-care demo video,
+for reach. (images/voice-rag/02_prerag_vs_postrag.png)
+========================================
+
+--- POST ---
+
+An LLM will happily invent a customer care number that doesn't exist.
+
+Ask a plain model "what is the customer care number?" and it either refuses or makes one up. That's not a small bug — for an enterprise assistant, a confident wrong answer is worse than no answer.
+
+So I built a small voice agent to show the fix, in the hardest setting I could pick: mixed Kannada + English, spoken.
+
+The setup:
+
+→ Speech-to-text: Sarvam Saaras v3, in "codemix" mode — because generic models (Whisper, and to a degree Amazon Transcribe) garble code-mixed Kannada-English.
+
+→ LLM + embeddings: AWS Bedrock — Claude for reasoning, Titan for embeddings.
+
+→ RAG: retrieve the right document, then force the model to answer only from it, and cite the source.
+
+→ Speech back out in Kannada.
+
+What the demo shows, same model, same question:
+
+Without RAG - "I don't have that information."
+With RAG - the exact toll-free number, the hours, and a source citation.
+
+The honest part most RAG demos skip: on public facts the model already knows (what a common appliance error code means), RAG adds little. Its real value shows up on private, current, or specific data — your helpline, your warranty, this week's pricing. There the model has to guess, and RAG replaces the guess with a grounded, cited fact.
+
+The win isn't a bigger model. It's retrieval plus traceability.
+
+The whole thing runs on free tiers and a few cents of Bedrock, from one Jupyter notebook — code, architecture diagrams, and video in the write-up.
+
+If you're building voice or RAG for Indian languages, or want your team to learn to build this properly, the full walkthrough (and how to work with me) is in the comments. 👇
+
+#VoiceAI #RAG #AWSBedrock #LLM #RegionalLanguages
+
+--- FIRST COMMENT (post immediately after publishing) ---
+
+Full write-up — architecture, code, and the without-vs-with-RAG demo videos:
+https://arjunthakur.dev/blog/voice-rag-kannada-english-code-mixed.html
+
+Code is open source: https://github.com/thakurarjun247/voice-rag
+
+I build and teach production voice + RAG systems. Services and background: https://arjunthakur.dev

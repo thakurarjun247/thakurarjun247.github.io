@@ -8,12 +8,25 @@
     <language>en</language>
     <managingEditor>arjun@arjunthakur.dev (Arjun Thakur)</managingEditor>
     <webMaster>arjun@arjunthakur.dev (Arjun Thakur)</webMaster>
-    <lastBuildDate>Wed, 22 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://arjunthakur.dev/images/og-cover.jpg</url>
       <title>Arjun Thakur — AI Engineering Blog</title>
       <link>https://arjunthakur.dev/blog.html</link>
     </image>
+    <item>
+      <title>Voice RAG for Regional Languages: A Kannada + English Agent on AWS Bedrock</title>
+      <link>https://arjunthakur.dev/blog/voice-rag-kannada-english-code-mixed.html</link>
+      <guid isPermaLink="true">https://arjunthakur.dev/blog/voice-rag-kannada-english-code-mixed.html</guid>
+      <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Building a live code-mixed Kannada + English voice agent with RAG — Sarvam speech-to-text, AWS Bedrock (Claude + Titan), and grounded, cited answers. Includes architecture, code, and video of the without-vs-with-RAG contrast.</description>
+      <author>arjun@arjunthakur.dev (Arjun Thakur)</author>
+      <category>Voice AI</category>
+      <category>RAG</category>
+      <category>AWS Bedrock</category>
+      <category>Kannada NLP</category>
+    </item>
+
     <item>
       <title>Will AI Recommend Your Business? What Generative Search Means for Getting Found</title>
       <link>https://arjunthakur.dev/blog/will-ai-recommend-your-business.html</link>

@@ -102,7 +102,7 @@ Location: Indore, Madhya Pradesh, India
 - /mcp-training.html — 1:1 & team Model Context Protocol (MCP) training (build servers, expose tools to agents)
 - /ai-architecture-mentoring.html — 1:1 AI architecture mentoring and design reviews for senior engineers and teams
 - /speaking.html — Speaking, workshops, college guest lectures, placement-office partnerships, corporate upskilling. Past at IITs and NITs. Local and international.
-- /blog.html — Technical blog and articles
+- /blog.html — Technical blog and articles. Featured: /blog/voice-rag-kannada-english-code-mixed.html — building a code-mixed Kannada + English voice RAG agent on AWS Bedrock (Sarvam speech-to-text, Claude, Titan embeddings) that returns grounded, cited answers.
 - /contact.html — Contact form and direct contact details
 - /faq.html — FAQ: training, consulting, projects, speaking, availability, pricing, and how to book
 - /interviews.html — Technical interview services hub: hire a freelance expert interviewer for your panel, or practise with 1:1 mock interviews. Links both audiences (companies hiring + candidates preparing). AI/ML, DSA, system design, Java/Spring. Hourly, remote, worldwide.

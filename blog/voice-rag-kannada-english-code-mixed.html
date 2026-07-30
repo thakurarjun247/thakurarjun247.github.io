@@ -1,0 +1,404 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include analytics.html %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>Voice RAG for Regional Languages: A Kannada + English Agent on AWS Bedrock — Arjun Thakur</title>
+  <meta name="description" content="Building a live code-mixed Kannada + English voice agent with RAG: Sarvam speech-to-text, AWS Bedrock (Claude + Titan), grounded and cited answers. Code, video, architecture.">
+  <meta name="keywords" content="voice RAG, code-mixed speech recognition, Kannada English ASR, Sarvam Saaras, AWS Bedrock, Claude, Titan embeddings, retrieval augmented generation, regional language AI, speech to text, gTTS, vector search, RAG hallucination, RAG training, freelance AI engineer, freelance AI trainer, Arjun Thakur">
+  <meta name="author" content="Arjun Thakur">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://arjunthakur.dev/blog/voice-rag-kannada-english-code-mixed.html">
+
+  <!-- Geo -->
+  <meta name="geo.region" content="IN-MP">
+  <meta name="geo.placename" content="Indore, Madhya Pradesh, India">
+  <meta name="geo.position" content="22.7196;75.8577">
+  <meta name="ICBM" content="22.7196, 75.8577">
+
+  <!-- Open Graph (Article) -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://arjunthakur.dev/blog/voice-rag-kannada-english-code-mixed.html">
+  <meta property="og:title" content="Voice RAG for Regional Languages: A Kannada + English Agent on AWS Bedrock">
+  <meta property="og:description" content="A live code-mixed Kannada + English voice agent with RAG — how retrieval turns 'I can't help' into an exact, cited answer. Architecture, code, and video.">
+  <meta property="og:image" content="https://arjunthakur.dev/images/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Arjun Thakur">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:published_time" content="2026-07-29">
+  <meta property="article:author" content="Arjun Thakur">
+  <meta property="article:tag" content="Voice AI">
+  <meta property="article:tag" content="RAG">
+  <meta property="article:tag" content="AWS Bedrock">
+  <meta property="article:tag" content="Kannada NLP">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Voice RAG for Regional Languages: Kannada + English on AWS Bedrock">
+  <meta name="twitter:description" content="A live code-mixed Kannada + English voice agent with RAG — retrieval turns 'I can't help' into an exact, cited answer.">
+  <meta name="twitter:image" content="https://arjunthakur.dev/images/og-cover.jpg">
+
+  <!-- Theme & Performance -->
+  <meta name="theme-color" content="#22d3ee">
+  <link rel="dns-prefetch" href="https://github.com">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../images/favicon/site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt — AI/LLM-friendly profile">
+  <link rel="stylesheet" href="../css/style.css?v=20260716-1">
+
+  <!-- JSON-LD: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Voice RAG for Regional Languages: A Kannada + English Agent on AWS Bedrock",
+    "description": "Building a live code-mixed Kannada + English voice agent with RAG: Sarvam speech-to-text, AWS Bedrock (Claude + Titan), grounded and cited answers. Architecture, code, and video.",
+    "url": "https://arjunthakur.dev/blog/voice-rag-kannada-english-code-mixed.html",
+    "datePublished": "2026-07-29",
+    "dateModified": "2026-07-29",
+    "author": {
+      "@type": "Person",
+      "name": "Arjun Thakur",
+      "url": "https://arjunthakur.dev",
+      "jobTitle": "Principal AI Engineer",
+      "sameAs": ["https://linkedin.com/in/thakurarjun247", "https://github.com/thakurarjun247",
+        "https://x.com/arjunthakurdev",
+        "https://www.youtube.com/@ThakurArjun247"]
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Arjun Thakur",
+      "url": "https://arjunthakur.dev"
+    },
+    "image": "https://arjunthakur.dev/images/voice-rag/01_architecture.png",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://arjunthakur.dev/blog/voice-rag-kannada-english-code-mixed.html"
+    },
+    "keywords": ["Voice AI", "RAG", "AWS Bedrock", "Kannada NLP", "Sarvam", "Titan embeddings", "Code-mixed speech", "Retrieval Augmented Generation"],
+    "articleSection": "AI Engineering",
+    "timeRequired": "PT11M",
+    "inLanguage": "en-US",
+    "isPartOf": {
+      "@type": "CollectionPage",
+      "name": "Blog — Arjun Thakur",
+      "url": "https://arjunthakur.dev/blog.html"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arjunthakur.dev/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://arjunthakur.dev/blog.html" },
+      { "@type": "ListItem", "position": 3, "name": "Voice RAG for Regional Languages: A Kannada + English Agent on AWS Bedrock" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Skip to main content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+{% include nav.html %}
+
+  <main id="main-content">
+    <!-- Blog Post -->
+    <article class="blog-post">
+        <div class="container blog-post-container">
+
+            <div class="blog-post-header">
+                <a href="../blog.html" class="back-link">← Back to Blog</a>
+                <div class="blog-post-meta">
+                    <span class="blog-post-date">July 29, 2026</span>
+                    <span class="blog-post-reading-time">11 min read</span>
+                </div>
+                <h1>Voice RAG for Regional Languages: A Kannada + English Agent on AWS Bedrock</h1>
+                <div class="blog-post-tags">
+                    <span class="tag">Voice AI</span>
+                    <span class="tag">RAG</span>
+                    <span class="tag">AWS Bedrock</span>
+                    <span class="tag">Kannada NLP</span>
+                    <span class="tag">Sarvam</span>
+                </div>
+            </div>
+
+            <div class="blog-post-content">
+
+                <p class="lead">
+                    Large language models are impressive until someone speaks to them in mixed
+                    Kannada and English and asks a company-specific question. Then they either guess or
+                    give up. This is a walkthrough of a live voice agent I built that fixes exactly that —
+                    code-mixed speech in, a <strong>grounded, cited</strong> answer out — using
+                    Retrieval-Augmented Generation (RAG) on AWS Bedrock. Full code, architecture, and video below.
+                </p>
+
+                <p>
+                    The whole project is open source:
+                    <a href="https://github.com/thakurarjun247/voice-rag" rel="noopener">github.com/thakurarjun247/voice-rag</a>.
+                    You can clone it, add your AWS and Sarvam keys, and run the same demo.
+                </p>
+
+                <h2>The 30-second version</h2>
+                <ul>
+                    <li><strong>Problem:</strong> generic LLMs mishandle code-mixed regional voice, and they
+                        hallucinate on private or current data (a helpline number, a warranty period, an error code).</li>
+                    <li><strong>Fix:</strong> transcribe the code-mixed speech properly, then use RAG to
+                        ground the answer in your own documents — with a source citation.</li>
+                    <li><strong>Stack:</strong> Sarvam Saaras v3 (speech-to-text), AWS Bedrock — Claude (LLM)
+                        and Titan (embeddings), in-memory cosine retrieval, gTTS (speech-out). Mostly free tiers.</li>
+                    <li><strong>Result:</strong> without RAG the assistant says "I don't have that";
+                        with RAG it returns the exact answer and cites the source.</li>
+                </ul>
+
+                <h2>Why LLMs struggle with code-mixed regional voice</h2>
+                <p>
+                    Two separate failures stack up when someone in Karnataka asks a real question like
+                    <em>"Nanna washing machine nalli error code OE bandide, enu maadbeku?"</em>
+                    ("My washing machine shows error code OE, what should I do?").
+                </p>
+                <p>
+                    First, <strong>the speech is code-mixed</strong> — Kannada and English interleaved in one
+                    sentence. General multilingual speech-to-text models expect one language per utterance and
+                    garble the mix. In testing, OpenAI Whisper produced barely usable transcripts for spoken
+                    Kannada-English; it's simply not what it was trained for.
+                </p>
+                <p>
+                    Second, <strong>the model hallucinates on facts it cannot know</strong>. Ask a plain LLM for
+                    a company's customer-care number and it will either refuse or invent a plausible-looking one.
+                    That is the core weakness RAG exists to solve — and it's the same lesson whether you're
+                    building in Kannada, Hindi, or English. (If you want the deeper version of this, I run a
+                    dedicated <a href="../rag-training.html">RAG training</a> and
+                    <a href="../voice-ai-development.html">voice AI development</a> track.)
+                </p>
+
+                <h2>The architecture</h2>
+                <p>
+                    The pipeline is a straight line with one branch. Speech becomes text, the text is used to
+                    retrieve the most relevant document, and the model answers <em>from that document</em> — then
+                    the answer is spoken back. The "without RAG" path (dashed) skips retrieval and goes straight to
+                    the model, which is where hallucination creeps in.
+                </p>
+                <figure style="margin:2rem 0;">
+                    <img src="../images/voice-rag/01_architecture.png" loading="lazy" style="width:100%;height:auto;border-radius:12px;border:1px solid #e2e8f0;" alt="Voice RAG system architecture: user speaks Kannada and English, Sarvam Saaras v3 speech-to-text, Titan embeddings retriever over a knowledge base, AWS Bedrock Claude generates a grounded answer, gTTS speaks it back, with a dashed pre-RAG bypass that may hallucinate.">
+                    <figcaption style="font-size:0.85rem;color:#64748b;margin-top:0.5rem;text-align:center;">Speak → Transcribe → Retrieve → Ground → Answer → Speak. Every step runs live.</figcaption>
+                </figure>
+
+                <h2>The stack — and what I rejected</h2>
+                <p>
+                    Every component was chosen for reliability and fit to code-mixed Kannada, not novelty. The
+                    interesting decisions are the rejections.
+                </p>
+                <figure style="margin:2rem 0;">
+                    <img src="../images/voice-rag/04_tech_stack.png" loading="lazy" style="width:100%;height:auto;border-radius:12px;border:1px solid #e2e8f0;" alt="Voice RAG technology stack: Sarvam Saaras v3 speech-to-text, AWS Bedrock Claude LLM, AWS Bedrock Titan v2 embeddings, in-memory cosine retrieval, gTTS Kannada text-to-speech, Jupyter runtime — with the rejected alternatives noted for each.">
+                    <figcaption style="font-size:0.85rem;color:#64748b;margin-top:0.5rem;text-align:center;">What each piece does, and what it was chosen over.</figcaption>
+                </figure>
+                <ul>
+                    <li><strong>Speech-to-text: Sarvam Saaras v3</strong>, built for Indian languages with a
+                        dedicated <code>codemix</code> mode. Chosen over Whisper (garbled the Kannada-English mix)
+                        and Amazon Transcribe (weaker on intra-sentence code-switching, and gated on a new account).</li>
+                    <li><strong>LLM: AWS Bedrock — Claude.</strong> Strong Kannada, fully managed, and VPC-ready for
+                        enterprises. The notebook auto-discovers the current Claude model, so it never breaks when a
+                        model version is retired.</li>
+                    <li><strong>Embeddings: AWS Bedrock — Titan Text Embeddings v2.</strong> Multilingual including
+                        Kannada, one managed API call, same account and region as the LLM.</li>
+                    <li><strong>Retrieval: in-memory cosine similarity (NumPy).</strong> For a small knowledge base,
+                        a vector database is overkill and just one more thing to break.</li>
+                    <li><strong>Text-to-speech: gTTS (Kannada).</strong> Amazon Polly has no Kannada voice, so gTTS
+                        is the pragmatic free option; Sarvam's TTS is the paid, higher-quality alternative.</li>
+                </ul>
+
+                <h2>How RAG works: retrieve, augment, generate</h2>
+                <p>
+                    RAG doesn't make the model "smarter." It hands the model the right page to read
+                    <em>before</em> it answers. Three steps:
+                </p>
+                <figure style="margin:2rem 0;">
+                    <img src="../images/voice-rag/03_rag_concept.png" loading="lazy" style="width:100%;height:auto;border-radius:12px;border:1px solid #e2e8f0;" alt="How RAG works: step 1 retrieve embeds the question and finds the top-k nearest chunks with cosine similarity, step 2 augment builds a prompt from instructions plus retrieved context plus the question, step 3 generate produces a grounded and cited answer.">
+                    <figcaption style="font-size:0.85rem;color:#64748b;margin-top:0.5rem;text-align:center;">Retrieval is just search plus a disciplined prompt — no fine-tuning, no bigger model.</figcaption>
+                </figure>
+                <p>
+                    Retrieval itself is worth seeing concretely. The question is embedded into a vector, scored
+                    against every chunk in the knowledge base by cosine similarity, and the top matches are kept.
+                </p>
+                <figure style="margin:2rem 0;">
+                    <img src="../images/voice-rag/05_retrieval_detail.png" loading="lazy" style="width:100%;height:auto;border-radius:12px;border:1px solid #e2e8f0;" alt="Inside retrieval: the query 'AC nalli CH 05 error' is embedded and scored against knowledge base chunks by cosine similarity; the two highest-scoring chunks are selected as context and passed to the LLM, with a note that production would use a vector database.">
+                    <figcaption style="font-size:0.85rem;color:#64748b;margin-top:0.5rem;text-align:center;">Each document is one chunk here; at scale you split into ~300–500-token chunks in a vector DB (FAISS, OpenSearch, pgvector).</figcaption>
+                </figure>
+
+                <h2>The crucial code</h2>
+                <p>
+                    Two things do the work. First, the code-mixed transcription — note the <code>codemix</code>
+                    mode and Kannada language code:
+                </p>
+                <div class="code-block">
+                    <pre><code># Code-mixed Kannada + English speech -> text (Sarvam Saaras v3)
+resp = requests.post(
+    "https://api.sarvam.ai/speech-to-text",
+    headers={"api-subscription-key": SARVAM_API_KEY},
+    files={"file": ("q.wav", audio, "audio/wav")},
+    data={"model": "saaras:v3", "mode": "codemix", "language_code": "kn-IN"},
+)
+transcript = resp.json()["transcript"]</code></pre>
+                </div>
+                <p>
+                    Then the retrieval-and-grounding step. This is the whole point: retrieve the nearest chunks,
+                    then instruct the model to answer <em>only</em> from that context and to cite the source.
+                </p>
+                <div class="code-block">
+                    <pre><code># 1) RETRIEVE - find the most relevant chunks
+def retrieve(query, k=2):
+    q = embed(query)                      # Titan embedding
+    sims = KB @ q / (norms * norm(q))     # cosine similarity
+    return top_k(sims, k)                 # nearest documents
+
+# 2) AUGMENT + GENERATE - ground it, force a citation
+prompt = f"""Answer ONLY from the context. Cite the source.
+CONTEXT:
+{context}
+User: {query}"""
+answer = llm(prompt)                       # grounded + cited</code></pre>
+                </div>
+                <p>
+                    The full, runnable notebook — including live-mic capture, model auto-discovery, preflight
+                    checks, and graceful fallbacks — is on GitHub.
+                </p>
+                <p>
+                    <a href="https://github.com/thakurarjun247/voice-rag" class="btn btn-primary" rel="noopener">View the full code on GitHub →</a>
+                </p>
+
+                <h2>See it live</h2>
+                <p>
+                    The demo runs from a single Jupyter notebook. Starting it is two commands:
+                </p>
+                <div class="code-block">
+                    <pre><code>cd D:\git\voice-rag
+jupyter notebook Voice_RAG_Demo.ipynb</code></pre>
+                </div>
+                <p>
+                    Then you speak a code-mixed question and watch the "without RAG" answer, then the
+                    "with RAG" answer. Two runs below.
+                </p>
+
+                <h3>Demo 1 — an appliance error code (AC "CH 05")</h3>
+                <p>
+                    Spoken query: <em>"Nanna Air conditioner nalli ch 05 error bandide, enu maadbeku?"</em>
+                    Without RAG the model gives a generic "turn it off and on" answer; with RAG it grounds the
+                    fix in the manual and cites the page.
+                </p>
+                <!-- REPLACE REPLACE_YT_AC with your uploaded YouTube video ID for the AC CH 05 demo -->
+                <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;margin:1.5rem 0;border:1px solid #e2e8f0;">
+                    <iframe src="https://www.youtube.com/embed/REPLACE_YT_AC" title="Kannada + English voice RAG demo — AC CH 05 error, without vs with RAG" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                </div>
+
+                <h3>Demo 2 — a company-specific fact (customer care number)</h3>
+                <p>
+                    Spoken query: <em>"What is the customer care number?"</em> This is the cleanest proof.
+                    Without RAG the model literally cannot answer — it has no way to know a specific helpline.
+                    With RAG it returns the exact number and cites the source document.
+                </p>
+                <!-- REPLACE REPLACE_YT_CARE with your uploaded YouTube video ID for the customer-care demo -->
+                <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;margin:1.5rem 0;border:1px solid #e2e8f0;">
+                    <iframe src="https://www.youtube.com/embed/REPLACE_YT_CARE" title="Kannada + English voice RAG demo — customer care number, without vs with RAG" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                </div>
+
+                <h2>Pre-RAG vs post-RAG: the result</h2>
+                <p>
+                    Same model, same question. The only difference is whether retrieval grounded the answer.
+                </p>
+                <figure style="margin:2rem 0;">
+                    <img src="../images/voice-rag/02_prerag_vs_postrag.png" loading="lazy" style="width:100%;height:auto;border-radius:12px;border:1px solid #e2e8f0;" alt="Pre-RAG vs post-RAG comparison for 'What is the customer care phone number?'. Without RAG the model says it does not have enough information and cites no source. With RAG it returns the exact toll-free number with hours and a source citation.">
+                    <figcaption style="font-size:0.85rem;color:#64748b;margin-top:0.5rem;text-align:center;">Without RAG: "I don't have that." With RAG: an exact, cited answer.</figcaption>
+                </figure>
+
+                <h2>When RAG helps — and when it doesn't</h2>
+                <p>
+                    An honest point that too many RAG demos skip: on <strong>public facts the model already
+                    knows</strong> — like what a common washing-machine error code means — RAG adds little,
+                    because the base model was already roughly right. Modern models like Claude know a lot of
+                    general troubleshooting.
+                </p>
+                <p>
+                    RAG becomes <strong>decisive on private, current, or specific data</strong>: your helpline
+                    number, your warranty terms, your internal policy, this week's pricing. There the model has to
+                    invent or refuse — and RAG replaces the guess with a grounded, cited fact. Two things it always
+                    adds, even when the model was already right: <strong>a source citation</strong> and
+                    <strong>far lower hallucination risk</strong>. For an enterprise assistant, that traceability is
+                    the difference between a demo and something you can actually trust.
+                </p>
+
+                <h2>Cost, reliability, and production</h2>
+                <p>
+                    The whole demo runs on free tiers and a few cents of Bedrock usage, with no idle
+                    infrastructure. Reliability came from small, boring choices: a preflight cell that fails fast
+                    with a checklist, model auto-discovery so a retired model ID can't break the run, cached audio,
+                    and typed-query fallbacks if the mic or a network call misbehaves.
+                </p>
+                <p>
+                    To productionize, the pipeline barely changes shape: chunk larger documents and move retrieval
+                    into a vector database (FAISS, OpenSearch, or pgvector), wrap it in a FastAPI service calling
+                    Bedrock inside your VPC so data never leaves your account, and add guardrails, evaluation
+                    metrics, and monitoring. The retrieval interface stays identical — you just swap the store.
+                </p>
+
+                <h2>Takeaways</h2>
+                <p>
+                    LLM plus RAG gives you answers that are accurate, grounded, in-language, and cited — and it
+                    works in the hardest setting, regional code-mixed voice. The win is not a bigger model; it's
+                    retrieval plus traceability. The exact same pattern powers any enterprise knowledge assistant,
+                    in any language.
+                </p>
+                <p>
+                    I build and teach production voice and RAG systems like this. If your team wants it built or
+                    wants to learn it hands-on, see <a href="../rag-training.html">RAG training</a>,
+                    <a href="../voice-ai-development.html">voice AI development</a>, or just reach out on the
+                    <a href="../contact.html">contact page</a>. The full code is
+                    <a href="https://github.com/thakurarjun247/voice-rag" rel="noopener">on GitHub</a>.
+                </p>
+
+            </div>
+
+        </div>
+    </article>
+
+    <!-- Author callout -->
+    <section class="services-section">
+      <div class="container">
+        <div class="callout callout--brand">
+          <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;">
+            <img src="../images/arjun.jpeg" width="72" height="72" loading="lazy" style="width:72px;height:72px;border-radius:50%;flex-shrink:0;" alt="Arjun Thakur">
+            <div><strong>Arjun Thakur</strong> — Principal AI Engineer &amp; Fractional CTO. I build production agentic AI (LangGraph, RAG, voice) and help teams do the same through <a href="../consulting.html">consulting</a> and <a href="../training.html">training</a>. <a href="../contact.html">Work with me &rarr;</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+{% include footer.html %}
+
+  <script src="../js/main.js?v=20260702-1" defer></script>
+</body>
+</html>
