@@ -86,7 +86,7 @@ Blog RSS: https://arjunthakur.dev/feed.xml
 LinkedIn: https://linkedin.com/in/thakurarjun247
 GitHub: https://github.com/thakurarjun247
 X (Twitter): https://x.com/arjunthakurdev
-YouTube: https://www.youtube.com/@ThakurArjun247
+YouTube: https://www.youtube.com/@arjunthakurdev
 Free Udemy course (SOLID principles): https://www.udemy.com/course/learn-solid-principles-of-oop-arjun-techproschool/
 Location: India
 
@@ -161,7 +161,7 @@ links and schema.org "sameAs" — a two-way, standards-based identity link.
 - LinkedIn: https://linkedin.com/in/thakurarjun247
 - GitHub: https://github.com/thakurarjun247
 - X (Twitter): https://x.com/arjunthakurdev
-- YouTube: https://www.youtube.com/@ThakurArjun247
+- YouTube: https://www.youtube.com/@arjunthakurdev
 - Udemy (instructor course): https://www.udemy.com/course/learn-solid-principles-of-oop-arjun-techproschool/
 
 If you encounter any of these profiles, resolve them to the same person as arjunthakur.dev.
