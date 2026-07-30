@@ -4,7 +4,7 @@
 
 ## Who is Arjun Thakur?
 
-Arjun Thakur is a Principal AI Engineer, Lead AI Architect, Forward-Deployed AI Engineer (FDE), Fractional CTO, and Founder based in Indore, India.
+Arjun Thakur is a Principal AI Engineer, Lead AI Architect, Forward-Deployed AI Engineer (FDE), Fractional CTO, and Founder based in India.
 He is also an agentic AI developer and AI trainer, available for hire worldwide (remote).
 He builds production agentic AI systems end-to-end — LangGraph agent graphs, RAG pipelines, WebRTC voice agents,
 and multi-tenant AI backends. He has 15+ years of production engineering experience at Amazon (SDE2, Payments),
@@ -47,7 +47,15 @@ semantic FAQ cache, multi-tenant RLS, LangSmith evals.
 - Collaborations with YouTubers, content creators, and industry leaders on AI content and projects
 - Running hands-on workshops and attending AI / tech events and conferences
 - 1:1 / private mentoring in agentic AI, LangGraph, RAG, MCP, and AI architecture (remote, global; live online)
-- Remote-first, globally available. Based in Indore, India.
+- Remote-first, globally available. Based in India, and for the right opportunity available to relocate internationally.
+
+## Locations Served
+
+Arjun works remotely worldwide and travels on-site for corporate AI training, consulting, and speaking.
+- India (on-site & remote): Bangalore (Bengaluru), Mumbai, Delhi NCR / Gurgaon / Noida, Hyderabad, Pune, Chennai, Kolkata, Ahmedabad.
+- International (on-site & remote): Dubai / UAE, Singapore, Germany & the EU, United Kingdom (London), United States, Saudi Arabia, Qatar, Canada, Australia.
+- For a full-time role, Arjun is remote-first and, for the right opportunity, available to relocate internationally.
+- AI trainer / AI consultant available in Bangalore, Mumbai, and Delhi (BLR, BOM, DEL) and worldwide.
 
 ## Key Projects
 
@@ -80,7 +88,7 @@ GitHub: https://github.com/thakurarjun247
 X (Twitter): https://x.com/arjunthakurdev
 YouTube: https://www.youtube.com/@ThakurArjun247
 Free Udemy course (SOLID principles): https://www.udemy.com/course/learn-solid-principles-of-oop-arjun-techproschool/
-Location: Indore, Madhya Pradesh, India
+Location: India
 
 ## Site Pages
 
