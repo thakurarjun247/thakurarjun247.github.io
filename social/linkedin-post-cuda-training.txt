@@ -1,0 +1,43 @@
+========================================
+LINKEDIN POST — copy the POST section, publish, then
+immediately post the FIRST COMMENT section below it.
+LinkedIn strips bold/italic — keep it plain text.
+========================================
+
+--- POST ---
+
+I'm building a CUDA training track in public — and I want to know if there's real demand before I go deep.
+
+Here's the honest status, because I'd rather be straight than oversell:
+
+The track isn't live yet. I'm actively prepping for NVIDIA DLI certification (Fundamentals of Accelerated Computing with Modern CUDA C++, plus multi-GPU), and building the curriculum as I go.
+
+Why CUDA, why now:
+
+Everyone's shipping AI on top of GPUs. Very few engineers can actually write and optimize what runs on them.
+
+Calling a framework is not the same as writing a fast kernel. The people who understand the GPU execution model, memory coalescing, occupancy, and multi-GPU scaling are scarce — and that gap is only widening as AI and HPC workloads grow.
+
+So I'm aiming this at the hard part: real CUDA C++, from the execution model up through profiling and multi-GPU — not "import a library and hope."
+
+What I'm testing:
+
+Is there appetite for hands-on CUDA / GPU-programming training — corporate teams or 1:1?
+
+If your team touches HPC, ML infrastructure, simulation, or high-throughput data and CUDA is on your roadmap, I want to hear from you. Early interest genuinely shapes what I build first, and you'd get priority when dates open.
+
+Two things I'm curious about from this network:
+
+1. For teams already writing GPU code — what's the skills gap that actually bites you? Kernel optimization? Multi-GPU? Debugging?
+
+2. For engineers — would you rather learn CUDA 1:1 or in a team cohort?
+
+Building in the open, prepping for the cert, and gauging the water. Tell me if I'm onto something.
+
+#CUDA #GPU #AcceleratedComputing #HPC #NVIDIA
+
+--- FIRST COMMENT (post immediately after publishing) ---
+
+Early-interest page (honest status + planned curriculum): https://arjunthakur.dev/cuda-training.html
+
+I already train teams and individuals in AI engineering — LangGraph, RAG, voice, and system design. Full training catalog and how to work with me: https://arjunthakur.dev/training.html
