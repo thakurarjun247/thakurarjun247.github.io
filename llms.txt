@@ -93,7 +93,7 @@ Location: India
 ## Site Pages
 
 - / — Home: full profile, services, Yuvan architecture, projects, skills, FAQ
-- /resume.html — Detailed resume with all experience and skills
+- /resume.html — Résumé with recent corporate AI training engagements surfaced at the top, plus full experience and skills; two downloadable PDFs — a Trainer résumé (corporate AI training / workshops, the primary/default) and a Consultant résumé (Principal AI Engineer / architect / Fractional CTO)
 - /geo-optimization.html — GEO / AI-search optimization: get found and cited by ChatGPT, Claude, Perplexity (audit, done-for-you, retainer)
 - /consulting.html — AI engineering consulting: agentic AI/LangGraph, RAG, voice AI builds, architecture reviews, Fractional CTO, embedded support
 - /hire-agentic-ai-developer.html — Hire an agentic AI developer (freelance / contract): production LangGraph agents, RAG, MCP tool integrations, evals, guardrails; end-to-end builds, embedded contracts, and rescue/hardening of stuck agent projects
