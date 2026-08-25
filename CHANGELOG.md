@@ -1,5 +1,29 @@
 # Changelog
 
+## 2026-08-25 — New service page: AI Cost Optimization
+
+Added a dedicated AI cost-optimization / AI-FinOps service page aimed at CTOs, VPs of Engineering, CFOs,
+and CEOs whose AI/LLM and cloud bills are rising faster than usage. Deliberately distinct from
+`reduce-costs-with-ai.html` (which uses AI to cut *operational* costs); this page cuts the cost of the
+*AI system itself* — LLM/API token spend, GPU and inference compute, and cloud AI spend.
+
+### Added
+- **ai-cost-optimization.html** (new) — full SEO head (title/description/keywords/canonical/OG/Twitter,
+  geo meta, favicon, llms.txt alternate); JSON-LD `Service` + `BreadcrumbList` + `FAQPage`. Sections:
+  where the AI bill leaks (token bloat, wrong-size models, no caching, runaway loops, idle GPU, no unit
+  economics), a 3-step engagement (Audit → Optimise → Verify & monitor), a "cut costs without breaking
+  the product" callout, a cost-engineering track-record callout, FAQ, and cross-linked Related cards.
+
+### Changed
+- **sitemap.xml** — added `<url>` for the new page (priority 0.9); bumped `<lastmod>` to 2026-08-25 on
+  `/`, `consulting.html`, and `reduce-costs-with-ai.html` (all edited).
+- **sitemap.html** — new `project-card` under Main.
+- **llms.txt** — new bullet under `## Site Pages` and a new Business FAQ Q&A; both note it's distinct
+  from `reduce-costs-with-ai.html`.
+- **consulting.html** — new card in the "For Business Leaders" grid.
+- **index.html** — new card in the services grid and a new inline link in the business-leaders line.
+- **reduce-costs-with-ai.html** — reciprocal Related card clarifying the two pages' distinction.
+
 ## 2026-07-16 — New service: interviewing & hiring (2 pages)
 
 Added a new service line — technical interviewing and hiring — split across two audience-specific,

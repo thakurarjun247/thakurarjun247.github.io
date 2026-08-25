@@ -1,0 +1,185 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include analytics.html %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Cost Optimization — Cut Your LLM, GPU &amp; Cloud AI Bill | Arjun Thakur</title>
+  <meta name="description" content="AI cost optimization for teams whose AI bill is climbing — cut LLM/API token spend, GPU and inference costs, and cloud AI spend without degrading the product. FinOps-grade audit, fixes, and measurement by a Principal AI Engineer who treats cost as a first-class metric. Remote, worldwide.">
+  <meta name="keywords" content="AI cost optimization, LLM cost optimization, reduce AI API costs, token cost reduction, GPU cost optimization, inference cost reduction, AI FinOps, AI cloud cost optimization, cut AI spend, lower LLM costs, model right-sizing, semantic caching, AI budget, AI unit economics, Arjun Thakur">
+  <meta name="author" content="Arjun Thakur">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://arjunthakur.dev/ai-cost-optimization.html">
+  <meta name="geo.region" content="IN">
+  <meta name="geo.placename" content="India">
+  <meta name="theme-color" content="#22d3ee">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arjunthakur.dev/ai-cost-optimization.html">
+  <meta property="og:title" content="AI Cost Optimization — Cut Your LLM, GPU &amp; Cloud AI Bill">
+  <meta property="og:description" content="Cut LLM/API tokens, GPU and inference, and cloud AI spend without degrading the product — a FinOps-grade audit and fixes from a Principal AI Engineer. Remote, worldwide.">
+  <meta property="og:image" content="https://arjunthakur.dev/images/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Arjun Thakur">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Cost Optimization — Cut Your LLM, GPU &amp; Cloud AI Bill">
+  <meta name="twitter:description" content="Cut LLM/API tokens, GPU and inference, and cloud AI spend without degrading the product — from a Principal AI Engineer. Remote, worldwide.">
+  <meta name="twitter:image" content="https://arjunthakur.dev/images/og-cover.jpg">
+  <link rel="icon" type="image/x-icon" href="/images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/images/favicon/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt — AI/LLM-friendly profile">
+  <link rel="stylesheet" href="css/style.css?v=20260716-1">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://arjunthakur.dev/ai-cost-optimization.html#service",
+    "serviceType": "AI cost optimization and FinOps for LLM, GPU, and cloud AI spend",
+    "name": "AI Cost Optimization",
+    "description": "AI cost-optimization engagements that lower the cost of running AI systems: cutting LLM/API token spend, GPU and inference costs, and cloud AI spend without degrading quality or latency. A FinOps-grade audit, prioritised fixes, and measured savings against a baseline, delivered by a Principal AI Engineer who treats cost as a first-class production metric. Delivered remotely, worldwide.",
+    "url": "https://arjunthakur.dev/ai-cost-optimization.html",
+    "provider": { "@id": "https://arjunthakur.dev/#person" },
+    "areaServed": "Worldwide",
+    "audience": { "@type": "Audience", "audienceType": "CTOs, VPs of Engineering, CFOs and finance leaders, and CEOs whose AI/LLM and cloud bills are rising faster than usage" },
+    "availableChannel": [
+      { "@type": "ServiceChannel", "name": "AI cost audit (fixed scope)" },
+      { "@type": "ServiceChannel", "name": "Optimization build (project-based)" },
+      { "@type": "ServiceChannel", "name": "Ongoing FinOps / cost monitoring" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arjunthakur.dev/" }, { "@type": "ListItem", "position": 2, "name": "Consulting", "item": "https://arjunthakur.dev/consulting.html" }, { "@type": "ListItem", "position": 3, "name": "AI Cost Optimization", "item": "https://arjunthakur.dev/ai-cost-optimization.html" } ] }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is AI cost optimization?", "acceptedAnswer": { "@type": "Answer", "text": "It is the discipline of lowering what it costs to run your AI systems — LLM/API token spend, GPU and inference compute, and the surrounding cloud infrastructure — without hurting quality, latency, or reliability. It is distinct from using AI to cut business costs: here the AI system itself is the line item being optimised, the way a CFO or CTO would scrutinise any other rising bill." } },
+      { "@type": "Question", "name": "Our AI bill is climbing faster than usage. Where does the money usually leak?", "acceptedAnswer": { "@type": "Answer", "text": "Common culprits: sending far more tokens (long prompts, whole documents, chat history) than the task needs; calling a frontier model for work a smaller one handles fine; no caching of repeated or near-identical requests; retries and agent loops that silently multiply calls; and over-provisioned GPU or always-on inference endpoints running at low utilisation. An audit finds which of these apply to you and what each is worth." } },
+      { "@type": "Question", "name": "Can you cut costs without making the product worse?", "acceptedAnswer": { "@type": "Answer", "text": "That is the whole point. Every change is measured against a quality and latency baseline before it ships, so you see the saving and the impact side by side. Where a cheaper option would degrade the experience, I say so and leave it — honest scoping is part of the value, not an afterthought." } },
+      { "@type": "Question", "name": "How much can we expect to save?", "acceptedAnswer": { "@type": "Answer", "text": "No honest engineer promises a fixed percentage sight unseen. The realistic range depends on how the system was built; teams that grew fast without cost discipline usually have the most on the table. I audit your actual usage and spend, estimate the opportunity, implement the highest-ROI fixes, and report the measured result against a baseline." } },
+      { "@type": "Question", "name": "Who is this for — engineering or finance?", "acceptedAnswer": { "@type": "Answer", "text": "Both. CTOs and VPs of Engineering get concrete, prioritised engineering fixes; CFOs, finance leaders, and CEOs get AI unit economics they can forecast and defend — cost per request, per user, and per feature — instead of a bill that only ever surprises them." } },
+      { "@type": "Question", "name": "How do we start?", "acceptedAnswer": { "@type": "Answer", "text": "Book a free call. We look at your current AI spend and architecture, identify the biggest leaks, and you get an honest view of the opportunity and what it would take to capture it." } }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+{% include nav.html %}
+  <header class="page-header">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> / <a href="consulting.html">Consulting</a> / <span>AI Cost Optimization</span></nav>
+      <div class="hero-badge"><span class="badge">AI Cost Optimization</span><span class="badge">LLM &middot; GPU &middot; Cloud</span><span class="badge">AI FinOps</span><span class="badge">Remote &middot; Worldwide</span></div>
+      <h1>Your AI Bill Is Climbing. <span class="gradient-text">I Bring It Down.</span></h1>
+      <p>AI cost optimization for teams running LLMs in production &mdash; cut token spend, GPU and inference costs, and cloud AI spend without degrading quality or latency. A FinOps-grade audit, prioritised fixes, and savings measured against a baseline, from a Principal AI Engineer who treats cost as a first-class metric. For CTOs, VPs of Engineering, and the finance leaders who have to forecast the bill. Remote, worldwide.</p>
+      <div class="cta-buttons">
+        <a href="contact.html#book" class="btn btn-primary">Book a Free Call</a>
+        <a href="#how" class="btn btn-secondary">How It Works</a>
+      </div>
+    </div>
+  </header>
+  <main id="main-content">
+
+  <section class="services-section">
+    <div class="container">
+      <div class="callout callout--brand">
+        <div class="callout-title">Who this is for</div>
+        <p>CTOs and VPs of Engineering watching an AI/LLM bill grow faster than usage; CFOs and finance leaders who need AI spend they can forecast and defend, not one that only ever surprises them; and CEOs weighing whether the AI feature actually pays for itself. If your inference, API, or GPU spend has outrun the plan &mdash; or you simply can't explain cost per request, per user, or per feature &mdash; there is usually real money on the table.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="how">
+    <div class="container">
+      <h2 class="section-title">Where the AI Bill Leaks</h2>
+      <p class="section-subtitle">The usual suspects &mdash; and what each is worth</p>
+      <div class="projects-grid">
+        <div class="project-card"><h3>Token bloat</h3><p>Long prompts, whole documents, and full chat history sent on every call &mdash; when the task needs a fraction of it. Trimming context and prompts is often the fastest, safest win.</p></div>
+        <div class="project-card"><h3>Wrong-size models</h3><p>Calling a frontier model for work a smaller, cheaper one does just as well. Right-sizing per task &mdash; and routing the hard cases up &mdash; cuts spend without cutting quality.</p></div>
+        <div class="project-card"><h3>No caching</h3><p>Paying full price for repeated or near-identical requests. Semantic and exact-match caching turns those into near-free responses that are faster too.</p></div>
+        <div class="project-card"><h3>Runaway loops &amp; retries</h3><p>Agent loops, retries, and fan-out that silently multiply calls. Guardrails and budgets stop a single request from quietly costing 10x.</p></div>
+        <div class="project-card"><h3>Idle GPU &amp; inference</h3><p>Over-provisioned GPUs and always-on endpoints running at low utilisation. Right-sizing, autoscaling, batching, and quantisation reclaim the waste.</p></div>
+        <div class="project-card"><h3>No unit economics</h3><p>Nobody can say what a request, a user, or a feature actually costs. Instrumenting spend per unit turns a surprising bill into a number you can forecast.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-section">
+    <div class="container">
+      <h2 class="section-title">How an Engagement Works</h2>
+      <div class="services-grid">
+        <div class="service-card"><h3>1 &middot; Audit</h3><p>I map your AI spend against your architecture and usage &mdash; where the tokens, calls, and compute actually go &mdash; and rank the leaks by what each is worth to fix. You get an honest opportunity estimate, not a sales number.</p></div>
+        <div class="service-card"><h3>2 &middot; Optimise</h3><p>I implement the highest-ROI fixes with production discipline &mdash; caching, right-sizing, prompt and context trimming, routing, batching, GPU right-sizing &mdash; each measured against a quality and latency baseline before it ships.</p></div>
+        <div class="service-card"><h3>3 &middot; Verify &amp; monitor</h3><p>We confirm the saving against the baseline and stand up per-request cost monitoring and budgets, so the bill stays down and the next regression is caught early &mdash; not three months later on the invoice.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-section">
+    <div class="container">
+      <div class="callout callout--muted">
+        <div class="callout-title">Cut costs without breaking the product</div>
+        <p>Optimisation only counts if the experience holds. Every change is gated on a quality and latency baseline before it ships, so you see the saving and its impact side by side. Where a cheaper option would genuinely degrade the product, I tell you and leave it &mdash; a smaller bill on a worse product is not a win. Honest scoping is part of the value.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-section">
+    <div class="container">
+      <div class="callout callout--muted">
+        <div class="callout-title">Why me &mdash; cost is how I think</div>
+        <p>Cost engineering isn't a pitch for me; it's how I ship. On my own live AI product I run a semantic cache targeting roughly a 30% hit rate specifically to hold per-session AI cost under an economic ceiling, choose the smallest model that does each job, and monitor spend per request. Earlier, at CoinSwitch, I cut query latency 30% with Redis caching and a further 40% with connection pooling while holding the system stable from 600K to 10M users. Across 15+ years &mdash; Amazon Payments, Agoda, CoinSwitch &mdash; the discipline is the same: measure, engineer, verify. That is exactly what bringing an AI bill down takes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-section" id="faq">
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq-stack">
+        <div class="faq-card"><h3>What is AI cost optimization?</h3><p>Lowering what it costs to run your AI systems &mdash; LLM/API tokens, GPU and inference compute, and surrounding cloud &mdash; without hurting quality, latency, or reliability. The AI system itself is the line item being optimised.</p></div>
+        <div class="faq-card"><h3>Where does the money usually leak?</h3><p>Token bloat, over-large models, no caching, runaway agent loops and retries, and idle over-provisioned GPU or inference endpoints. An audit finds which apply to you and what each is worth.</p></div>
+        <div class="faq-card"><h3>Can you cut costs without making the product worse?</h3><p>Yes &mdash; that's the point. Every change is measured against a quality and latency baseline before it ships. Where a cheaper option would degrade the experience, I say so and leave it.</p></div>
+        <div class="faq-card"><h3>How much can we expect to save?</h3><p>No honest engineer promises a fixed percentage sight unseen. I audit your actual usage and spend, estimate the opportunity, implement the highest-ROI fixes, and report the measured result against a baseline.</p></div>
+        <div class="faq-card"><h3>Is this for engineering or finance?</h3><p>Both. Engineering gets prioritised fixes; finance and leadership get AI unit economics &mdash; cost per request, per user, per feature &mdash; they can forecast and defend.</p></div>
+        <div class="faq-card"><h3>How do we start?</h3><p>Book a free call; we look at your current AI spend and architecture, find the biggest leaks, and you get an honest view of the opportunity.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects">
+    <div class="container">
+      <h2 class="section-title">Related</h2>
+      <div class="projects-grid">
+        <div class="project-card"><h3><a href="reduce-costs-with-ai.html">Reduce Costs with AI &rarr;</a></h3><p>The other direction: use AI to automate repetitive work and cut your <em>operational</em> costs &mdash; not the cost of the AI itself.</p></div>
+        <div class="project-card"><h3><a href="consulting.html">AI Consulting &rarr;</a></h3><p>The consulting hub &mdash; agentic AI, RAG, and voice builds; architecture reviews; Fractional CTO.</p></div>
+        <div class="project-card"><h3><a href="ai-architecture-mentoring.html">AI Architecture &amp; Design Review &rarr;</a></h3><p>Audit an in-progress AI system for reliability, cost, and scale &mdash; with a prioritised action list.</p></div>
+        <div class="project-card"><h3><a href="fractional-cto-for-startups.html">Fractional CTO for Startups &rarr;</a></h3><p>Part-time engineering leadership &mdash; keep cost, architecture, and delivery on track.</p></div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+  <section class="cta-section">
+    <div class="container">
+      <h2>What is your AI actually costing you?</h2>
+      <p>Book a free call and let's find the biggest place your AI bill is leaking &mdash; and what it's worth to fix.</p>
+      <div class="cta-buttons"><a href="contact.html#book" class="btn btn-primary">Book Free Call</a><a href="consulting.html" class="btn btn-secondary">See Consulting &rarr;</a></div>
+    </div>
+  </section>
+{% include footer.html %}
+  <script src="js/main.js?v=20260702-1" defer></script>
+</body>
+</html>
