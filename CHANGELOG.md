@@ -20,11 +20,8 @@ curriculum in crawlable HTML (the PDF is an export, not the source), a download 
 
 ### Changed
 - **training.html** — the two flagship programmes added as the first two cards in the "1:1 & Team Training
-  Tracks" grid. The "Backend and Systems Training Programs" section was compressed from 8 cards to 3 and
-  retitled "Also Delivered: Backend and Systems Training Programs", so the page reads AI-first. Verified by
-  script that **all 97 checked keyword tokens present before the edit are still present after** — Java 21,
-  Spring Boot, Kafka, Kubernetes, AWS/EC2/S3/ECS/Lambda/IAM/RDS/DynamoDB, HLD/LLD, SOLID, GoF, pgvector,
-  Cassandra, PgBouncer, Jenkins, Grafana, ELK, DSA, and the city/geo terms all survive.
+  Tracks" grid. This is the **only** change to the page: verified byte-identical to the previous version
+  apart from the two inserted cards, so no existing heading, keyword or section was touched.
 - **sitemap.xml** — two new `<url>` blocks (priority 0.9); `training.html` `<lastmod>` bumped to 2026-09-05.
 - **sitemap.html** — two new `project-card` entries under Training & Mentoring.
 - **llms.txt** — two new bullets under `## Site Pages`, both marked FLAGSHIP, with full technology coverage
