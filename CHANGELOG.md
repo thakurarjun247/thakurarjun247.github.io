@@ -1,5 +1,44 @@
 # Changelog
 
+## 2026-09-05 — Two flagship training programme pages + hub restructure
+
+Added dedicated, shareable pages for the two flagship corporate training programmes, so prospects and vendor
+partners can be pointed at a URL instead of receiving an email attachment. Each page carries the full day-by-day
+curriculum in crawlable HTML (the PDF is an export, not the source), a download button, and share controls.
+
+### Added
+- **rag-agentic-ai-engineering-5-day-training.html** (new) — 5-day RAG & agentic AI engineering programme for
+  software engineers. Full SEO head; JSON-LD `Course` (with two `CourseInstance` entries, onsite + online),
+  `Service`, `BreadcrumbList` and `FAQPage`. Day-by-day curriculum with per-block minute budgets, LangGraph vs
+  AWS Bedrock stack comparison, outcomes, takeaways, technologies list, delivery formats, 7-question FAQ.
+- **low-code-ai-automation-n8n-3-day-training.html** (new) — 3-day no-code programme (n8n + NotebookLM) for
+  non-technical teams. Same schema set and page structure.
+- **trainings/** — the two curriculum PDFs (4pp and 3pp, A4), linked from both pages.
+- **Action bar** on both pages: Download PDF (left), and Copy page link / Copy PDF link / Email / WhatsApp /
+  LinkedIn (right). Copy uses `navigator.clipboard` with a `document.execCommand` fallback; implemented as an
+  inline script so `js/main.js` is untouched and no cache-bust is needed.
+
+### Changed
+- **training.html** — the two flagship programmes added as the first two cards in the "1:1 & Team Training
+  Tracks" grid. The "Backend and Systems Training Programs" section was compressed from 8 cards to 3 and
+  retitled "Also Delivered: Backend and Systems Training Programs", so the page reads AI-first. Verified by
+  script that **all 97 checked keyword tokens present before the edit are still present after** — Java 21,
+  Spring Boot, Kafka, Kubernetes, AWS/EC2/S3/ECS/Lambda/IAM/RDS/DynamoDB, HLD/LLD, SOLID, GoF, pgvector,
+  Cassandra, PgBouncer, Jenkins, Grafana, ELK, DSA, and the city/geo terms all survive.
+- **sitemap.xml** — two new `<url>` blocks (priority 0.9); `training.html` `<lastmod>` bumped to 2026-09-05.
+- **sitemap.html** — two new `project-card` entries under Training & Mentoring.
+- **llms.txt** — two new bullets under `## Site Pages`, both marked FLAGSHIP, with full technology coverage
+  so AI assistants can answer questions about the programmes without fetching the pages.
+
+### SEO/GEO notes
+- Both pages use only existing CSS classes plus inline styles — `css/style.css` and `js/main.js` are unchanged,
+  so no `?v=` cache-bust was required on any of the other 49 pages.
+- All 8 JSON-LD blocks across the two pages validated as parseable; one `<h1>` per page; headings nest cleanly.
+- `Course` schema `provider` links by `@id` to `https://arjunthakur.dev/#person`, joining the existing entity graph.
+- Titles and keywords carry acronyms and full forms together (RAG / Retrieval-Augmented Generation,
+  MCP / Model Context Protocol, HITL, LLM) plus Hong Kong and Japan geo terms.
+
+
 ## 2026-08-25 — New service page: AI Cost Optimization
 
 Added a dedicated AI cost-optimization / AI-FinOps service page aimed at CTOs, VPs of Engineering, CFOs,
