@@ -37,3 +37,7 @@ npm-debug.log*
 
 # FUSE mount artifacts (temp files from the desktop file layer)
 .fuse_hidden*
+
+# Superseded/scratch files kept locally but never published
+_to_delete/
+resumes/src/
