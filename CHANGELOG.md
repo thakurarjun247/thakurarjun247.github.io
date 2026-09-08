@@ -1,5 +1,44 @@
 # Changelog
 
+## 2026-09-08 — Trainer résumé leads with training; both delivery tracks represented
+
+The trainer résumé and `resume.html` now lead with the training identity rather than the engineering one, and
+both standing delivery tracks — code-first and no-code/low-code — are represented so the résumé covers
+technical and non-technical audiences alike. Additive throughout; no existing content removed.
+
+### Changed
+- **resumes/Arjun-Thakur-AI-Trainer-Resume.pdf** and **resumes/src/Arjun-Thakur-AI-Trainer-Resume.docx** —
+  headline reordered to "Corporate AI Trainer & Agentic AI Developer | Principal / Lead AI Engineer |
+  Architect & Fractional CTO | Founder | ex-Amazon, ex-Agoda". "Available for" line now leads with corporate
+  AI training and notes both code-first and no-code tracks. New Summary bullet covering both audiences. New
+  "Training Programs" section describing the two tracks generically. "Training & Enablement" skills line
+  extended with no-code / low-code enablement (n8n, NotebookLM). Certifications moved from directly under
+  Summary to sit after Education, so the AI-training content leads and the AWS credentials sit with the other
+  qualifications — matching the order `resume.html` already used.
+  Deliberately **generic**: no programme URLs and no fixed day counts, so the same résumé suits a client who
+  wants a differently-scoped programme. The only day count remaining is the factual LG delivery record.
+- **resume.html** — sub-headline reordered to match the PDF (all prior role tokens retained). New Summary
+  bullet on the two tracks. New "Training and Enablement" card added as the first Core Skills category
+  (the PDF had this line; the page did not — the two had drifted). New "Training Programmes" block linking
+  to the two programme pages; unlike the PDF, the web page links out, since internal linking helps discovery.
+- **resume.html download buttons** — regrouped by résumé rather than by format. The Trainer résumé now offers
+  **PDF and editable Word (.docx)**, so a training partner or vendor can adapt the profile before submitting it to
+  their own end client; the Consultant résumé stays PDF-only. The `.docx` is published at
+  `resumes/Arjun-Thakur-AI-Trainer-Resume.docx` (alongside the PDF, not under `src/`) so the public URL is clean.
+  Reuses the existing `download-pdf-btn` handler, which is format-agnostic despite its name — no JS change, no cache-bust.
+- **sitemap.xml** — `resume.html` `<lastmod>` bumped to 2026-09-08.
+- **llms.txt** — `/resume.html` entry rewritten to describe the training-led ordering and both tracks.
+
+### Notes
+- The previous `resumes/src/*.docx` sources were stale: dated 30 July against 12 August PDFs, and missing the
+  "Training & Enablement" skills line, Microsoft AutoGen / Azure OpenAI, and the entire RECENT TRAININGS
+  section. They were superseded by the current source supplied for this edit; regenerating from them would
+  have silently deleted that content.
+- Verified against `git HEAD`: 45 headings after vs 41 before, **none lost**; no keyword token dropped; one
+  `<h1>`; all JSON-LD parses; `sitemap.xml` well-formed. `css/style.css` and `js/main.js` untouched, so no
+  cache-bust was needed.
+
+
 ## 2026-09-05 — Two flagship training programme pages + hub restructure
 
 Added dedicated, shareable pages for the two flagship corporate training programmes, so prospects and vendor
