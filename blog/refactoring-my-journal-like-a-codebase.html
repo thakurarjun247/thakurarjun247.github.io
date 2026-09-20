@@ -1,0 +1,357 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include analytics.html %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!-- Primary SEO -->
+  <title>I Refactored My Journal Like a Codebase — Arjun Thakur</title>
+  <meta name="description" content="Journal entries pile up and quietly contradict each other. Here is the system I built — version-controlled entries, topic folders, a cited principles doc, and dated resolution docs for contradictions.">
+  <meta name="keywords" content="journaling system, version controlled journal, journaling like a codebase, principles document, personal knowledge management, metacognition, systems thinking, self-knowledge, decision journal, refactoring your thinking, Arjun Thakur">
+  <meta name="author" content="Arjun Thakur">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://arjunthakur.dev/blog/refactoring-my-journal-like-a-codebase.html">
+
+  <!-- Geo -->
+  <meta name="geo.region" content="IN">
+  <meta name="geo.placename" content="India">
+
+  <!-- Open Graph (Article) -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://arjunthakur.dev/blog/refactoring-my-journal-like-a-codebase.html">
+  <meta property="og:title" content="I Refactored My Journal Like a Codebase">
+  <meta property="og:description" content="A journal is append-only storage with no read path. Here's how I gave mine one: version-controlled entries, a cited principles doc, and dated resolutions for contradictions.">
+  <meta property="og:image" content="https://arjunthakur.dev/images/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Arjun Thakur">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:published_time" content="2026-09-20">
+  <meta property="article:author" content="Arjun Thakur">
+  <meta property="article:tag" content="Journaling">
+  <meta property="article:tag" content="Systems Thinking">
+  <meta property="article:tag" content="Metacognition">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="I Refactored My Journal Like a Codebase">
+  <meta name="twitter:description" content="A journal is a log, not a database. How I refactored mine — and what changed.">
+  <meta name="twitter:image" content="https://arjunthakur.dev/images/og-cover.jpg">
+
+  <!-- Theme & Performance -->
+  <meta name="theme-color" content="#22d3ee">
+  <link rel="dns-prefetch" href="https://github.com">
+
+  <!-- Favicon (do not edit) -->
+  <link rel="icon" type="image/x-icon" href="../images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../images/favicon/site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt — AI/LLM-friendly profile">
+  <link rel="stylesheet" href="../css/style.css?v=20260716-1">
+
+  <!-- JSON-LD: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "I Refactored My Journal Like a Codebase",
+    "description": "Journal entries pile up and quietly contradict each other. Here is the system I built — version-controlled entries, topic folders, a cited principles doc, and dated resolution docs for contradictions.",
+    "url": "https://arjunthakur.dev/blog/refactoring-my-journal-like-a-codebase.html",
+    "datePublished": "2026-09-20",
+    "dateModified": "2026-09-20",
+    "author": {
+      "@type": "Person",
+      "name": "Arjun Thakur",
+      "url": "https://arjunthakur.dev",
+      "jobTitle": "Principal AI Engineer",
+      "sameAs": ["https://linkedin.com/in/thakurarjun247", "https://github.com/thakurarjun247",
+        "https://x.com/arjunthakurdev",
+        "https://www.youtube.com/@arjunthakurdev"]
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Arjun Thakur",
+      "url": "https://arjunthakur.dev"
+    },
+    "image": "https://arjunthakur.dev/images/arjun.jpeg",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://arjunthakur.dev/blog/refactoring-my-journal-like-a-codebase.html"
+    },
+    "keywords": ["Journaling", "Systems Thinking", "Metacognition"],
+    "articleSection": "Systems Thinking",
+    "timeRequired": "PT7M",
+    "inLanguage": "en-US",
+    "isPartOf": {
+      "@type": "CollectionPage",
+      "name": "Blog — Arjun Thakur",
+      "url": "https://arjunthakur.dev/blog.html"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arjunthakur.dev/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://arjunthakur.dev/blog.html" },
+      { "@type": "ListItem", "position": 3, "name": "I Refactored My Journal Like a Codebase" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Skip to main content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation (shared include — do not edit here) -->
+{% include nav.html %}
+
+  <main id="main-content">
+    <!-- Blog Post -->
+    <article class="blog-post">
+        <div class="container blog-post-container">
+
+            <div class="blog-post-header">
+                <a href="../blog.html" class="back-link">← Back to Blog</a>
+                <div class="blog-post-meta">
+                    <span class="blog-post-date">September 20, 2026</span>
+                    <span class="blog-post-reading-time">7 min read</span>
+                </div>
+                <h1>I Refactored My Journal Like a Codebase</h1>
+                <div class="blog-post-tags">
+                    <span class="tag">Journaling</span>
+                    <span class="tag">Systems Thinking</span>
+                    <span class="tag">Metacognition</span>
+                </div>
+            </div>
+
+            <div class="blog-post-content">
+
+                <!-- ═══════════ ARTICLE BODY START — write the post below ═══════════ -->
+                <p class="lead">
+                    I've journaled for years. The writing was never the problem. The problem was that entries
+                    piled up, scattered, and quietly contradicted each other — I'd settle something in January,
+                    un-settle it by March, and forget I'd ever decided. So I did the only thing that made sense
+                    to an engineer: I refactored it.
+                </p>
+
+                <h2>A journal is a log, not a database</h2>
+                <p>
+                    Here is the thing I took embarrassingly long to notice. A journal is append-only storage
+                    with no read path. You write to it constantly and query it approximately never.
+                </p>
+                <p>
+                    In any other system we'd call that a logging pipeline with no aggregation layer. Useful for
+                    forensics, if you happen to know the timestamp you're looking for. Useless for answering
+                    a question like "what do I actually believe about this?"
+                </p>
+                <p>
+                    And because there's no read path, contradictions never surface. Two incompatible conclusions
+                    can sit in the same notebook for years and never once appear on the same screen. You don't
+                    notice you're flip-flopping. You just feel vaguely unsettled about the same topic, over and
+                    over, and each time you reason your way to an answer from scratch — as if the last three
+                    times never happened.
+                </p>
+                <p>
+                    That re-derivation cost is the real tax. Not the writing. The forgetting.
+                </p>
+
+                <h2>The system, as it stands</h2>
+                <p>
+                    This evolved over a couple of years rather than arriving fully formed. Four pieces.
+                </p>
+
+                <h3>1. Every entry is a file, version-controlled</h3>
+                <p>
+                    Plain markdown, one file per entry, in a git repository. The date is in the filename. The
+                    commit history is the point: I can watch a belief change and see exactly when and why.
+                </p>
+                <p>
+                    That sounds like overkill until the first time you run a diff on something you wrote two
+                    years ago and realise you've quietly reversed a position you'd have sworn you'd held
+                    consistently. Memory rewrites the past to feel coherent. Git doesn't.
+                </p>
+
+                <h3>2. Entries live in topic folders</h3>
+                <p>
+                    Work, health, money, relationships, craft — the handful of areas that actually generate
+                    recurring decisions. Nothing clever. The folders exist so that when I want everything I've
+                    ever concluded about one area, it's one directory, not a chronological scavenger hunt.
+                </p>
+
+                <h3>3. One condensed principles doc sits on top</h3>
+                <p>
+                    This is the piece that made the whole thing work. A single document of distilled rules,
+                    each one citing the entry it came from.
+                </p>
+                <div class="code-block">
+                    <pre><code>## Energy, not hours, is the binding constraint
+Source:  2024-03-11-after-the-q1-crunch.md
+Revised: 2025-08-02-resolution-side-projects.md
+
+I keep optimising the calendar and then wondering why a free
+afternoon produces nothing. Protect the state, not the slot.</code></pre>
+                </div>
+                <p>
+                    The citation is not decoration. A principle with no source is a vibe, and vibes are exactly
+                    what this system exists to replace. If I can't point at the day I learned something, I
+                    probably didn't learn it — I read it somewhere and liked how it sounded.
+                </p>
+                <p>
+                    In database terms it's a materialised view: derived data, cheap to read, rebuilt from the
+                    source when the source changes. In practice it means the thing I consult is three pages,
+                    not three hundred.
+                </p>
+
+                <h3>4. Contradictions get a dated resolution doc</h3>
+                <p>
+                    When I catch myself arguing against something I already settled, I don't just overwrite the
+                    old position. I write a resolution: what I used to think, what I think now, what changed,
+                    and what evidence moved me.
+                </p>
+                <div class="code-block">
+                    <pre><code># Resolution — side projects, 2025-08-02
+
+Held (2023-06):  Ship side projects fast, momentum beats polish.
+Held (2025-04):  Never start anything I can't finish properly.
+
+These are both defensible and I've been oscillating for 18 months.
+
+Settled: the distinction isn't speed vs. polish, it's whether the
+project has an external commitment attached. No commitment, ship
+rough. Commitment, finish properly. The oscillation was me applying
+one rule to two different categories.</code></pre>
+                </div>
+                <p>
+                    This is the closest thing to a merge commit. You don't silently take one side and pretend
+                    the conflict never existed — you record that there was a conflict, and how it was resolved.
+                    Six months later, when the same tension resurfaces, the work is already done.
+                </p>
+
+                <h2>What actually changed</h2>
+                <p>
+                    My self-knowledge stopped living only in my head, where it contradicted itself silently.
+                    It became something I can query.
+                </p>
+                <p>
+                    The concrete effect is narrower than it sounds, and more useful. I stopped re-litigating
+                    decisions I'd already made. Not all decisions — the ones worth revisiting still get
+                    revisited. But the ones I'd settled and then forgotten I'd settled now cost me nothing.
+                    That turns out to be a surprising amount of recovered attention.
+                </p>
+                <p>
+                    The second effect I didn't expect: writing an entry got easier once I knew it had somewhere
+                    to go. An entry that feeds a principles doc has a job. A journal entry that disappears into
+                    an undifferentiated pile does not, and some part of me always knew that and wrote
+                    accordingly.
+                </p>
+
+                <h2>What I got wrong first</h2>
+                <p>
+                    Three things, in case they save you the detour.
+                </p>
+                <ul>
+                    <li>
+                        <strong>I structured too early.</strong> I built the folder taxonomy before I had enough
+                        entries to know what the categories actually were. Half of them were empty a year later
+                        and two of the real themes had no home. Write first, let the structure emerge from
+                        volume.
+                    </li>
+                    <li>
+                        <strong>I wrote principles prematurely.</strong> An insight that has survived one good
+                        week is not a principle. It's a mood. I now wait until something has recurred — ideally
+                        until I've written about it from two different directions — before it earns a line in
+                        the distilled doc.
+                    </li>
+                    <li>
+                        <strong>I tried to make it comprehensive.</strong> The principles doc is valuable
+                        precisely because it's short enough to reread. Every time I've let it sprawl, I've
+                        stopped consulting it, and the whole system quietly reverted to being a log again.
+                    </li>
+                </ul>
+
+                <h2>You don't need git</h2>
+                <p>
+                    The version control is genuinely useful to me, and it's also the least important part. I
+                    reach for git because it's already in my hands — the same reason a carpenter's shelves are
+                    suspiciously well-joined. If your tools are a notes app and a folder of documents, the
+                    system works the same.
+                </p>
+                <p>
+                    What you actually need is smaller than the tooling suggests:
+                </p>
+                <ul>
+                    <li>One place where your conclusions are written down, separate from where your thinking is written down.</li>
+                    <li>Every conclusion traceable to the moment you reached it.</li>
+                    <li>A habit of revisiting — and an explicit way to record it when you change your mind, rather than silently overwriting.</li>
+                </ul>
+                <p>
+                    That's the whole thing. Dated entries, a short distilled layer on top, citations between
+                    them, and honesty when the two disagree.
+                </p>
+
+                <h2>The part that generalises</h2>
+                <p>
+                    Most of us keep re-deriving the same lessons because we never kept the last derivation. We
+                    treat our own conclusions as though they're cached in memory, when memory is the one
+                    component in the stack with no durability guarantees and a documented habit of rewriting
+                    history.
+                </p>
+                <p>
+                    Treating my own thinking like a codebase to refactor has been one of the highest-leverage
+                    habits I've built — not because the metaphor is clever, but because refactoring has a
+                    specific meaning. You don't add features. You don't rewrite from scratch. You take
+                    something that already works, and you make its structure match what you've learned about
+                    it since.
+                </p>
+                <p>
+                    Which is a reasonable description of what growing up is supposed to be, and a much better
+                    one than most.
+                </p>
+                <p>
+                    Running something similar, or something better? I'd genuinely like to hear how it's
+                    structured — <a href="../contact.html">get in touch</a>.
+                </p>
+
+                <!-- ═══════════ ARTICLE BODY END ═══════════ -->
+
+            </div>
+
+        </div>
+    </article>
+
+    <!-- Author callout (shared block — usually leave as-is) -->
+    <section class="services-section">
+      <div class="container">
+        <div class="callout callout--brand">
+          <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;">
+            <img src="../images/arjun.jpeg" width="72" height="72" loading="lazy" style="width:72px;height:72px;border-radius:50%;flex-shrink:0;" alt="Arjun Thakur">
+            <div><strong>Arjun Thakur</strong> — Principal AI Engineer &amp; Fractional CTO. I build production agentic AI (LangGraph, RAG, voice) and help teams do the same through <a href="../consulting.html">consulting</a> and <a href="../training.html">training</a>. <a href="../contact.html">Work with me &rarr;</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer (shared include — do not edit here) -->
+{% include footer.html %}
+
+  <script src="../js/main.js?v=20260702-1" defer></script>
+</body>
+</html>

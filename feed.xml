@@ -8,12 +8,24 @@
     <language>en</language>
     <managingEditor>arjun@arjunthakur.dev (Arjun Thakur)</managingEditor>
     <webMaster>arjun@arjunthakur.dev (Arjun Thakur)</webMaster>
-    <lastBuildDate>Wed, 29 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 20 Sep 2026 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://arjunthakur.dev/images/og-cover.jpg</url>
       <title>Arjun Thakur — AI Engineering Blog</title>
       <link>https://arjunthakur.dev/blog.html</link>
     </image>
+    <item>
+      <title>I Refactored My Journal Like a Codebase</title>
+      <link>https://arjunthakur.dev/blog/refactoring-my-journal-like-a-codebase.html</link>
+      <guid isPermaLink="true">https://arjunthakur.dev/blog/refactoring-my-journal-like-a-codebase.html</guid>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
+      <description>A journal is append-only storage with no read path. How I gave mine one — version-controlled entries, topic folders, a condensed principles doc where every rule cites its source, and dated resolution docs when I catch myself flip-flopping.</description>
+      <author>arjun@arjunthakur.dev (Arjun Thakur)</author>
+      <category>Journaling</category>
+      <category>Systems Thinking</category>
+      <category>Metacognition</category>
+      <category>Personal Knowledge Management</category>
+    </item>
     <item>
       <title>Voice RAG for Regional Languages: A Kannada + English Agent on AWS Bedrock</title>
       <link>https://arjunthakur.dev/blog/voice-rag-kannada-english-code-mixed.html</link>

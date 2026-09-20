@@ -118,8 +118,15 @@
   </url>
 
   <url>
+    <loc>https://arjunthakur.dev/blog/refactoring-my-journal-like-a-codebase.html</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://arjunthakur.dev/blog.html</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
