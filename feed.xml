@@ -8,12 +8,24 @@
     <language>en</language>
     <managingEditor>arjun@arjunthakur.dev (Arjun Thakur)</managingEditor>
     <webMaster>arjun@arjunthakur.dev (Arjun Thakur)</webMaster>
-    <lastBuildDate>Sun, 20 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 21 Sep 2026 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://arjunthakur.dev/images/og-cover.jpg</url>
       <title>Arjun Thakur — AI Engineering Blog</title>
       <link>https://arjunthakur.dev/blog.html</link>
     </image>
+    <item>
+      <title>An Agent Is a Loop, Not a Personality: Three Shifts That Separate AI Teams That Ship</title>
+      <link>https://arjunthakur.dev/blog/agent-is-a-loop-not-a-personality.html</link>
+      <guid isPermaLink="true">https://arjunthakur.dev/blog/agent-is-a-loop-not-a-personality.html</guid>
+      <pubDate>Mon, 21 Sep 2026 00:00:00 +0000</pubDate>
+      <description>After training several hundred enterprise engineers on AI, three shifts separate teams that ship agents from teams that stall: understand the raw agent loop, treat RAG as retrieval quality, and run evals before scale.</description>
+      <author>arjun@arjunthakur.dev (Arjun Thakur)</author>
+      <category>Agentic AI</category>
+      <category>RAG</category>
+      <category>LLM Evals</category>
+      <category>LangGraph</category>
+    </item>
     <item>
       <title>I Refactored My Journal Like a Codebase</title>
       <link>https://arjunthakur.dev/blog/refactoring-my-journal-like-a-codebase.html</link>
