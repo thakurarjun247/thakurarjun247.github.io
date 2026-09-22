@@ -46,12 +46,13 @@
       box-shadow: var(--shadow-lg), var(--shadow-glow);
     }
     .dash-ico {
-      width: 54px; height: 54px; border-radius: 50%;
+      width: 54px; height: 54px; border-radius: 14px;
       display: flex; align-items: center; justify-content: center;
-      font-size: 1.6rem; font-weight: 700;
-      background: var(--gradient-subtle);
+      background: #fff;
       border: 1px solid var(--border-subtle);
+      overflow: hidden;
     }
+    .dash-ico img { width: 34px; height: 34px; display: block; }
     .dash-name { font-weight: 600; font-size: .95rem; }
   </style>
 </head>
@@ -69,37 +70,37 @@
 
       <div class="dash-grid">
         <a class="dash-tile" href="https://arjunthakur.dev/" target="_blank" rel="noopener">
-          <div class="dash-ico">🌐</div>
+          <div class="dash-ico"><img src="/images/favicon/favicon-32x32.png" alt="" loading="lazy"></div>
           <div class="dash-name">Website</div>
         </a>
 
         <a class="dash-tile" href="https://linkedin.com/in/thakurarjun247" target="_blank" rel="me noopener">
-          <div class="dash-ico">in</div>
+          <div class="dash-ico"><img src="/images/dash/linkedin.png" alt="" loading="lazy"></div>
           <div class="dash-name">LinkedIn</div>
         </a>
 
         <a class="dash-tile" href="https://mail.google.com/" target="_blank" rel="noopener">
-          <div class="dash-ico">✉️</div>
+          <div class="dash-ico"><img src="/images/dash/gmail.png" alt="" loading="lazy"></div>
           <div class="dash-name">Gmail</div>
         </a>
 
         <a class="dash-tile" href="https://mail.zoho.com/" target="_blank" rel="noopener">
-          <div class="dash-ico">📮</div>
+          <div class="dash-ico"><img src="/images/dash/zoho.png" alt="" loading="lazy"></div>
           <div class="dash-name">Zoho Mail</div>
         </a>
 
-        <a class="dash-tile" href="https://calendar.zoho.com/" target="_blank" rel="noopener">
-          <div class="dash-ico">📅</div>
-          <div class="dash-name">Zoho Calendar</div>
-        </a>
-
         <a class="dash-tile" href="https://zoom.us/start/videomeeting" target="_blank" rel="noopener">
-          <div class="dash-ico">🎥</div>
+          <div class="dash-ico"><img src="/images/dash/zoom.png" alt="" loading="lazy"></div>
           <div class="dash-name">New Zoom Meeting</div>
         </a>
 
-        <a class="dash-tile" href="https://claude.ai/new" target="_blank" rel="noopener">
-          <div class="dash-ico">✦</div>
+        <a class="dash-tile" href="https://zoom.us/meeting" target="_blank" rel="noopener">
+          <div class="dash-ico"><img src="/images/dash/zoom.png" alt="" loading="lazy"></div>
+          <div class="dash-name">Zoom Meetings</div>
+        </a>
+
+        <a class="dash-tile" href="claude://cowork/new">
+          <div class="dash-ico"><img src="/images/dash/claude.png" alt="" loading="lazy"></div>
           <div class="dash-name">Claude / Cowork</div>
         </a>
       </div>
