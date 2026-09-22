@@ -8,7 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Control Panel — Arjun Thakur</title>
   <meta name="description" content="Private quick-launch control panel.">
-  <!-- Personal launcher: keep out of search + sitemaps -->
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#22d3ee">
 
@@ -22,73 +21,38 @@
   <link rel="stylesheet" href="css/style.css?v=20260716-1">
 
   <style>
-    /* ---- Dashboard-specific, built on the site's design tokens ---- */
     .dash-section { padding: 3rem 0 4rem; }
     .dash-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 1.25rem;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1.1rem;
       margin-top: 2rem;
     }
-    .dash-card {
-      display: flex; flex-direction: column; gap: .55rem;
+    .dash-tile {
+      display: flex; flex-direction: column; align-items: center; gap: .85rem;
       background: linear-gradient(180deg, var(--card-bg) 0%, var(--card-elevated) 100%);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-lg);
       box-shadow: var(--shadow-md);
-      padding: 1.25rem;
+      padding: 1.6rem 1rem;
       text-decoration: none;
       color: var(--text-primary);
+      text-align: center;
       transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
     }
-    .dash-card:hover {
+    .dash-tile:hover {
       transform: translateY(-3px);
       border-color: rgba(34,211,238,0.45);
       box-shadow: var(--shadow-lg), var(--shadow-glow);
     }
     .dash-ico {
-      width: 44px; height: 44px; border-radius: var(--radius-md);
+      width: 54px; height: 54px; border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
-      font-size: 1.35rem; font-weight: 700;
+      font-size: 1.6rem; font-weight: 700;
       background: var(--gradient-subtle);
       border: 1px solid var(--border-subtle);
     }
-    .dash-name { font-weight: 700; font-size: 1.02rem; }
-    .dash-desc { color: var(--text-secondary); font-size: .85rem; }
-    .dash-url  { color: var(--text-muted); font-size: .74rem; font-family: var(--font-mono); word-break: break-all; }
-
-    /* Zoom panel */
-    .zoom-panel {
-      margin-top: 2.5rem;
-      background: linear-gradient(180deg, var(--card-bg) 0%, var(--card-elevated) 100%);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-md);
-      padding: 1.75rem;
-    }
-    .zoom-panel h2 { margin: 0 0 .25rem; font-size: 1.2rem; }
-    .zoom-panel .zoom-sub { color: var(--text-secondary); font-size: .85rem; margin-bottom: 1.25rem; }
-    .zoom-rows { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: .9rem; }
-    .zoom-row {
-      background: var(--dark-bg);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: .8rem .9rem;
-    }
-    .zoom-k { font-size: .7rem; text-transform: uppercase; letter-spacing: .06em; color: var(--text-muted); margin-bottom: .35rem; }
-    .zoom-v { display: flex; align-items: center; justify-content: space-between; gap: .6rem; }
-    .zoom-v span { font-family: var(--font-mono); font-size: .95rem; word-break: break-all; }
-    .copy-btn {
-      flex-shrink: 0; cursor: pointer; font-family: var(--font-sans); font-weight: 600;
-      font-size: .78rem; padding: .35rem .7rem; border-radius: var(--radius-sm);
-      background: rgba(34,211,238,0.06); color: var(--primary-color);
-      border: 1px solid rgba(34,211,238,0.45); transition: .15s;
-    }
-    .copy-btn:hover { background: rgba(34,211,238,0.14); }
-    .copy-btn.done { background: var(--success-color); color: #06090d; border-color: var(--success-color); }
-    .invite-block { margin-top: 1.1rem; }
-    .invite-block .zoom-v span { white-space: pre-wrap; font-family: var(--font-mono); font-size: .82rem; line-height: 1.6; }
-    .zoom-actions { margin-top: 1.25rem; display: flex; gap: .75rem; flex-wrap: wrap; }
+    .dash-name { font-weight: 600; font-size: .95rem; }
   </style>
 </head>
 <body>
@@ -102,92 +66,42 @@
     <div class="container">
 
       <h1 class="section-title">Control Panel</h1>
-      <p class="section-subtitle">Everything in one place — quick launch.</p>
 
       <div class="dash-grid">
-        <a class="dash-card" href="https://arjunthakur.dev/" target="_blank" rel="noopener">
+        <a class="dash-tile" href="https://arjunthakur.dev/" target="_blank" rel="noopener">
           <div class="dash-ico">🌐</div>
-          <div class="dash-name">My Website</div>
-          <div class="dash-desc">arjunthakur.dev</div>
-          <div class="dash-url">https://arjunthakur.dev</div>
+          <div class="dash-name">Website</div>
         </a>
 
-        <a class="dash-card" href="https://linkedin.com/in/thakurarjun247" target="_blank" rel="me noopener">
+        <a class="dash-tile" href="https://linkedin.com/in/thakurarjun247" target="_blank" rel="me noopener">
           <div class="dash-ico">in</div>
           <div class="dash-name">LinkedIn</div>
-          <div class="dash-desc">My profile</div>
-          <div class="dash-url">linkedin.com/in/thakurarjun247</div>
         </a>
 
-        <a class="dash-card" href="https://mail.google.com/" target="_blank" rel="noopener">
+        <a class="dash-tile" href="https://mail.google.com/" target="_blank" rel="noopener">
           <div class="dash-ico">✉️</div>
           <div class="dash-name">Gmail</div>
-          <div class="dash-desc">thakurarjun247@gmail.com</div>
-          <div class="dash-url">mail.google.com</div>
         </a>
 
-        <a class="dash-card" href="https://mail.zoho.com/" target="_blank" rel="noopener">
+        <a class="dash-tile" href="https://mail.zoho.com/" target="_blank" rel="noopener">
           <div class="dash-ico">📮</div>
           <div class="dash-name">Zoho Mail</div>
-          <div class="dash-desc">Inbox</div>
-          <div class="dash-url">mail.zoho.com</div>
         </a>
 
-        <a class="dash-card" href="https://calendar.zoho.com/" target="_blank" rel="noopener">
+        <a class="dash-tile" href="https://calendar.zoho.com/" target="_blank" rel="noopener">
           <div class="dash-ico">📅</div>
           <div class="dash-name">Zoho Calendar</div>
-          <div class="dash-desc">Schedule &amp; events</div>
-          <div class="dash-url">calendar.zoho.com</div>
         </a>
 
-        <a class="dash-card" href="https://claude.ai/new" target="_blank" rel="noopener">
+        <a class="dash-tile" href="https://zoom.us/start/videomeeting" target="_blank" rel="noopener">
+          <div class="dash-ico">🎥</div>
+          <div class="dash-name">New Zoom Meeting</div>
+        </a>
+
+        <a class="dash-tile" href="https://claude.ai/new" target="_blank" rel="noopener">
           <div class="dash-ico">✦</div>
           <div class="dash-name">Claude / Cowork</div>
-          <div class="dash-desc">Cloud Code Cowork</div>
-          <div class="dash-url">claude.ai</div>
         </a>
-      </div>
-
-      <div class="zoom-panel">
-        <h2>🎥 Zoom — Personal Meeting Room</h2>
-        <div class="zoom-sub">Arjun Thakur's PMR · one-click copy on any field.</div>
-
-        <div class="zoom-rows">
-          <div class="zoom-row">
-            <div class="zoom-k">Meeting ID</div>
-            <div class="zoom-v"><span id="pmiText">278 266 9883</span><button class="copy-btn" data-copy="pmiText">Copy</button></div>
-          </div>
-          <div class="zoom-row">
-            <div class="zoom-k">Passcode</div>
-            <div class="zoom-v"><span id="pwdText">V7FRwu</span><button class="copy-btn" data-copy="pwdText">Copy</button></div>
-          </div>
-          <div class="zoom-row">
-            <div class="zoom-k">Join Link</div>
-            <div class="zoom-v"><span id="linkText">https://us05web.zoom.us/j/2782669883?pwd=xCFXQWtEB8xwrjakDqO0tq6vTha30T.1</span><button class="copy-btn" data-copy="linkText">Copy</button></div>
-          </div>
-        </div>
-
-        <div class="invite-block">
-          <div class="zoom-k" style="margin-bottom:.5rem;">Full invite (copy-paste ready)</div>
-          <div class="zoom-row">
-            <div class="zoom-v">
-              <span id="inviteText">Topic: Arjun Thakur's Personal Meeting Room
-
-Join Zoom Meeting
-https://us05web.zoom.us/j/2782669883?pwd=xCFXQWtEB8xwrjakDqO0tq6vTha30T.1
-
-Meeting ID: 278 266 9883
-Passcode: V7FRwu</span>
-              <button class="copy-btn" data-copy="inviteText">Copy invite</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="zoom-actions">
-          <a class="btn btn-primary" href="zoommtg://zoom.us/start?confno=2782669883">▶ Start my Zoom (app)</a>
-          <a class="btn btn-secondary" href="zoommtg://zoom.us/join?confno=2782669883&pwd=V7FRwu">Join via app</a>
-          <a class="btn btn-secondary" href="https://us05web.zoom.us/meetings/2782669883/invitations?signature=zsjLEXJrsyvN4WAtLGrxtYPthBH-OvKr6yKGmzbcupc" target="_blank" rel="noopener">Invitation page ↗</a>
-        </div>
       </div>
 
     </div>
@@ -197,21 +111,5 @@ Passcode: V7FRwu</span>
 {% include footer.html %}
 
   <script src="js/main.js?v=20260702-1" defer></script>
-  <script>
-  (function () {
-    document.addEventListener('click', function (e) {
-      var btn = e.target.closest('.copy-btn');
-      if (!btn) return;
-      var el = document.getElementById(btn.getAttribute('data-copy'));
-      if (!el) return;
-      navigator.clipboard.writeText(el.textContent.trim()).then(function () {
-        var old = btn.textContent;
-        btn.textContent = '✓ Copied';
-        btn.classList.add('done');
-        setTimeout(function () { btn.textContent = old; btn.classList.remove('done'); }, 1200);
-      });
-    });
-  })();
-  </script>
 </body>
 </html>
