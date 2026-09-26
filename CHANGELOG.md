@@ -1,5 +1,29 @@
 # Changelog
 
+## 2026-09-26 — Careers becomes a hub; each role gets its own page under `careers/`
+
+`careers.html` is now a hub that lists open roles. Each role lives at its own URL under `careers/`, so every
+role can carry its own `JobPosting` schema, title and keywords. The existing sales role moved there with its copy
+unchanged, and a new Junior AI Associate role was added.
+
+### Added
+- **careers/junior-ai-associate.html** — new role page: full-time (₹15,000/month) or part-time 4 hrs/day
+  (₹7,000/month), first month paid probation at 50%. Full SEO head, `JobPosting` (with `baseSalary`, both
+  `FULL_TIME` and `PART_TIME`) and 3-level `BreadcrumbList`. Page-scoped `<style>` for the pay table only;
+  `css/style.css` untouched, so no cache-bust.
+- **careers/sales-outreach-associate.html** — the sales role moved from `careers.html`. Body copy, `JobPosting`
+  block (identifier `sales-outreach-associate-2026`) and keywords carried over verbatim; `BreadcrumbList` extended
+  to 3 levels. Uses `../` relative paths, same as `blog/`.
+
+### Changed
+- **careers.html** — rewritten as a hub: role cards linking to each page, `ItemList` JSON-LD of open roles,
+  `BreadcrumbList` kept. `JobPosting` moved to the sales role page (not deleted). All previous meta keywords kept,
+  AI-role keywords added. A small inline script forwards old deep links `careers.html#role` / `#apply` to the
+  sales role page.
+- **sitemap.xml** — `careers.html` and `sitemap.html` `<lastmod>` bumped to 2026-09-26; both role pages added.
+- **sitemap.html** — Careers card reworded as the hub; a card added for each role.
+- **llms.txt** — `/careers.html` entry rewritten as the hub; a bullet added for each role page under Site Pages.
+
 ## 2026-09-08 — Trainer résumé leads with training; both delivery tracks represented
 
 The trainer résumé and `resume.html` now lead with the training identity rather than the engineering one, and
