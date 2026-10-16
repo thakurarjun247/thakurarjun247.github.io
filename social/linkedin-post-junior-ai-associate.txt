@@ -1,0 +1,64 @@
+========================================
+LINKEDIN POST — copy the POST section, publish, then
+immediately post the FIRST COMMENT section below it and pin it.
+LinkedIn strips bold/italic — keep it plain text.
+Link goes in the comment, not the post (LinkedIn cuts reach on posts with external links).
+========================================
+
+--- POST ---
+
+Hiring: Junior AI Associate (Generative AI) in Dewas / Indore, Madhya Pradesh.
+Full-time or part-time. Freshers and final-year students welcome.
+
+About the work:
+
+I deliver corporate AI training and consulting (generative AI, LLMs, RAG and AI agents) for engineering and business teams. This role supports the technical side: client research, training content, and call support.
+
+What you'll do:
+
+→ Research each client before calls: industry, teams, and where AI fits
+→ Draft custom training outlines using ChatGPT and Claude
+→ Build training material: slides, hands-on labs, sample datasets, Jupyter demo notebooks
+→ Join client calls, capture requirements, draft follow-ups and proposals
+→ Answer basic technical questions for the sales team
+→ Over time, build demos and small AI apps (RAG chatbots, simple AI agents) with Claude Code
+
+Tools and topics you'll work with:
+
+ChatGPT, Claude, Claude Code, Python, Jupyter, LLM APIs, RAG, embeddings, AI agents, prompt engineering, PowerPoint / Google Slides
+
+Who fits:
+
+→ You use ChatGPT or Claude daily and know how to get good output from them
+→ Clear written English
+→ Basic Python, or you can pick it up on your own quickly
+→ You can explain a technical idea simply to a non-technical person
+→ Self-driven. No hand-holding. You figure things out.
+→ Reliable: you meet deadlines
+
+Nice to have:
+
+→ You've built something with an LLM API, even a small project
+→ CS, IT or AI/ML background (B.Tech, BCA, MCA, B.Sc), final year or recent grad
+
+Location and hours:
+
+→ Dewas preferred, in person. Indore works with 1–2 visits a week to Dewas.
+→ Full-time, or part-time at 4 hours a day
+→ Paid from day one. Immediate start.
+
+How to apply:
+
+Pay, the full JD and apply steps are on my website. Link in the first comment.
+
+Apply only through the link. Applications in comments or DMs won't be considered, and please don't call. Shortlisted candidates get a short task by email.
+
+Know a final-year student or fresher in Indore or Dewas who'd fit? Tag them or share this.
+
+#Hiring #GenerativeAI #AIJobs #FresherJobs #Indore #Dewas #Python
+
+--- FIRST COMMENT (post immediately after publishing, then pin it) ---
+
+Junior AI Associate: pay, full JD and how to apply: https://arjunthakur.dev/careers/junior-ai-associate.html
+
+Applications are by email only, using the exact subject line given on the page. DMs and comments won't be considered.

@@ -1,0 +1,25 @@
+========================================
+WHATSAPP STATUS — post STATUS 1 first, then STATUS 2 right after.
+Viewers see statuses in posting order, so the link lands "next".
+WhatsApp formatting: *bold* works. Limit per status: 700 characters, 10 line breaks.
+========================================
+
+--- STATUS 1 ---
+
+*Hiring: Junior AI Associate* (full-time or part-time)
+
+Research clients, build AI training material (slides, labs, demo notebooks), and over time build AI apps with Claude Code.
+
+• You use ChatGPT or Claude daily
+• Basic Python and clear written English
+• Students & fresh grads welcome
+• Self-driven only. No hand-holding.
+
+*Pay, full JD and how to apply are on my website. Link in the next status.* Please don't reply, DM or call to apply.
+
+--- STATUS 2 ---
+
+*Apply here:*
+https://arjunthakur.dev/careers/junior-ai-associate.html
+
+Full JD and apply steps are on the page. Email only, with the exact subject line given there.
