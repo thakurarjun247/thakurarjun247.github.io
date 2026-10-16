@@ -6,8 +6,8 @@
     <atom:link href="https://arjunthakur.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Technical articles on agentic AI, LangGraph, RAG, voice agents, FastAPI, and production AI engineering by Arjun Thakur, Principal AI Engineer.</description>
     <language>en</language>
-    <managingEditor>arjun@arjunthakur.dev (Arjun Thakur)</managingEditor>
-    <webMaster>arjun@arjunthakur.dev (Arjun Thakur)</webMaster>
+    <managingEditor>hello@arjunthakur.dev (Arjun Thakur)</managingEditor>
+    <webMaster>hello@arjunthakur.dev (Arjun Thakur)</webMaster>
     <lastBuildDate>Mon, 21 Sep 2026 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://arjunthakur.dev/images/og-cover.jpg</url>
@@ -20,7 +20,7 @@
       <guid isPermaLink="true">https://arjunthakur.dev/blog/agent-is-a-loop-not-a-personality.html</guid>
       <pubDate>Mon, 21 Sep 2026 00:00:00 +0000</pubDate>
       <description>After training several hundred enterprise engineers on AI, three shifts separate teams that ship agents from teams that stall: understand the raw agent loop, treat RAG as retrieval quality, and run evals before scale.</description>
-      <author>arjun@arjunthakur.dev (Arjun Thakur)</author>
+      <author>hello@arjunthakur.dev (Arjun Thakur)</author>
       <category>Agentic AI</category>
       <category>RAG</category>
       <category>LLM Evals</category>
@@ -32,7 +32,7 @@
       <guid isPermaLink="true">https://arjunthakur.dev/blog/refactoring-my-journal-like-a-codebase.html</guid>
       <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
       <description>A journal is append-only storage with no read path. How I gave mine one — version-controlled entries, topic folders, a condensed principles doc where every rule cites its source, and dated resolution docs when I catch myself flip-flopping.</description>
-      <author>arjun@arjunthakur.dev (Arjun Thakur)</author>
+      <author>hello@arjunthakur.dev (Arjun Thakur)</author>
       <category>Journaling</category>
       <category>Systems Thinking</category>
       <category>Metacognition</category>
@@ -44,7 +44,7 @@
       <guid isPermaLink="true">https://arjunthakur.dev/blog/voice-rag-kannada-english-code-mixed.html</guid>
       <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
       <description>Building a live code-mixed Kannada + English voice agent with RAG — Sarvam speech-to-text, AWS Bedrock (Claude + Titan), and grounded, cited answers. Includes architecture, code, and video of the without-vs-with-RAG contrast.</description>
-      <author>arjun@arjunthakur.dev (Arjun Thakur)</author>
+      <author>hello@arjunthakur.dev (Arjun Thakur)</author>
       <category>Voice AI</category>
       <category>RAG</category>
       <category>AWS Bedrock</category>
@@ -57,7 +57,7 @@
       <guid isPermaLink="true">https://arjunthakur.dev/blog/will-ai-recommend-your-business.html</guid>
       <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
       <description>Your customers now ask ChatGPT, Claude, and Perplexity for recommendations instead of scrolling Google. A plain-language guide for business owners on how AI search decides who it recommends — and how to be the answer.</description>
-      <author>arjun@arjunthakur.dev (Arjun Thakur)</author>
+      <author>hello@arjunthakur.dev (Arjun Thakur)</author>
       <category>AI Search</category>
       <category>Business Growth</category>
       <category>Getting Found</category>
@@ -69,7 +69,7 @@
       <guid isPermaLink="true">https://arjunthakur.dev/blog/how-does-a-machine-learn-linear-regression.html</guid>
       <pubDate>Wed, 16 Jul 2026 00:00:00 +0000</pubDate>
       <description>A beginner-friendly walkthrough of linear regression from a demo session at Masai School: predict a salary from years of experience, guess the line y = mx + c, and see how a machine learns by reducing its error — ending with the intuition behind gradient descent.</description>
-      <author>arjun@arjunthakur.dev (Arjun Thakur)</author>
+      <author>hello@arjunthakur.dev (Arjun Thakur)</author>
       <category>Machine Learning</category>
       <category>Linear Regression</category>
       <category>Gradient Descent</category>
@@ -81,7 +81,7 @@
       <guid isPermaLink="true">https://arjunthakur.dev/blog/how-exa-search-found-me-geo-part-2.html</guid>
       <pubDate>Wed, 16 Jul 2026 00:00:00 +0000</pubDate>
       <description>A neural (embeddings-based) search engine surfaced my name to a cold prospect who then emailed me. Part 2 of my GEO series: what Exa is, an inventory of everything I've shipped for SEO and GEO to date, and the identity-ownership step most people miss — rel=me, sameAs, and an ownership statement in llms.txt.</description>
-      <author>arjun@arjunthakur.dev (Arjun Thakur)</author>
+      <author>hello@arjunthakur.dev (Arjun Thakur)</author>
       <category>GEO</category>
       <category>Exa</category>
       <category>AI Search</category>
@@ -93,7 +93,7 @@
       <guid isPermaLink="true">https://arjunthakur.dev/blog/agents-dont-fail-like-services-fail.html</guid>
       <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
       <description>A microservice dies loudly — a 500, alerting, a tripped circuit breaker. An agent fails silently, synthesizing confidently on top of garbage or burning tokens in a reasoning loop. Building a multi-agent stock recommender exposed the gap in agent reliability tooling — and the gateway and chaos harness I'm building for it.</description>
-      <author>arjun@arjunthakur.dev (Arjun Thakur)</author>
+      <author>hello@arjunthakur.dev (Arjun Thakur)</author>
       <category>Agentic AI</category>
       <category>Reliability</category>
       <category>Distributed Systems</category>
@@ -105,7 +105,7 @@
       <guid isPermaLink="true">https://arjunthakur.dev/blog/how-i-optimized-my-site-for-llms.html</guid>
       <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
       <description>A condensed, practical guide to Generative Engine Optimization (GEO) — how I made my portfolio findable and citable by ChatGPT, Claude, and Perplexity, with real code. The site is open source.</description>
-      <author>arjun@arjunthakur.dev (Arjun Thakur)</author>
+      <author>hello@arjunthakur.dev (Arjun Thakur)</author>
       <category>GEO</category>
       <category>AI Search</category>
     </item>
@@ -115,7 +115,7 @@
       <guid isPermaLink="true">https://arjunthakur.dev/blog/two-agent-stacks-bedrock-vs-langgraph.html</guid>
       <pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate>
       <description>Shipping two agentic systems on deliberately different foundations — native AWS Bedrock with A2A/MCP vs. LangGraph + LangChain. What actually differed under the hood: orchestration, evals, and grounding.</description>
-      <author>arjun@arjunthakur.dev (Arjun Thakur)</author>
+      <author>hello@arjunthakur.dev (Arjun Thakur)</author>
       <category>Agentic AI</category>
       <category>LangGraph</category>
       <category>AWS Bedrock</category>
@@ -127,7 +127,7 @@
       <guid isPermaLink="true">https://arjunthakur.dev/blog/jwt-spring-boot-react-guide.html</guid>
       <pubDate>Fri, 15 Nov 2024 00:00:00 +0000</pubDate>
       <description>Step-by-step guide to implementing secure JWT authentication in Spring Boot with a React frontend. Covers token generation, validation, refresh tokens, and production security best practices.</description>
-      <author>arjun@arjunthakur.dev (Arjun Thakur)</author>
+      <author>hello@arjunthakur.dev (Arjun Thakur)</author>
       <category>Spring Boot</category>
       <category>JWT</category>
       <category>React</category>
