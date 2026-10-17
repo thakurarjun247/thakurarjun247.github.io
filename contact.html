@@ -226,6 +226,9 @@
                         <option>Talk / keynote</option>
                         <option>Podcast / collaboration</option>
                       </optgroup>
+                      <optgroup label="Partnerships">
+                        <option value="Affiliate / partnership">Affiliate / partnership</option>
+                      </optgroup>
                       <optgroup label="Interviews">
                         <option>Hire a technical interviewer</option>
                         <option>Mock interview / prep</option>
@@ -365,6 +368,10 @@
         status.classList.add("is-error");
       });
     });
+
+    // Preselect topic from ?topic= (e.g. links from /affiliate-partnerships.html)
+    var topic = new URLSearchParams(location.search).get("topic");
+    if (topic === "partnership") { form.elements.inquiry.value = "Affiliate / partnership"; }
 
     var resetBtn = document.querySelector(".nf-reset");
     if (resetBtn) resetBtn.addEventListener("click", function(){
