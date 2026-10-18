@@ -344,10 +344,21 @@
       form.classList.add("is-submitting");
       submit.disabled = true;
 
+      // Per-enquiry subject, sender name and Reply-To: a fixed subject from one sender made
+      // Gmail fold every enquiry into a single thread, and replies must reach the visitor.
+      var data   = new FormData(form);
+      var name   = (data.get("name") || "").trim();
+      var email  = (data.get("email") || "").trim();
+      var topic  = (data.get("inquiry") || "").trim() || "General";
+      var stamp  = new Date().toLocaleString("en-GB", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
+      data.set("subject", "Enquiry: " + name + " · " + topic + " · " + stamp);
+      data.set("from_name", name + " via arjunthakur.dev");
+      data.set("replyto", email);
+
       fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: { "Accept": "application/json" },
-        body: new FormData(form)
+        body: data
       })
       .then(function(r){ return r.json().then(function(d){ return { ok: r.ok, data: d }; }); })
       .then(function(res){
