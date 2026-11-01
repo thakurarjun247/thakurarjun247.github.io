@@ -111,6 +111,8 @@ but these still apply:
   - To preview locally: `bundle exec jekyll serve` (needs Ruby + `bundle install`). Output builds to `_site/`.
 - CSS/JS are cache-busted via `?v=YYYYMMDD-n` query strings. Bump these only if you change `css/style.css` or `js/main.js` (not when you merely reuse existing classes in HTML). The link tags live in each page's `<head>` (not the includes), so a bump still touches every page.
 - `feed.xml` dates are RFC-822 (`Mon, 13 Jul 2026 ...`); `sitemap.xml` and JSON-LD dates are ISO (`2026-07-13`). Don't mix them.
+- `ProfilePage` `dateCreated`/`dateModified` (index.html, resume.html) need a full datetime with timezone
+  (`2026-07-13T00:00:00+05:30`). Date-only values raise a Search Console warning.
 - Keep the JWT post's date as `2024-11-15` everywhere (it was previously mismatched — see CHANGELOG).
 - Validate JSON-LD after editing (no trailing commas, valid JSON).
 - Don't move contact details (email/phone/WhatsApp) out of crawlable HTML or JSON-LD for anti-spam —

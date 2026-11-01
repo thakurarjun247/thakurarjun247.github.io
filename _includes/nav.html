@@ -1,10 +1,10 @@
   <nav class="navbar" aria-label="Main navigation">
     <div class="container">
-      <a href="/index.html" class="logo">Arjun Thakur</a>
+      <a href="/" class="logo">Arjun Thakur</a>
       <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
       <ul class="nav-menu" id="navMenu">
         {%- assign current = page.url | remove_first: "/" %}
-        {% if current == "index.html" %}<li><span class="nav-current" aria-current="page">Home</span></li>{% else %}<li><a href="/index.html">Home</a></li>{% endif %}
+        {% if current == "index.html" %}<li><span class="nav-current" aria-current="page">Home</span></li>{% else %}<li><a href="/">Home</a></li>{% endif %}
         {% if current == "consulting.html" %}<li><span class="nav-current" aria-current="page">Consulting</span></li>{% else %}<li><a href="/consulting.html">Consulting</a></li>{% endif %}
         {% if current == "training.html" %}<li><span class="nav-current" aria-current="page">Training</span></li>{% else %}<li><a href="/training.html">Training</a></li>{% endif %}
         {% if current == "interviews.html" or current == "hire-a-freelance-technical-interviewer.html" or current == "mock-interview-practice.html" %}<li><span class="nav-current" aria-current="page">Interviews</span></li>{% else %}<li><a href="/interviews.html">Interviews</a></li>{% endif %}

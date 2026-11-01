@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-11-02 — Search Console fixes: ProfilePage datetimes, homepage links
+
+### Fixed
+- **index.html, resume.html** — `ProfilePage` `dateCreated`/`dateModified` are now full datetimes with
+  timezone, clearing the Search Console "Invalid datetime value" warnings. `dateModified` brought up to date.
+- **All pages and `_includes/nav.html`** — 51 internal links to `index.html` now point to `/`, so internal
+  links agree with the canonical homepage URL. Link-only edits, so no `sitemap.xml` `<lastmod>` bumps for those.
+- **sitemap.xml** — `/` and `resume.html` `<lastmod>` bumped to 2026-11-02.
+- **CHECKLIST.md** — gotcha added for the `ProfilePage` datetime format.
+
 ## 2026-09-26 — Careers becomes a hub; each role gets its own page under `careers/`
 
 `careers.html` is now a hub that lists open roles. Each role lives at its own URL under `careers/`, so every
