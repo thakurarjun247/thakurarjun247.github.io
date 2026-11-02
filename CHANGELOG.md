@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-02 — Technical scan fixes (no copy or URL changes)
+
+### Fixed
+- **blog/voice-rag-kannada-english-code-mixed.html** — `width`/`height` on the 5 diagrams to reduce layout shift.
+- **contact.html, resume.html, training.html** — missing `twitter:image` added, same image as `og:image`.
+- **favicon.ico** — added at the root; the default path returned 404.
+
 ## 2026-11-02 — Nav and internal link fixes
 
 ### Fixed

@@ -199,7 +199,7 @@
                     the model, which is where hallucination creeps in.
                 </p>
                 <figure style="margin:2rem 0;">
-                    <img src="../images/voice-rag/01_architecture.png" loading="lazy" style="width:100%;height:auto;border-radius:12px;border:1px solid #e2e8f0;" alt="Voice RAG system architecture: user speaks Kannada and English, Sarvam Saaras v3 speech-to-text, Titan embeddings retriever over a knowledge base, AWS Bedrock Claude generates a grounded answer, gTTS speaks it back, with a dashed pre-RAG bypass that may hallucinate.">
+                    <img src="../images/voice-rag/01_architecture.png" width="2048" height="1152" loading="lazy" style="width:100%;height:auto;border-radius:12px;border:1px solid #e2e8f0;" alt="Voice RAG system architecture: user speaks Kannada and English, Sarvam Saaras v3 speech-to-text, Titan embeddings retriever over a knowledge base, AWS Bedrock Claude generates a grounded answer, gTTS speaks it back, with a dashed pre-RAG bypass that may hallucinate.">
                     <figcaption style="font-size:0.85rem;color:#64748b;margin-top:0.5rem;text-align:center;">Speak → Transcribe → Retrieve → Ground → Answer → Speak. Every step runs live.</figcaption>
                 </figure>
 
@@ -209,7 +209,7 @@
                     interesting decisions are the rejections.
                 </p>
                 <figure style="margin:2rem 0;">
-                    <img src="../images/voice-rag/04_tech_stack.png" loading="lazy" style="width:100%;height:auto;border-radius:12px;border:1px solid #e2e8f0;" alt="Voice RAG technology stack: Sarvam Saaras v3 speech-to-text, AWS Bedrock Claude LLM, AWS Bedrock Titan v2 embeddings, in-memory cosine retrieval, gTTS Kannada text-to-speech, Jupyter runtime — with the rejected alternatives noted for each.">
+                    <img src="../images/voice-rag/04_tech_stack.png" width="2048" height="1152" loading="lazy" style="width:100%;height:auto;border-radius:12px;border:1px solid #e2e8f0;" alt="Voice RAG technology stack: Sarvam Saaras v3 speech-to-text, AWS Bedrock Claude LLM, AWS Bedrock Titan v2 embeddings, in-memory cosine retrieval, gTTS Kannada text-to-speech, Jupyter runtime — with the rejected alternatives noted for each.">
                     <figcaption style="font-size:0.85rem;color:#64748b;margin-top:0.5rem;text-align:center;">What each piece does, and what it was chosen over.</figcaption>
                 </figure>
                 <ul>
@@ -233,7 +233,7 @@
                     <em>before</em> it answers. Three steps:
                 </p>
                 <figure style="margin:2rem 0;">
-                    <img src="../images/voice-rag/03_rag_concept.png" loading="lazy" style="width:100%;height:auto;border-radius:12px;border:1px solid #e2e8f0;" alt="How RAG works: step 1 retrieve embeds the question and finds the top-k nearest chunks with cosine similarity, step 2 augment builds a prompt from instructions plus retrieved context plus the question, step 3 generate produces a grounded and cited answer.">
+                    <img src="../images/voice-rag/03_rag_concept.png" width="2048" height="1152" loading="lazy" style="width:100%;height:auto;border-radius:12px;border:1px solid #e2e8f0;" alt="How RAG works: step 1 retrieve embeds the question and finds the top-k nearest chunks with cosine similarity, step 2 augment builds a prompt from instructions plus retrieved context plus the question, step 3 generate produces a grounded and cited answer.">
                     <figcaption style="font-size:0.85rem;color:#64748b;margin-top:0.5rem;text-align:center;">Retrieval is just search plus a disciplined prompt — no fine-tuning, no bigger model.</figcaption>
                 </figure>
                 <p>
@@ -241,7 +241,7 @@
                     against every chunk in the knowledge base by cosine similarity, and the top matches are kept.
                 </p>
                 <figure style="margin:2rem 0;">
-                    <img src="../images/voice-rag/05_retrieval_detail.png" loading="lazy" style="width:100%;height:auto;border-radius:12px;border:1px solid #e2e8f0;" alt="Inside retrieval: the query 'AC nalli CH 05 error' is embedded and scored against knowledge base chunks by cosine similarity; the two highest-scoring chunks are selected as context and passed to the LLM, with a note that production would use a vector database.">
+                    <img src="../images/voice-rag/05_retrieval_detail.png" width="2048" height="1152" loading="lazy" style="width:100%;height:auto;border-radius:12px;border:1px solid #e2e8f0;" alt="Inside retrieval: the query 'AC nalli CH 05 error' is embedded and scored against knowledge base chunks by cosine similarity; the two highest-scoring chunks are selected as context and passed to the LLM, with a note that production would use a vector database.">
                     <figcaption style="font-size:0.85rem;color:#64748b;margin-top:0.5rem;text-align:center;">Each document is one chunk here; at scale you split into ~300–500-token chunks in a vector DB (FAISS, OpenSearch, pgvector).</figcaption>
                 </figure>
 
@@ -326,7 +326,7 @@ jupyter notebook Voice_RAG_Demo.ipynb</code></pre>
                     Same model, same question. The only difference is whether retrieval grounded the answer.
                 </p>
                 <figure style="margin:2rem 0;">
-                    <img src="../images/voice-rag/02_prerag_vs_postrag.png" loading="lazy" style="width:100%;height:auto;border-radius:12px;border:1px solid #e2e8f0;" alt="Pre-RAG vs post-RAG comparison for 'What is the customer care phone number?'. Without RAG the model says it does not have enough information and cites no source. With RAG it returns the exact toll-free number with hours and a source citation.">
+                    <img src="../images/voice-rag/02_prerag_vs_postrag.png" width="2048" height="1152" loading="lazy" style="width:100%;height:auto;border-radius:12px;border:1px solid #e2e8f0;" alt="Pre-RAG vs post-RAG comparison for 'What is the customer care phone number?'. Without RAG the model says it does not have enough information and cites no source. With RAG it returns the exact toll-free number with hours and a source citation.">
                     <figcaption style="font-size:0.85rem;color:#64748b;margin-top:0.5rem;text-align:center;">Without RAG: "I don't have that." With RAG: an exact, cited answer.</figcaption>
                 </figure>
 
