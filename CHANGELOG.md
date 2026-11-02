@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-02 — Voice RAG post: broken video embeds hidden
+
+### Fixed
+- **blog/voice-rag-kannada-english-code-mixed.html** — the 2 YouTube embeds still had placeholder IDs and showed
+  as broken frames. Commented out, not deleted. To restore, set the real IDs and remove the comment markers.
+
 ## 2026-11-02 — Technical scan fixes (no copy or URL changes)
 
 ### Fixed
