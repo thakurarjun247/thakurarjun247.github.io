@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-11-02 — Nav and internal link fixes
+
+### Fixed
+- **_includes/nav.html** — Home now shows as current on the homepage (`page.url` is `/`, so the old
+  `index.html` check never matched). Interview sub-pages keep a real link to `interviews.html`, highlighted,
+  instead of a non-clickable label that removed the only nav link to the hub.
+- **speaking/ship-sabha-ai-evaluations-chennai.html** — hardcoded nav and footer replaced with the shared
+  includes. The old nav had no Interviews link; the shared footer is a superset of the old one.
+
+### Added
+- **All 10 blog posts, blog/_TEMPLATE.html** — `Related:` line above the author callout linking 2 related
+  posts. Most posts had no links from other posts. Existing classes only, so no cache-bust.
+- **sitemap.xml** — `<lastmod>` bumped to 2026-11-02 for those posts and the Ship Sabha page. Article
+  `dateModified` left alone, as the articles themselves did not change.
+- **CHECKLIST.md** — nav steps corrected to the shared include; `Related:` line added to the new-post steps.
+
 ## 2026-11-02 — Search Console fixes: ProfilePage datetimes, homepage links
 
 ### Fixed

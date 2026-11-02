@@ -50,6 +50,8 @@ author callout). Then update these **5** files:
   - JSON-LD **BreadcrumbList**: position 3 `name`
   - Visible header: date, reading time, `<h1>`, tags
   - Body content
+  - `Related:` line above the author callout, linking 2 related posts by relative path. Also add the new post
+    to the `Related:` line of 1-2 older posts, so every post has links from other posts, not just `blog.html`.
 - [ ] **`blog.html`** — the index. Two edits:
   - Add a `<article class="blog-card">` at the **top** of `.blog-grid` (newest first). Include emoji thumbnail, `<time datetime>`, `<h2>`, description, 3 tags, Read More link to `blog/<slug>.html`.
   - Add a matching entry at the **top** of the JSON-LD `CollectionPage` → `hasPart` array (`@type: Article`, name, url, datePublished, description, author).
@@ -72,7 +74,7 @@ Optional / judgment call:
 - [ ] **`sitemap.xml`** — add a `<url>` block (pick sensible `changefreq`/`priority`).
 - [ ] **`sitemap.html`** — add a `project-card` under the right section (Main / Training & Mentoring / Writing).
 - [ ] **`llms.txt`** — add a bullet under `## Site Pages` (top-level pages ARE listed here).
-- [ ] **Nav menu** — if it's a primary page, add `<li>` to the `.nav-menu` in **every** page's navbar (they're hardcoded per file, not shared). Current nav: Home, Consulting, Training, Speaking, Blog, Resume, FAQ, Contact.
+- [ ] **Nav menu** — if it's a primary page, add one `{% if %}` line to `_includes/nav.html` (shared, edit once). Current nav: Home, Consulting, Training, Interviews, Speaking, Blog, Resume, FAQ, Contact.
 - [ ] **`CHANGELOG.md`** — optional entry.
 
 **Do NOT need updating:** `robots.txt` (wildcard), `feed.xml` (blog-only).
@@ -94,8 +96,8 @@ but these still apply:
 - [ ] **Cache-bust ONLY if you edited `css/style.css` or `js/main.js`** — bump the `?v=YYYYMMDD-n`
       query string on the `<link>`/`<script>` in **every** page that references it. Reusing existing
       CSS classes in HTML is **not** a CSS change — no bump needed.
-- [ ] **Nav edits propagate to every file** — navbars are copy-pasted, not shared. A nav change means
-      editing all pages.
+- [ ] **Nav and footer edits go in `_includes/`** — every page must use `{% include nav.html %}` and
+      `{% include footer.html %}`, never a hardcoded copy.
 - [ ] **Shared/global copy** — if the same block (footer, contact details, tagline) is duplicated across
       pages, update every copy so they don't drift.
 - [ ] **`CHANGELOG.md`** — optional entry.
