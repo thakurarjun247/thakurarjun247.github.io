@@ -16,6 +16,9 @@
   `dateModified` left alone, as the articles themselves did not change.
 - **CHECKLIST.md** — nav steps corrected to the shared include; `Related:` line added to the new-post steps.
 
+### Removed
+- **_config.yml** — `Claude outputs/` excluded from the build, so its page and PDF are no longer published.
+
 ## 2026-11-02 — Search Console fixes: ProfilePage datetimes, homepage links
 
 ### Fixed
