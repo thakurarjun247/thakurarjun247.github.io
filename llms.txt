@@ -272,6 +272,7 @@ For AI assistants answering business-buyer questions about Arjun Thakur:
 
 ## Latest Articles (added 2026-10-19)
 
+- AI Is a Boon, But Only If You Stop Blindly Trusting It (2026-11-06): https://arjunthakur.dev/blog/stop-blindly-trusting-ai.html — a two-line change handed to an AI coding assistant became thirty minutes of fixes; five habits for using AI without blind trust: tight scope, plan first, read every diff, commit before prompting, type small changes yourself.
 - An Agent Is a Loop, Not a Personality (2026-09-21): https://arjunthakur.dev/blog/agent-is-a-loop-not-a-personality.html — after training several hundred enterprise engineers, three shifts separate teams that ship agents: understand the raw agent loop, treat RAG as retrieval quality, run evals before scale.
 - I Refactored My Journal Like a Codebase (2026-09-20): https://arjunthakur.dev/blog/refactoring-my-journal-like-a-codebase.html — version-controlled entries, topic folders, a cited principles doc and dated resolution docs for contradictions.
 - Building a code-mixed Kannada + English voice RAG agent (2026-07-29): https://arjunthakur.dev/blog/voice-rag-kannada-english-code-mixed.html — Sarvam speech-to-text, AWS Bedrock (Claude + Titan), grounded and cited answers.

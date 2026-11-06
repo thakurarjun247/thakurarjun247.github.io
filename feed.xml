@@ -8,12 +8,23 @@
     <language>en</language>
     <managingEditor>hello@arjunthakur.dev (Arjun Thakur)</managingEditor>
     <webMaster>hello@arjunthakur.dev (Arjun Thakur)</webMaster>
-    <lastBuildDate>Mon, 21 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://arjunthakur.dev/images/og-cover.jpg</url>
       <title>Arjun Thakur — AI Engineering Blog</title>
       <link>https://arjunthakur.dev/blog.html</link>
     </image>
+    <item>
+      <title>AI Is a Boon, But Only If You Stop Blindly Trusting It</title>
+      <link>https://arjunthakur.dev/blog/stop-blindly-trusting-ai.html</link>
+      <guid isPermaLink="true">https://arjunthakur.dev/blog/stop-blindly-trusting-ai.html</guid>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+      <description>I asked an AI coding assistant for a two-line change and spent thirty minutes fixing the other code it changed without being asked. Why it happens, and five habits for using AI without blindly trusting it.</description>
+      <author>hello@arjunthakur.dev (Arjun Thakur)</author>
+      <category>AI-Assisted Development</category>
+      <category>Software Engineering</category>
+      <category>Best Practices</category>
+    </item>
     <item>
       <title>An Agent Is a Loop, Not a Personality: Three Shifts That Separate AI Teams That Ship</title>
       <link>https://arjunthakur.dev/blog/agent-is-a-loop-not-a-personality.html</link>

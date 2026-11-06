@@ -1,0 +1,282 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include analytics.html %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>AI Is a Boon, But Only If You Stop Blindly Trusting It — Arjun Thakur</title>
+  <meta name="description" content="AI coding assistants are a boon, but blind trust turned my 2-line change into 30 minutes of fixes. How to use AI for software development without losing control.">
+  <meta name="keywords" content="AI coding assistants, AI-assisted development, blindly trusting AI, AI code review, software engineering best practices, Arjun Thakur">
+  <meta name="author" content="Arjun Thakur">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://arjunthakur.dev/blog/stop-blindly-trusting-ai.html">
+
+  <!-- Geo -->
+  <meta name="geo.region" content="IN">
+  <meta name="geo.placename" content="India">
+
+  <!-- Open Graph (Article) -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://arjunthakur.dev/blog/stop-blindly-trusting-ai.html">
+  <meta property="og:title" content="AI Is a Boon, But Only If You Stop Blindly Trusting It">
+  <meta property="og:description" content="A 2-line change I handed to AI turned into 30 minutes of fixing code it changed without being asked. What I learned about using AI without blindly trusting it.">
+  <meta property="og:image" content="https://arjunthakur.dev/images/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Arjun Thakur">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:published_time" content="2026-11-06">
+  <meta property="article:author" content="Arjun Thakur">
+  <meta property="article:tag" content="AI-Assisted Development">
+  <meta property="article:tag" content="Software Engineering">
+  <meta property="article:tag" content="Best Practices">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Is a Boon, But Only If You Stop Blindly Trusting It">
+  <meta name="twitter:description" content="I asked AI for a 2-line change. I spent 30 minutes fixing what else it changed. AI is a boon, but only if you stop blindly trusting it.">
+  <meta name="twitter:image" content="https://arjunthakur.dev/images/og-cover.jpg">
+
+  <!-- Theme & Performance -->
+  <meta name="theme-color" content="#22d3ee">
+  <link rel="dns-prefetch" href="https://github.com">
+
+  <!-- Favicon (do not edit) -->
+  <link rel="icon" type="image/x-icon" href="../images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../images/favicon/site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt — AI/LLM-friendly profile">
+  <link rel="stylesheet" href="../css/style.css?v=20261016-4">
+
+  <!-- JSON-LD: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "AI Is a Boon, But Only If You Stop Blindly Trusting It",
+    "description": "AI coding assistants are a boon, but blind trust turned my 2-line change into 30 minutes of fixes. How to use AI for software development without losing control.",
+    "url": "https://arjunthakur.dev/blog/stop-blindly-trusting-ai.html",
+    "datePublished": "2026-11-06",
+    "dateModified": "2026-11-06",
+    "author": {
+      "@type": "Person",
+      "name": "Arjun Thakur",
+      "url": "https://arjunthakur.dev",
+      "jobTitle": "Principal AI Engineer",
+      "sameAs": ["https://linkedin.com/in/thakurarjun247", "https://github.com/thakurarjun247",
+        "https://x.com/arjunthakurdev",
+        "https://www.youtube.com/@arjunthakurdev"]
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Arjun Thakur",
+      "url": "https://arjunthakur.dev"
+    },
+    "image": "https://arjunthakur.dev/images/arjun.jpeg",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://arjunthakur.dev/blog/stop-blindly-trusting-ai.html"
+    },
+    "keywords": ["AI-Assisted Development", "Software Engineering", "Best Practices"],
+    "articleSection": "AI-Assisted Development",
+    "timeRequired": "PT5M",
+    "inLanguage": "en-US",
+    "isPartOf": {
+      "@type": "CollectionPage",
+      "name": "Blog — Arjun Thakur",
+      "url": "https://arjunthakur.dev/blog.html"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arjunthakur.dev/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://arjunthakur.dev/blog.html" },
+      { "@type": "ListItem", "position": 3, "name": "AI Is a Boon, But Only If You Stop Blindly Trusting It" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Skip to main content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation (shared include — do not edit here) -->
+{% include nav.html %}
+
+  <main id="main-content">
+    <!-- Blog Post -->
+    <article class="blog-post">
+        <div class="container blog-post-container">
+
+            <div class="blog-post-header">
+                <a href="../blog.html" class="back-link">← Back to Blog</a>
+                <div class="blog-post-meta">
+                    <span class="blog-post-date">November 6, 2026</span>
+                    <span class="blog-post-reading-time">5 min read</span>
+                </div>
+                <h1>AI Is a Boon, But Only If You Stop Blindly Trusting It</h1>
+                <div class="blog-post-tags">
+                    <span class="tag">AI-Assisted Development</span>
+                    <span class="tag">Software Engineering</span>
+                    <span class="tag">Best Practices</span>
+                </div>
+            </div>
+
+            <div class="blog-post-content">
+
+                <!-- ═══════════ ARTICLE BODY START — write the post below ═══════════ -->
+
+                <p class="lead">
+                    AI has changed how I work. I've built a lot of AI and ML projects, and AI coding
+                    assistants now handle much of the boring work for me: boilerplate, refactors, test
+                    scaffolding, the first draft of a tricky function. On a good day it feels like having a
+                    fast, tireless pair programmer.
+                </p>
+
+                <p>
+                    Those projects also taught me something the hype skips over: <strong>AI is a boon only
+                    when you know how to use it properly.</strong> Trust it blindly and the tool that was
+                    supposed to save you hours can quietly undo days of work.
+                </p>
+
+                <h2>The two-minute change that took thirty</h2>
+                <p>
+                    Here's the moment it clicked for me.
+                </p>
+                <p>
+                    I was deep in a project and needed a tiny change, literally two lines. I could have
+                    typed it myself, but it felt faster to just tell the AI what I wanted and move on.
+                </p>
+                <p>
+                    It made my two-line change. It also "helpfully" changed other things I never asked
+                    about: it renamed a variable, reworked a function nearby and adjusted logic in another
+                    part of the file. None of that was in my request.
+                </p>
+                <p>
+                    Then things started breaking. What should have been a two-minute task became
+                    <strong>thirty minutes</strong> of tracking down what had changed, working out why and
+                    putting back the code that had been working fine.
+                </p>
+                <p>
+                    The AI hadn't done what I asked. It had done what it <em>thought</em> would help, and
+                    those are not the same thing.
+                </p>
+
+                <h2>Why this happens</h2>
+                <p>
+                    AI coding tools are built to be helpful, and that's exactly the problem. Give a model a
+                    small task and it often reads it as a chance to "improve" whatever it sees nearby. It
+                    doesn't know which parts of your code are fragile, which strange-looking line is there
+                    on purpose or which function three other modules quietly depend on.
+                </p>
+                <p>
+                    You have that context. The AI usually doesn't. When you hand over control without
+                    checking the output, you're betting that its guesses match your intent. On a real
+                    project, sometimes they won't.
+                </p>
+
+                <h2>How I work with AI now</h2>
+                <p>
+                    I didn't stop using AI. I changed how I use it.
+                </p>
+
+                <h3>1. Keep the scope tight and say so</h3>
+                <p>
+                    I don't just say "fix this." I say "change only these two lines, don't modify anything
+                    else." Stating the limit up front cuts down a lot on surprise edits.
+                </p>
+
+                <h3>2. Ask for the plan before the change</h3>
+                <p>
+                    For anything beyond a trivial edit, I ask the AI to explain what it's going to change
+                    <em>before</em> it changes it. If the plan touches files or functions I didn't expect, I
+                    catch it before it lands.
+                </p>
+
+                <h3>3. Read every diff</h3>
+                <p>
+                    This is the big one. I treat AI-generated code like a pull request from a new teammate:
+                    helpful and fast, but not merged without review. If a two-line request comes back as a
+                    forty-line diff, that's a red flag.
+                </p>
+
+                <h3>4. Commit before you prompt</h3>
+                <p>
+                    I commit before I let AI touch anything. If it goes sideways, rolling back takes one
+                    command instead of thirty minutes of archaeology.
+                </p>
+                <div class="code-block">
+                    <pre><code>git add -A &amp;&amp; git commit -m "checkpoint before AI edit"
+# ...let the AI make its change, then review exactly what it touched:
+git diff
+# not what you asked for? throw it away:
+git restore .</code></pre>
+                </div>
+
+                <h3>5. Know when to just type it yourself</h3>
+                <p>
+                    For a two-line change you already understand, writing it by hand is often faster than
+                    prompting, waiting and reviewing. AI pays off on the work that's actually tedious, not
+                    on every keystroke.
+                </p>
+
+                <h2>The real lesson</h2>
+                <p>
+                    AI isn't the problem. <strong>Blind trust is.</strong> AI is an amplifier: in the hands
+                    of someone who reviews, questions and stays in control, it multiplies productivity. In
+                    the hands of someone who accepts every suggestion, it multiplies mistakes just as fast.
+                </p>
+                <p>
+                    The developers who'll get the most out of AI aren't the ones who use it the most.
+                    They're the ones who know when to rely on it, when to check it and when to tell it no.
+                </p>
+                <p>
+                    Use AI. Just don't hand it the steering wheel. Questions or a different take? Reach out
+                    via the <a href="../contact.html">contact page</a>.
+                </p>
+
+                <!-- ═══════════ ARTICLE BODY END ═══════════ -->
+
+            </div>
+
+        </div>
+    </article>
+
+    <!-- Author callout (shared block — usually leave as-is) -->
+    <section class="services-section">
+      <div class="container">
+        <p><strong>Related:</strong> <a href="agent-is-a-loop-not-a-personality.html">An Agent Is a Loop, Not a Personality</a> &middot; <a href="agents-dont-fail-like-services-fail.html">Agents Don't Fail Like Services Fail</a></p>
+        <div class="callout callout--brand">
+          <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;">
+            <img src="../images/arjun.jpeg" width="72" height="72" loading="lazy" style="width:72px;height:72px;border-radius:50%;flex-shrink:0;" alt="Arjun Thakur">
+            <div><strong>Arjun Thakur</strong> — Principal AI Engineer &amp; Fractional CTO. I build production agentic AI (LangGraph, RAG, voice) and help teams do the same through <a href="../consulting.html">consulting</a> and <a href="../training.html">training</a>. <a href="../contact.html">Work with me &rarr;</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer (shared include — do not edit here) -->
+{% include footer.html %}
+
+  <script src="../js/main.js?v=20260702-1" defer></script>
+</body>
+</html>
