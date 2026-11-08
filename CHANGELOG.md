@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-11-08 — Homepage hero: real stats, calmer badges, mobile headline
+
+### Fixed
+- **index.html** — hero stats now carry the real numbers in the HTML (15+, 5, 900+) instead of "0". Crawlers that
+  don't run JavaScript (GPTBot, ClaudeBot, PerplexityBot) were reading "0 Years Production Engineering". The
+  count-up animation in js/main.js still runs for visitors.
+
+### Changed
+- **index.html** — the 3 cyan credential pills became one muted text line (same words, so nothing lost for SEO).
+  The green "Available" pill is now the only badge above the headline.
+- **css/style.css** — new `.hero-credentials` style; on screens up to 768px the hero photo shrinks to 150px so the
+  headline sits on the first screen. Cache-bust on index.html only: `style.css?v=20261108-1`.
+
 ## 2026-11-08 — Careers page intro trimmed
 
 ### Changed

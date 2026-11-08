@@ -3349,3 +3349,20 @@ a.contact-method:hover .contact-go { color: var(--primary-color); transform: tra
 @media (max-width: 600px) {
     .contact-section { padding-top: 2rem; }
 }
+
+/* Hero credentials: one muted line instead of a row of cyan pills (2026-11-08) */
+.hero-credentials {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 0 0 1.25rem;
+}
+
+/* Mobile hero: smaller photo so the headline sits above the fold (2026-11-08) */
+@media (max-width: 768px) {
+    .hero .profile-image-container { max-width: 150px; padding: 4px; border-radius: 18px; }
+    .hero .profile-image { border-radius: 14px; }
+    .hero .hero-image > p { margin-top: 0.5rem !important; font-size: 0.85rem !important; }
+    .hero .hero-content { gap: 1.25rem; }
+}
