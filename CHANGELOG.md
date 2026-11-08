@@ -7,6 +7,9 @@
   callout. The page keeps one H1, now "Careers: Open Roles", and the duplicate "Open Roles" H2 above the cards is gone.
   Title, meta description and JSON-LD are unchanged.
 - **careers.html** — removed the hero badges (Indore / Dewas, Full-time & part-time roles, Students welcome).
+- **careers.html** — now just two sections: "Open Roles (We are hiring)" (the page's H1) and "Closed Roles
+  (Not hiring anymore)". Removed the page header (breadcrumb, "Careers: Open Roles", both buttons) and the bottom
+  "Found your role?" call to action. BreadcrumbList JSON-LD kept.
 
 ## 2026-11-08 — Nav reordered: Careers in, Interviews and FAQ moved to footer
 
