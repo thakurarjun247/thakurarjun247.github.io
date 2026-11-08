@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-11-08 — New role: Creative Lead, AI Video & Characters
+
+### Added
+- **careers/creative-lead-ai-video.html** — job page (content from the JD PDF), JobPosting + BreadcrumbList
+  JSON-LD, embedded Google Form (owned by arjun@arjunthakur.dev; links only, no uploads, so it embeds fully and needs no sign-in).
+  Form and response Sheet live in Drive folder "Hiring - Creative Lead, AI Video".
+- **careers.html** — listed under Open Roles (card + ItemList JSON-LD); meta description refreshed.
+- **sitemap.xml, sitemap.html, llms.txt** — new page added; careers.html lastmod bumped.
+
 ## 2026-11-02 — Voice RAG post: broken video embeds hidden
 
 ### Fixed
