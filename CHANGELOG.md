@@ -6,6 +6,7 @@
 - **careers.html** — removed the "Careers at Arjun Thakur" title with its intro paragraph, and the "How I hire"
   callout. The page keeps one H1, now "Careers: Open Roles", and the duplicate "Open Roles" H2 above the cards is gone.
   Title, meta description and JSON-LD are unchanged.
+- **careers.html** — removed the hero badges (Indore / Dewas, Full-time & part-time roles, Students welcome).
 
 ## 2026-11-08 — Nav reordered: Careers in, Interviews and FAQ moved to footer
 
