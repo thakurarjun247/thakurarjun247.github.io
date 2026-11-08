@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-11-08 — Nav reordered: Careers in, Interviews and FAQ moved to footer
+
+### Changed
+- **_includes/nav.html** — removed Interviews and FAQ from the top menu to save space, added Careers.
+  New order: Home, Consulting, Training, Speaking, Blog, Resume, Team, Careers, Contact. Blog posts and job
+  pages now highlight Blog / Careers. No page was removed and no URL changed.
+- **_includes/footer.html** — added an Interviews link next to FAQ, so `interviews.html` keeps a link from
+  every page (it is still in sitemap.xml, sitemap.html, llms.txt and linked from the homepage and service pages).
+- **CHECKLIST.md** — current-nav line updated.
+
 ## 2026-11-08 — New role: Creative Lead, AI Video & Characters
 
 ### Added

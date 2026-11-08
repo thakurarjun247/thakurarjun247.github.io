@@ -74,7 +74,7 @@ Optional / judgment call:
 - [ ] **`sitemap.xml`** — add a `<url>` block (pick sensible `changefreq`/`priority`).
 - [ ] **`sitemap.html`** — add a `project-card` under the right section (Main / Training & Mentoring / Writing).
 - [ ] **`llms.txt`** — add a bullet under `## Site Pages` (top-level pages ARE listed here).
-- [ ] **Nav menu** — if it's a primary page, add one `{% if %}` line to `_includes/nav.html` (shared, edit once). Current nav: Home, Consulting, Training, Interviews, Speaking, Blog, Resume, FAQ, Contact.
+- [ ] **Nav menu** — if it's a primary page, add one `{% if %}` line to `_includes/nav.html` (shared, edit once). Current nav: Home, Consulting, Training, Speaking, Blog, Resume, Team, Careers, Contact (FAQ lives in the footer).
 - [ ] **`CHANGELOG.md`** — optional entry.
 
 **Do NOT need updating:** `robots.txt` (wildcard), `feed.xml` (blog-only).
