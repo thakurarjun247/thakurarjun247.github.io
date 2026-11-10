@@ -3366,3 +3366,27 @@ a.contact-method:hover .contact-go { color: var(--primary-color); transform: tra
     .hero .hero-image > p { margin-top: 0.5rem !important; font-size: 0.85rem !important; }
     .hero .hero-content { gap: 1.25rem; }
 }
+
+/* Desktop nav: tighten spacing on narrower desktops/tablets so all ten items
+   (incl. Partnerships) stay on one row above the 768px hamburger breakpoint (2026-11-10) */
+@media (min-width: 769px) {
+    .logo { white-space: nowrap !important; }
+    .nav-menu { gap: 2rem !important; }
+}
+@media (min-width: 769px) and (max-width: 1240px) {
+    .nav-menu { gap: 1.5rem !important; }
+}
+@media (min-width: 769px) and (max-width: 1140px) {
+    .nav-menu { gap: 1.1rem !important; }
+    .logo { font-size: 1.3rem !important; }
+}
+@media (min-width: 769px) and (max-width: 1040px) {
+    .nav-menu { gap: 0.8rem !important; }
+    .nav-menu a, .nav-menu .nav-current { font-size: 0.9rem !important; }
+    .logo { font-size: 1.2rem !important; }
+}
+@media (min-width: 769px) and (max-width: 900px) {
+    .nav-menu { gap: 0.5rem !important; }
+    .nav-menu a, .nav-menu .nav-current { font-size: 0.8rem !important; }
+    .logo { font-size: 1.05rem !important; }
+}

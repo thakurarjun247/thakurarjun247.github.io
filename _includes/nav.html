@@ -12,6 +12,7 @@
         {% if current == "resume.html" %}<li><span class="nav-current" aria-current="page">Resume</span></li>{% else %}<li><a href="/resume.html">Resume</a></li>{% endif %}
         {% if current == "team.html" %}<li><span class="nav-current" aria-current="page">Team</span></li>{% else %}<li><a href="/team.html">Team</a></li>{% endif %}
         {% if current == "careers.html" %}<li><span class="nav-current" aria-current="page">Careers</span></li>{% elsif current contains "careers/" %}<li><a href="/careers.html" class="nav-current">Careers</a></li>{% else %}<li><a href="/careers.html">Careers</a></li>{% endif %}
+        {% if current == "affiliate-partnerships.html" %}<li><span class="nav-current" aria-current="page">Partnerships</span></li>{% elsif current == "ai-consulting-referral-partners.html" %}<li><a href="/affiliate-partnerships.html" class="nav-current">Partnerships</a></li>{% else %}<li><a href="/affiliate-partnerships.html">Partnerships</a></li>{% endif %}
         {% if current == "contact.html" %}<li><span class="nav-current" aria-current="page">Contact</span></li>{% else %}<li><a href="/contact.html">Contact</a></li>{% endif %}
       </ul>
     </div>
