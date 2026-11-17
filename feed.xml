@@ -8,12 +8,23 @@
     <language>en</language>
     <managingEditor>hello@arjunthakur.dev (Arjun Thakur)</managingEditor>
     <webMaster>hello@arjunthakur.dev (Arjun Thakur)</webMaster>
-    <lastBuildDate>Fri, 06 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://arjunthakur.dev/images/og-cover.jpg</url>
       <title>Arjun Thakur — AI Engineering Blog</title>
       <link>https://arjunthakur.dev/blog.html</link>
     </image>
+    <item>
+      <title>Why AI Agents Are Becoming So Popular</title>
+      <link>https://arjunthakur.dev/blog/why-ai-agents-are-becoming-popular.html</link>
+      <guid isPermaLink="true">https://arjunthakur.dev/blog/why-ai-agents-are-becoming-popular.html</guid>
+      <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+      <description>A chatbot suggests hotels; an AI agent compares prices, checks availability and builds the itinerary. Why AI agents are becoming popular: everyday AI, less manual effort, the shift from answering to acting, task planning, and business use cases.</description>
+      <author>hello@arjunthakur.dev (Arjun Thakur)</author>
+      <category>Agentic AI</category>
+      <category>AI Agents</category>
+      <category>AI Adoption</category>
+    </item>
     <item>
       <title>AI Is a Boon, But Only If You Stop Blindly Trusting It</title>
       <link>https://arjunthakur.dev/blog/stop-blindly-trusting-ai.html</link>
