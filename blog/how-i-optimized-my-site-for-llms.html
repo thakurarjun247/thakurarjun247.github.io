@@ -52,7 +52,7 @@
     "description": "A condensed, practical guide to Generative Engine Optimization: how I made my portfolio findable and citable by ChatGPT, Claude, and Perplexity, with real code from my own site.",
     "url": "https://arjunthakur.dev/blog/how-i-optimized-my-site-for-llms.html",
     "datePublished": "2026-07-10",
-    "dateModified": "2026-07-10",
+    "dateModified": "2026-11-23",
     "author": { "@type": "Person", "name": "Arjun Thakur", "url": "https://arjunthakur.dev", "jobTitle": "Principal AI Engineer", "sameAs": ["https://linkedin.com/in/thakurarjun247", "https://github.com/thakurarjun247",
         "https://x.com/arjunthakurdev",
         "https://www.youtube.com/@arjunthakurdev"] },
@@ -191,6 +191,26 @@ Allow: /</code></pre></div>
             <strong>structured, quotable, and corroborated</strong> across your site and the web is what an
             LLM will confidently cite. GEO isn't a trick — it's making the truth about you easy for a machine
             to read. The proof: a real, paying lead that came straight from ChatGPT.
+          </p>
+
+          <h2>A 30-minute GEO checklist for your own site</h2>
+          <p>You don't need to copy everything above to start. If you do nothing else, work through this list in order:</p>
+          <ol>
+            <li><strong>Open your <code>robots.txt</code>.</strong> Check that it doesn't block <code>GPTBot</code>, <code>ClaudeBot</code>, <code>PerplexityBot</code>, or <code>CCBot</code>. A blanket <code>Disallow</code> added years ago is the most common reason an AI assistant has never heard of a business.</li>
+            <li><strong>Write one paragraph that says who you are, what you do, and where.</strong> Put it on your homepage in plain text and reuse it word for word in <code>llms.txt</code> and your <code>Person</code> or <code>Organization</code> schema. Using the same words everywhere matters more than clever wording.</li>
+            <li><strong>Give every entity a stable <code>@id</code>.</strong> Point every page's schema to it, and add your LinkedIn and GitHub profiles to <code>sameAs</code>, so an engine can tell that all of them are the same person.</li>
+            <li><strong>Turn your five most-asked customer questions into an FAQ</strong> with <code>FAQPage</code> markup. Short, direct answers are what assistants quote.</li>
+            <li><strong>Submit your sitemap to both Google Search Console and Bing Webmaster Tools</strong>, and set up IndexNow. Bing's index is what ChatGPT and Perplexity read from, and many sites never submit to it.</li>
+          </ol>
+
+          <h2>What happened next</h2>
+          <p>
+            This post covers the on-site setup. A few months later the same setup surfaced me in a very different way:
+            a startup founder found me through Exa, a neural people-search engine, without anyone typing my name.
+            I wrote that up, along with the identity-ownership step most people skip, in
+            <a href="how-exa-search-found-me-geo-part-2.html">GEO Part 2: How Exa Search Found Me</a>. If you'd rather
+            have it done for you, I now offer this as a service:
+            <a href="../geo-optimization.html">GEO / AI-search optimization</a>.
           </p>
 
           <h2>The site is open source</h2>
